@@ -78,6 +78,7 @@ dependencies[] = omega_tools
 ; Fields
 dependencies[] = entityreference
 dependencies[] = field_group
+dependencies[] = field_collection
 ; Media
 dependencies[] = imce
 dependencies[] = imce_crop

@@ -51,9 +51,21 @@ projects[ckeditor_link][subdir] = "contrib"
 projects[ckeditor_link][version] = "2.2"
 
 ; Site Building
+; create nice looking paths for entities
+projects[pathauto][version] = "1.2"
+projects[pathauto][subdir] = "contrib"
+; visual styling of groupings of fields
+projects[field_group][version] = "1.1"
+projects[field_group][subdir] = "contrib"
 ; date widgets
 projects[date][subdir] = "contrib"
 projects[date][version] = "2.6"
+; composite field
+projects[field_collection][version] = "1.0-beta4"
+projects[field_collection][subdir] = "contrib"
+; make fields that reference entities
+projects[entityreference][version] = "1.0-rc3"
+projects[entityreference][subdir] = "contrib"
 ; Color picker widget
 projects[jquery_colorpicker][subdir] = "contrib"
 projects[jquery_colorpicker][version] = "1.0-rc1"
@@ -101,6 +113,9 @@ projects[context][version] = "3.0-beta4"
 ; exportable version of blocks
 projects[boxes][subdir] = "contrib"
 projects[boxes][version] = "1.0"
+; Prints nicer help documentation
+projects[advanced_help][version] = "1.0"
+projects[advanced_help][subdir] = "contrib"
 
 ; Content migration
 ; Import data from external sources
@@ -126,6 +141,9 @@ projects[devel][version] = "1.3"
 ; Package and deploy functionality
 projects[features][subdir] = "contrib"
 projects[features][version] = "1.0"
+; Best practice
+projects[backup_migrate][version] = "2.4"
+projects[backup_migrate][subdir] = "contrib"
 
 ; APIs
 ; required by feeds
@@ -155,6 +173,9 @@ projects[diff][version] = "2.0"
 ; Enhancements
 projects[entity][subdir] = "contrib"
 projects[entity][version] = "1.0-rc3"
+; needed for views / features / everything else
+projects[ctools][version] = "1.2"
+projects[ctools][subdir] = "contrib"
 
 ; Theme development
 ; exporting tools for omega
@@ -163,6 +184,9 @@ projects[omega_tools][version] = "3.0-rc4"
 ; additional blocks
 projects[delta][subdir] = "contrib"
 projects[delta][version] = "3.0-beta11"
+; Responsive display of a grid
+projects[views_fluid_grid][version] = "3.0"
+projects[views_fluid_grid][subdir] = "contrib"
 
 ; specific settings for themes
 projects[context_condition_theme][subdir] = "contrib"
