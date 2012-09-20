@@ -350,4 +350,6 @@ function mooc_install() {
   variable_set('admin_theme', $admin_theme);
   // activate admin theme when editing a node
   variable_set('node_admin_theme', '1');
+  // ignore any rebuild messages
+  node_access_needs_rebuild(FALSE);
 }
