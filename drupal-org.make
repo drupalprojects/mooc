@@ -170,7 +170,7 @@ projects[context_condition_theme][version] = "1.0"
 
 ; chamfer default layouts
 projects[chamfer_defaults][subdir] = "contrib"
-projects[chamfer_defaults][version] = "1.0-beta1"
+projects[chamfer_defaults][version] = "1.0-beta2"
 
 ; Themes
 
