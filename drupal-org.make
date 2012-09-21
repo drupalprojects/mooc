@@ -9,7 +9,7 @@ api = "2"
 ; Content Author
 ; workflow management to hide items
 projects[hidden_nodes][subdir] = "contrib"
-projects[hidden_nodes][version] = "1.0-beta4"
+projects[hidden_nodes][version] = "1.0"
 ; Book outline UX improvements
 projects[outline_designer][subdir] = "contrib"
 projects[outline_designer][version] = "2.0-alpha3"
