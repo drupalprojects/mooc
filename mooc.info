@@ -59,7 +59,6 @@ dependencies[] = admin_menu
 dependencies[] = admin_menu_toolbar
 ; Features
 dependencies[] = chamfer_defaults
-dependencies[] = features_tools
 dependencies[] = features
 ; Context
 dependencies[] = context
