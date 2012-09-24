@@ -23,6 +23,15 @@ dependencies[] = token
 dependencies[] = transliteration
 dependencies[] = pathauto
 dependencies[] = better_formats
+dependencies[] = mooc
+; Feeds
+dependencies[] = feeds_node_helper_import
+dependencies[] = feeds_node_helper
+dependencies[] = feeds_tamper
+dependencies[] = feeds_tamper_ui
+dependencies[] = feeds_ui
+dependencies[] = feeds_xpathparser
+dependencies[] = feeds
 ; Core
 dependencies[] = block
 dependencies[] = book
@@ -53,10 +62,6 @@ dependencies[] = dblog
 dependencies[] = overlay
 ; Permissions
 dependencies[] = hidden_nodes
-; Administration
-dependencies[] = admin_theme
-dependencies[] = admin_menu
-dependencies[] = admin_menu_toolbar
 ; Features
 dependencies[] = chamfer_defaults
 dependencies[] = features
@@ -81,13 +86,6 @@ dependencies[] = omega_tools
 dependencies[] = entityreference
 dependencies[] = field_collection
 dependencies[] = field_group
-; Feeds
-dependencies[] = feeds_node_helper
-dependencies[] = feeds_tamper
-dependencies[] = feeds_tamper_ui
-dependencies[] = feeds_ui
-dependencies[] = feeds_xpathparser
-dependencies[] = feeds
 ; Media
 dependencies[] = imce
 dependencies[] = imce_crop
@@ -124,7 +122,10 @@ dependencies[] = views
 dependencies[] = book_title_override
 ; Node form columns
 dependencies[] = nodeformcols
-
+; Administration
+dependencies[] = admin_theme
+dependencies[] = admin_menu
+dependencies[] = admin_menu_toolbar
 
 ; Variables
 variables[additional_settings__active_tab_page] = 'edit-menu'
