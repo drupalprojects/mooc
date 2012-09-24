@@ -99,28 +99,8 @@ function mooc_install() {
       'cache' => -1,
     ),
     array(
-      'module' => 'search',
-      'delta' => 'form',
-      'theme' => $default_theme,
-      'status' => 1,
-      'weight' => -1,
-      'region' => 'sidebar_first',
-      'pages' => '',
-      'cache' => -1,
-    ),
-    array(
       'module' => 'user',
       'delta' => 'login',
-      'theme' => $default_theme,
-      'status' => 1,
-      'weight' => 0,
-      'region' => 'sidebar_first',
-      'pages' => '',
-      'cache' => -1,
-    ),
-    array(
-      'module' => 'system',
-      'delta' => 'navigation',
       'theme' => $default_theme,
       'status' => 1,
       'weight' => 0,
@@ -133,7 +113,7 @@ function mooc_install() {
       'delta' => 'help',
       'theme' => $default_theme,
       'status' => 1,
-      'weight' => 0,
+      'weight' => -10,
       'region' => 'content',
       'pages' => '',
       'cache' => -1,
@@ -154,21 +134,15 @@ function mooc_install() {
       'theme' => $admin_theme,
       'status' => 1,
       'weight' => 0,
-      'region' => 'content',
-      'pages' => '',
-      'cache' => -1,
-    ),
-    array(
-      'module' => 'user',
-      'delta' => 'login',
-      'theme' => $admin_theme,
-      'status' => 1,
-      'weight' => 10,
-      'region' => 'content',
+      'region' => 'help',
       'pages' => '',
       'cache' => -1,
     ),
   );
+	// drop system / user blocks to ensure correct building
+	db_delete('block')->condition('module', 'system')->execute();
+	db_delete('block')->condition('module', 'user')->execute();
+	// add in our blocks defined above
   $query = db_insert('block')->fields(array('module', 'delta', 'theme', 'status', 'weight', 'region', 'pages', 'cache'));
   foreach ($blocks as $block) {
     $query->values($block);
@@ -181,9 +155,9 @@ function mooc_install() {
   $types = array(
     array(
       'type' => 'page',
-      'name' => st('Basic page'),
+      'name' => st('Page'),
       'base' => 'node_content',
-      'description' => st("Use <em>basic pages</em> for your static content, such as an 'About us' page."),
+      'description' => st("Use <em>pages</em> for your course content."),
       'custom' => 1,
       'modified' => 1,
       'locked' => 0,
@@ -210,10 +184,10 @@ function mooc_install() {
     rdf_mapping_save($rdf_mapping);
   }
 
-  // Default "Basic page" to not be promoted and have comments disabled.
+  // Default "Page" to not be promoted and have comments disabled.
   variable_set('node_options_page', array('status'));
 
-  // Don't display date and author information for "Basic page" nodes by default.
+  // Don't display date and author information for "Page" nodes by default.
   variable_set('node_submitted_page', FALSE);
 
   // Enable user picture support and set the default to a square thumbnail option.
