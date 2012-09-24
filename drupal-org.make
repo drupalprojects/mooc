@@ -18,7 +18,7 @@ projects[scanner][subdir] = "contrib"
 projects[scanner][version] = "1.x-dev"
 ; Text editor UX
 projects[textbook][subdir] = "contrib"
-projects[textbook][version] = "1.0-beta2"
+projects[textbook][version] = "1.0-beta3"
 ; Text editor API
 projects[wysiwyg][subdir] = "contrib"
 projects[wysiwyg][version] = "2.x-dev"
@@ -151,19 +151,19 @@ projects[job_scheduler][subdir] = "contrib"
 projects[job_scheduler][version] = "2.0-alpha3"
 ; Inject block regions across themes
 projects[regions][subdir] = "contrib"
-projects[regions][version] = "1.2"
+projects[regions][version] = "1.3"
 ; Override packaged variables
 projects[strongarm][subdir] = "contrib"
 projects[strongarm][version] = "2.0"
 ; Token enhancement
 projects[token][subdir] = "contrib"
-projects[token][version] = "1.3"
+projects[token][version] = "1.4"
 ; Accept non UTF characters successfully
 projects[transliteration][subdir] = "contrib"
 projects[transliteration][version] = "3.1"
 ; University IDs for migrations / relations
 projects[uuid][subdir] = "contrib"
-projects[uuid][version] = "1.0-alpha3"
+projects[uuid][version] = "1.x-dev"
 ; Library importing
 projects[libraries][subdir] = "contrib"
 projects[libraries][version] = "2.0"
@@ -172,7 +172,7 @@ projects[diff][subdir] = "contrib"
 projects[diff][version] = "2.0"
 ; Enhancements
 projects[entity][subdir] = "contrib"
-projects[entity][version] = "1.0-rc3"
+projects[entity][version] = "1.0-rc4"
 ; needed for views / features / everything else
 projects[ctools][version] = "1.2"
 projects[ctools][subdir] = "contrib"
@@ -187,6 +187,9 @@ projects[delta][version] = "3.0-beta11"
 ; Responsive display of a grid
 projects[views_fluid_grid][version] = "3.0"
 projects[views_fluid_grid][subdir] = "contrib"
+; Responsive menu switches to mobile friendly mode
+projects[tinynav][version] = "1.1"
+projects[tinynav][subdir] = "contrib"
 
 ; specific settings for themes
 projects[context_condition_theme][subdir] = "contrib"
@@ -238,3 +241,7 @@ libraries[profiler][download][type] = "get"
 libraries[profiler][download][url] = "http://ftp.drupal.org/files/projects/profiler-7.x-2.0-beta1.tar.gz"
 libraries[profiler][directory_name] = "profiler"
 libraries[profiler][type] = "library"
+
+; Patches
+; Fixes warning message in Scanner module
+projects[scanner][patch][] = "http://drupal.org/files/strict-variable-by-reference.patch"
