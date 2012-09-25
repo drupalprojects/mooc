@@ -64,7 +64,7 @@ projects[date][version] = "2.6"
 projects[field_collection][version] = "1.0-beta4"
 projects[field_collection][subdir] = "contrib"
 ; make fields that reference entities
-projects[entityreference][version] = "1.0-rc3"
+projects[entityreference][version] = "1.0-rc4"
 projects[entityreference][subdir] = "contrib"
 ; Color picker widget
 projects[jquery_colorpicker][subdir] = "contrib"
