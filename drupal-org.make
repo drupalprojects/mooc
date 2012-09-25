@@ -49,6 +49,9 @@ projects[book_title_override][version] = "1.0-beta4"
 ; internal linking to nodes, users and taxonomy
 projects[ckeditor_link][subdir] = "contrib"
 projects[ckeditor_link][version] = "2.2"
+; content form clean up
+projects[jammer][version] = "1.2"
+projects[jammer][subdir] = "contrib"
 
 ; Site Building
 ; create nice looking paths for entities
@@ -134,13 +137,16 @@ projects[feeds_xpathparser][version] = "1.0-beta3"
 ; Development
 ; export settings to contribute back to the project
 projects[profiler_builder][subdir] = "contrib"
-projects[profiler_builder][version] = "1.0-beta1"
+projects[profiler_builder][version] = "1.0-beta2"
 ; Developer tools
 projects[devel][subdir] = "contrib"
 projects[devel][version] = "1.3"
 ; Package and deploy functionality
 projects[features][subdir] = "contrib"
 projects[features][version] = "1.0"
+; develop features faster
+projects[ftools][subdir] = "contrib"
+projects[ftools][version] = "1.5"
 ; Best practice
 projects[backup_migrate][version] = "2.4"
 projects[backup_migrate][subdir] = "contrib"
@@ -151,7 +157,7 @@ projects[job_scheduler][subdir] = "contrib"
 projects[job_scheduler][version] = "2.0-alpha3"
 ; Inject block regions across themes
 projects[regions][subdir] = "contrib"
-projects[regions][version] = "1.3"
+projects[regions][version] = "1.4"
 ; Override packaged variables
 projects[strongarm][subdir] = "contrib"
 projects[strongarm][version] = "2.0"
