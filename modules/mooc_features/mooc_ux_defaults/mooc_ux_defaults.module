@@ -170,6 +170,14 @@ function mooc_ux_defaults_profiler_builder_ignore_alter(&$ignore_list) {
     'site_slogan',
     'site_frontpage',
     'outline_designer_page_icon',
+    'imce_custom_process',
+    'imce_custom_content',
+    'ckeditor_link_autocomplete_menus',
+    'ckeditor_link_autocomplete_node_types',
+    'ckeditor_link_autocomplete_vocabularies',
+    'ckeditor_link_type_name',
+    'ckeditor_link_type_selected',
+    'imce_profiles',
   );
   // merge these items in to have them ignored
   $ignore_list = array_merge($ignore_list, $ignore);
