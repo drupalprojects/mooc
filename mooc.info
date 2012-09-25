@@ -64,6 +64,10 @@ dependencies[] = hidden_nodes
 ; Features
 dependencies[] = chamfer_defaults
 dependencies[] = features
+; Textbook
+dependencies[] = textbook
+dependencies[] = textbook_editor
+dependencies[] = textbook_templates
 ; Context
 dependencies[] = context
 dependencies[] = context_condition_theme
@@ -95,9 +99,6 @@ dependencies[] = lightbox2
 dependencies[] = wysiwyg
 dependencies[] = wysiwyg_template
 dependencies[] = ckeditor_link
-; MOOC
-dependencies[] = mooc_roles_perms
-dependencies[] = mooc_ux_defaults
 ; Outline Designer
 dependencies[] = outline_designer
 dependencies[] = outline_designer_book
@@ -108,10 +109,6 @@ dependencies[] = regions
 dependencies[] = regions_admin_example
 dependencies[] = regions_admin_left
 dependencies[] = regions_right_slideout
-; Textbook
-dependencies[] = textbook
-dependencies[] = textbook_editor
-dependencies[] = textbook_templates
 ; User Interface
 dependencies[] = tinynav
 ; UUID
@@ -132,6 +129,9 @@ dependencies[] = admin_menu
 dependencies[] = admin_menu_toolbar
 ; Jammer
 dependencies[] = jammer
+; MOOC
+dependencies[] = mooc_roles_perms
+dependencies[] = mooc_ux_defaults
 
 ; Variables
 
@@ -150,16 +150,6 @@ variables[book_child_type] = 'page'
 variables[boxes_edit_location] = '2'
 variables[cache] = 1
 variables[cache_lifetime] = '0'
-variables[ckeditor_link_autocomplete_menus][- any -] = 0
-variables[ckeditor_link_autocomplete_menus][main-menu] = 0
-variables[ckeditor_link_autocomplete_menus][management] = 0
-variables[ckeditor_link_autocomplete_menus][navigation] = 0
-variables[ckeditor_link_autocomplete_menus][user-menu] = 0
-variables[ckeditor_link_autocomplete_node_types][- any -] = '- any -'
-variables[ckeditor_link_autocomplete_node_types][page] = 0
-variables[ckeditor_link_autocomplete_vocabularies][- any -] = 0
-variables[ckeditor_link_autocomplete_vocabularies][1] = 0
-variables[ckeditor_link_type_name] = 'Internal link'
 variables[color_chamfer_palette][bg_top] = '#000000'
 variables[color_chamfer_palette][bg_bottom] = '#111111'
 variables[color_chamfer_palette][ext_link] = '#00ccff'
@@ -229,62 +219,6 @@ variables[hidden_nodes_show_message] = 1
 variables[hidden_nodes_show_parent_message] = 1
 variables[hidden_nodes_show_partial_message] = 1
 variables[hidden_nodes_types][page] = 'page'
-variables[imce_custom_content][imce_mkdir_content] = '1'
-variables[imce_custom_process][imce_mkdir_process_profile] = '1'
-variables[imce_profiles][1][name] = 'User-1'
-variables[imce_profiles][1][usertab] = '1'
-variables[imce_profiles][1][filesize] = '0'
-variables[imce_profiles][1][quota] = '0'
-variables[imce_profiles][1][tuquota] = '0'
-variables[imce_profiles][1][extensions] = '*'
-variables[imce_profiles][1][dimensions] = '1200x1200'
-variables[imce_profiles][1][filenum] = '0'
-variables[imce_profiles][1][directories][0][name] = '.'
-variables[imce_profiles][1][directories][0][subnav] = '1'
-variables[imce_profiles][1][directories][0][browse] = '1'
-variables[imce_profiles][1][directories][0][upload] = '1'
-variables[imce_profiles][1][directories][0][thumb] = '1'
-variables[imce_profiles][1][directories][0][delete] = '1'
-variables[imce_profiles][1][directories][0][resize] = '1'
-variables[imce_profiles][1][directories][0][crop] = '1'
-variables[imce_profiles][1][directories][0][mkdir] = '1'
-variables[imce_profiles][1][directories][0][rmdir] = '1'
-variables[imce_profiles][1][thumbnails][0][name] = 'Small'
-variables[imce_profiles][1][thumbnails][0][dimensions] = '90x90'
-variables[imce_profiles][1][thumbnails][0][prefix] = 'small_'
-variables[imce_profiles][1][thumbnails][0][suffix] = ''
-variables[imce_profiles][1][thumbnails][1][name] = 'Medium'
-variables[imce_profiles][1][thumbnails][1][dimensions] = '120x120'
-variables[imce_profiles][1][thumbnails][1][prefix] = 'medium_'
-variables[imce_profiles][1][thumbnails][1][suffix] = ''
-variables[imce_profiles][1][thumbnails][2][name] = 'Large'
-variables[imce_profiles][1][thumbnails][2][dimensions] = '180x180'
-variables[imce_profiles][1][thumbnails][2][prefix] = 'large_'
-variables[imce_profiles][1][thumbnails][2][suffix] = ''
-variables[imce_profiles][1][mkdirnum] = '0'
-variables[imce_profiles][2][name] = 'Sample profile'
-variables[imce_profiles][2][usertab] = '1'
-variables[imce_profiles][2][filesize] = '1'
-variables[imce_profiles][2][quota] = '2'
-variables[imce_profiles][2][tuquota] = '0'
-variables[imce_profiles][2][extensions] = 'gif png jpg jpeg'
-variables[imce_profiles][2][dimensions] = '800x600'
-variables[imce_profiles][2][filenum] = '1'
-variables[imce_profiles][2][directories][0][name] = 'u%uid'
-variables[imce_profiles][2][directories][0][subnav] = '0'
-variables[imce_profiles][2][directories][0][browse] = '1'
-variables[imce_profiles][2][directories][0][upload] = '1'
-variables[imce_profiles][2][directories][0][thumb] = '1'
-variables[imce_profiles][2][directories][0][delete] = '0'
-variables[imce_profiles][2][directories][0][resize] = '0'
-variables[imce_profiles][2][directories][0][crop] = '0'
-variables[imce_profiles][2][directories][0][mkdir] = '0'
-variables[imce_profiles][2][directories][0][rmdir] = '0'
-variables[imce_profiles][2][thumbnails][0][name] = 'Thumb'
-variables[imce_profiles][2][thumbnails][0][dimensions] = '90x90'
-variables[imce_profiles][2][thumbnails][0][prefix] = 'thumb_'
-variables[imce_profiles][2][thumbnails][0][suffix] = ''
-variables[imce_profiles][2][mkdirnum] = '2'
 variables[jammer_author_options][page] = 'page'
 variables[jammer_comment_settings][page] = 'page'
 variables[jammer_menu_options][page] = 'page'

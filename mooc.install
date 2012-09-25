@@ -83,10 +83,10 @@ function mooc_install() {
       'cache' => -1,
     ),
   );
-	// drop system / user blocks to ensure correct building
-	db_delete('block')->condition('module', 'system')->execute();
-	db_delete('block')->condition('module', 'user')->execute();
-	// add in our blocks defined above
+  // drop system / user blocks to ensure correct building
+  db_delete('block')->condition('module', 'system')->execute();
+  db_delete('block')->condition('module', 'user')->execute();
+  // add in our blocks defined above
   $query = db_insert('block')->fields(array('module', 'delta', 'theme', 'status', 'weight', 'region', 'pages', 'cache'));
   foreach ($blocks as $block) {
     $query->values($block);
@@ -262,7 +262,51 @@ function mooc_install() {
     ),
   );
   field_create_instance($instance);
+  // Create a Home link in the main menu.
+  $item = array(
+    'link_title' => st('Home'),
+    'link_path' => '<front>',
+    'menu_name' => 'main-menu',
+  );
+  menu_link_save($item);
+  // revert features to ensure they are all installed
+  $features = array(
+    'textbook_editor',
+    'textbook_templates',
+    'feeds_node_helper_import',
+    'regions_admin_example',
+    'mooc_ux_defaults',
+    'mooc_roles_perms',
+  );
+  features_revert($features);
 
+  // From shortcut.install, add shortcuts to the default set on install
+  $shortcut_set = shortcut_set_load(SHORTCUT_DEFAULT_SET_NAME);
+  $shortcut_set->links = array(
+    array(
+      'link_path' => 'admin/content/book', 
+      'link_title' => st('Course outline'), 
+      'weight' => -18,
+    ),
+    array(
+      'link_path' => 'admin/appearance/settings/chamfer', 
+      'link_title' => st('Theme'), 
+      'weight' => -17,
+    ),
+    array(
+      'link_path' => 'admin/content/scanner', 
+      'link_title' => st('Search / Replace'), 
+      'weight' => -16,
+    ),
+    array(
+      'link_path' => 'admin/config/system/course-settings', 
+      'link_title' => st('Course settings'), 
+      'weight' => -15,
+    ),
+  );
+  shortcut_set_save($shortcut_set);
+  // drop the "book" content type as its confusing
+  node_type_delete('book');
   // Create a default role for site administrators, with all available permissions assigned.
   $admin_role = new stdClass();
   $admin_role->name = 'administrator';
@@ -276,42 +320,6 @@ function mooc_install() {
   db_insert('users_roles')
     ->fields(array('uid' => 1, 'rid' => $admin_role->rid))
     ->execute();
-
-  // Create a Home link in the main menu.
-  $item = array(
-    'link_title' => st('Home'),
-    'link_path' => '<front>',
-    'menu_name' => 'main-menu',
-  );
-  menu_link_save($item);
-
-  // From shortcut.install, add shortcuts to the default set on install
-  $shortcut_set = shortcut_set_load(SHORTCUT_DEFAULT_SET_NAME);
-  $shortcut_set->links = array(
-		array(
-      'link_path' => 'admin/content/book', 
-      'link_title' => st('Course outline'), 
-      'weight' => -18,
-    ),
-		array(
-      'link_path' => 'admin/appearance/settings/chamfer', 
-      'link_title' => st('Theme'), 
-      'weight' => -17,
-    ),
-		array(
-      'link_path' => 'admin/content/scanner', 
-      'link_title' => st('Search / Replace'), 
-      'weight' => -16,
-    ),
-    array(
-      'link_path' => 'admin/config/system/course-settings', 
-      'link_title' => st('Course settings'), 
-      'weight' => -15,
-    ),
-  );
-  shortcut_set_save($shortcut_set);
-	// drop the "book" content type as its confusing
-	node_type_delete('book');
   // Update the menu router information.
   menu_rebuild();
   // ignore any rebuild messages
