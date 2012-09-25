@@ -223,7 +223,7 @@ projects[omega][type] = "theme"
 projects[omega][subdir] = "contrib"
 
 ; Clean, responsive and accessible sub-theme from omega
-projects[chamfer][version] = "1.0-beta4"
+projects[chamfer][version] = "1.0-beta5"
 projects[chamfer][type] = "theme"
 projects[chamfer][subdir] = "contrib"
 
