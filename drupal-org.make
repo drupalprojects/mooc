@@ -126,7 +126,7 @@ projects[feeds][subdir] = "contrib"
 projects[feeds][version] = "2.0-alpha5"
 ; Map book outlines to feed data
 projects[feeds_node_helper][subdir] = "contrib"
-projects[feeds_node_helper][version] = "1.1"
+projects[feeds_node_helper][version] = "1.2"
 ; Convert values before import
 projects[feeds_tamper][subdir] = "contrib"
 projects[feeds_tamper][version] = "1.0-beta3"
