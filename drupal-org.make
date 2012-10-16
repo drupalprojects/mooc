@@ -69,6 +69,15 @@ projects[field_collection][subdir] = "contrib"
 ; make fields that reference entities
 projects[entityreference][version] = "1.0-rc5"
 projects[entityreference][subdir] = "contrib"
+; allow prepopulating based on URL format for entity references
+projects[entityreference_prepopulate][version] = "1.1"
+projects[entityreference_prepopulate][subdir] = "contrib"
+; allow prepopulating of other fields based on URL format
+projects[prepopulate][version] = "2.x-dev"
+projects[prepopulate][subdir] = "contrib"
+; UX improvement for highlighting and referencing content in content
+projects[nodereference_highlight][version] = "1.0-alpha1"
+projects[nodereference_highlight][subdir] = "contrib"
 ; Color picker widget
 projects[jquery_colorpicker][subdir] = "contrib"
 projects[jquery_colorpicker][version] = "1.0-rc1"
@@ -123,13 +132,13 @@ projects[advanced_help][subdir] = "contrib"
 ; Content migration
 ; Import data from external sources
 projects[feeds][subdir] = "contrib"
-projects[feeds][version] = "2.0-alpha5"
+projects[feeds][version] = "2.0-alpha6"
 ; Map book outlines to feed data
 projects[feeds_node_helper][subdir] = "contrib"
 projects[feeds_node_helper][version] = "1.2"
 ; Convert values before import
 projects[feeds_tamper][subdir] = "contrib"
-projects[feeds_tamper][version] = "1.0-beta3"
+projects[feeds_tamper][version] = "1.0-beta4"
 ; import XML documents and walk them
 projects[feeds_xpathparser][subdir] = "contrib"
 projects[feeds_xpathparser][version] = "1.0-beta3"
@@ -146,7 +155,7 @@ projects[features][subdir] = "contrib"
 projects[features][version] = "1.0"
 ; develop features faster
 projects[ftools][subdir] = "contrib"
-projects[ftools][version] = "1.5"
+projects[ftools][version] = "1.6"
 ; Best practice
 projects[backup_migrate][version] = "2.4"
 projects[backup_migrate][subdir] = "contrib"
