@@ -18,13 +18,13 @@ projects[scanner][subdir] = "contrib"
 projects[scanner][version] = "1.x-dev"
 ; Text editor UX
 projects[textbook][subdir] = "contrib"
-projects[textbook][version] = "1.0-beta3"
+projects[textbook][version] = "1.0-rc1"
 ; Text editor API
 projects[wysiwyg][subdir] = "contrib"
-projects[wysiwyg][version] = "2.x-dev"
+projects[wysiwyg][version] = "2.2"
 ; Reusable HTML/CSS templates
 projects[wysiwyg_template][subdir] = "contrib"
-projects[wysiwyg_template][version] = "2.8"
+projects[wysiwyg_template][version] = "2.9"
 ; Clean file upload manager
 projects[imce][subdir] = "contrib"
 projects[imce][version] = "1.5"
@@ -76,7 +76,7 @@ projects[entityreference_prepopulate][subdir] = "contrib"
 projects[prepopulate][version] = "2.x-dev"
 projects[prepopulate][subdir] = "contrib"
 ; UX improvement for highlighting and referencing content in content
-projects[nodereference_highlight][version] = "1.0-alpha1"
+projects[nodereference_highlight][version] = "1.0-alpha2"
 projects[nodereference_highlight][subdir] = "contrib"
 ; Color picker widget
 projects[jquery_colorpicker][subdir] = "contrib"
@@ -132,7 +132,7 @@ projects[advanced_help][subdir] = "contrib"
 ; Content migration
 ; Import data from external sources
 projects[feeds][subdir] = "contrib"
-projects[feeds][version] = "2.0-alpha6"
+projects[feeds][version] = "2.0-alpha7"
 ; Map book outlines to feed data
 projects[feeds_node_helper][subdir] = "contrib"
 projects[feeds_node_helper][version] = "1.2"
@@ -146,7 +146,7 @@ projects[feeds_xpathparser][version] = "1.0-beta3"
 ; Development
 ; export settings to contribute back to the project
 projects[profiler_builder][subdir] = "contrib"
-projects[profiler_builder][version] = "1.0-beta2"
+projects[profiler_builder][version] = "1.0-rc1"
 ; Developer tools
 projects[devel][subdir] = "contrib"
 projects[devel][version] = "1.3"
@@ -232,7 +232,7 @@ projects[omega][type] = "theme"
 projects[omega][subdir] = "contrib"
 
 ; Clean, responsive and accessible sub-theme from omega
-projects[chamfer][version] = "1.0-beta5"
+projects[chamfer][version] = "1.0-rc1"
 projects[chamfer][type] = "theme"
 projects[chamfer][subdir] = "contrib"
 
