@@ -188,7 +188,7 @@ projects[lightbox2][subdir] = "contrib"
 projects[wysiwyg][version] = "2.2"
 projects[wysiwyg][subdir] = "contrib"
 
-projects[wysiwyg_template][version] = "2.9"
+projects[wysiwyg_template][version] = "2.x-dev"
 projects[wysiwyg_template][subdir] = "contrib"
 
 projects[views][version] = "3.5"
