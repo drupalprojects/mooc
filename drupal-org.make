@@ -203,7 +203,7 @@ projects[views_bulk_operations][subdir] = "contrib"
 projects[views_fluid_grid][version] = "3.0"
 projects[views_fluid_grid][subdir] = "contrib"
 
-projects[nodereference_highlight][version] = "1.0-alpha2" ;
+projects[nodereference_highlight][version] = "1.x-dev"
 projects[nodereference_highlight][subdir] = "contrib"
 
 ; Themes
