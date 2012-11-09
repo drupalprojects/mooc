@@ -1,41 +1,29 @@
 ; required for packaging
 name = "MOOC"
 description = "Massively Open Online Course is a set of tools for building an online course"
+exclusive = "1"
 core = "7.x"
-; Other
-dependencies[] = strongarm
-dependencies[] = masquerade
-dependencies[] = advanced_help
-dependencies[] = backup_migrate
-dependencies[] = boxes
-dependencies[] = diff
-dependencies[] = entity
-dependencies[] = entity_token
-dependencies[] = job_scheduler
-dependencies[] = libraries
-dependencies[] = menu_block
-dependencies[] = module_filter
-dependencies[] = options_element
-dependencies[] = scanner
-dependencies[] = select_or_other
-dependencies[] = stringoverrides
-dependencies[] = token
-dependencies[] = transliteration
-dependencies[] = pathauto
-dependencies[] = better_formats
-; Feeds
-dependencies[] = feeds_node_helper_import
-dependencies[] = feeds_node_helper
-dependencies[] = feeds_tamper
-dependencies[] = feeds_tamper_ui
-dependencies[] = feeds_ui
-dependencies[] = feeds_xpathparser
-dependencies[] = feeds
+; ----------
+; Dependencies
+; ----------
+; Administration
+dependencies[] = admin_menu
+dependencies[] = admin_menu_toolbar
+dependencies[] = admin_theme
+; Book
+dependencies[] = book_title_override
+; Chaos tool suite
+dependencies[] = ctools
+; Context
+dependencies[] = context
+dependencies[] = context_condition_theme
+dependencies[] = context_ui
 ; Core
 dependencies[] = block
 dependencies[] = book
 dependencies[] = color
 dependencies[] = contextual
+dependencies[] = dblog
 dependencies[] = field
 dependencies[] = field_sql_storage
 dependencies[] = field_ui
@@ -48,6 +36,7 @@ dependencies[] = menu
 dependencies[] = node
 dependencies[] = number
 dependencies[] = options
+dependencies[] = overlay
 dependencies[] = path
 dependencies[] = rdf
 dependencies[] = search
@@ -57,84 +46,107 @@ dependencies[] = taxonomy
 dependencies[] = text
 dependencies[] = update
 dependencies[] = user
-dependencies[] = dblog
-dependencies[] = overlay
-; Permissions
-dependencies[] = hidden_nodes
-; Features
-dependencies[] = chamfer_defaults
-dependencies[] = features
-; Textbook
-dependencies[] = textbook
-dependencies[] = textbook_editor
-dependencies[] = textbook_templates
-; Context
-dependencies[] = context
-dependencies[] = context_condition_theme
-dependencies[] = context_ui
-; Chaos tool suite
-dependencies[] = ctools
 ; Date/Time
 dependencies[] = date
 dependencies[] = date_api
 dependencies[] = date_popup
 dependencies[] = date_views
+; Entity
+dependencies[] = nodereference_highlight
+; Feeds
+dependencies[] = feeds
+dependencies[] = feeds_node_helper
+dependencies[] = feeds_node_helper_import
+dependencies[] = feeds_tamper
+dependencies[] = feeds_tamper_ui
+dependencies[] = feeds_ui
+dependencies[] = feeds_xpathparser
+; Fields
+dependencies[] = entityreference
+dependencies[] = entityreference_prepopulate
+dependencies[] = field_collection
+dependencies[] = field_group
+; Input filters
+dependencies[] = video_filter
+; Jammer
+dependencies[] = jammer
+; MOOC
+dependencies[] = mooc_roles_perms
+dependencies[] = mooc_ux_defaults
+; Media
+dependencies[] = imce
+dependencies[] = imce_crop
+dependencies[] = imce_mkdir
+; Node form columns
+dependencies[] = nodeformcols
+; Other
+dependencies[] = advanced_help
+dependencies[] = backup_migrate
+dependencies[] = better_formats
+dependencies[] = boxes
+dependencies[] = diff
+dependencies[] = entity
+dependencies[] = entity_token
+dependencies[] = job_scheduler
+dependencies[] = jw_player
+dependencies[] = libraries
+dependencies[] = masquerade
+dependencies[] = menu_block
+dependencies[] = module_filter
+dependencies[] = options_element
+dependencies[] = pathauto
+dependencies[] = prepopulate
+dependencies[] = scanner
+dependencies[] = select_or_other
+dependencies[] = stringoverrides
+dependencies[] = strongarm
+dependencies[] = tipsy
+dependencies[] = token
+dependencies[] = transliteration
+dependencies[] = typo
+; Outline Designer
+dependencies[] = outline_designer
+dependencies[] = outline_designer_book
+; Permissions
+dependencies[] = hidden_nodes
+; Regions
+dependencies[] = regions
+dependencies[] = regions_right_slideout
+; Textbook
+dependencies[] = textbook
+dependencies[] = textbook_editor
+dependencies[] = textbook_templates
 ; Theme Tools
 dependencies[] = delta
 dependencies[] = delta_blocks
 dependencies[] = delta_color
 dependencies[] = delta_ui
 dependencies[] = omega_tools
-; Fields
-dependencies[] = entityreference
-dependencies[] = field_collection
-dependencies[] = field_group
-; Media
-dependencies[] = imce
-dependencies[] = imce_crop
-dependencies[] = imce_mkdir
+; UUID
+dependencies[] = uuid
+; User Interface
+dependencies[] = tinynav
 ; User interface
+dependencies[] = ckeditor_link
 dependencies[] = imce_wysiwyg
 dependencies[] = lightbox2
 dependencies[] = wysiwyg
 dependencies[] = wysiwyg_template
-dependencies[] = ckeditor_link
-; Outline Designer
-dependencies[] = outline_designer
-dependencies[] = outline_designer_book
-; Development
-dependencies[] = profiler_builder
-; Regions
-dependencies[] = regions
-dependencies[] = regions_admin_example
-dependencies[] = regions_admin_left
-dependencies[] = regions_right_slideout
-; User Interface
-dependencies[] = tinynav
-; UUID
-dependencies[] = uuid
-; Input filters
-dependencies[] = video_filter
 ; Views
+dependencies[] = views
+dependencies[] = views_bulk_operations
 dependencies[] = views_fluid_grid
 dependencies[] = views_ui
-dependencies[] = views
-; Book
-dependencies[] = book_title_override
-; Node form columns
-dependencies[] = nodeformcols
-; Administration
-dependencies[] = admin_theme
-dependencies[] = admin_menu
-dependencies[] = admin_menu_toolbar
-; Jammer
-dependencies[] = jammer
-; MOOC
-dependencies[] = mooc_roles_perms
-dependencies[] = mooc_ux_defaults
+; Features
+dependencies[] = features
+dependencies[] = chamfer_defaults
+dependencies[] = node_reference_highlight_glossary
 
+; ----------
 ; Variables
-
+; ----------
+variables[additional_settings__active_tab_nrhi_person] = 'edit-submission'
+variables[additional_settings__active_tab_nrhi_term] = 'edit-submission'
 variables[additional_settings__active_tab_page] = 'edit-submission'
 variables[admin_menu_cache_client] = '1'
 variables[admin_menu_display] = 'plid'
@@ -146,34 +158,20 @@ variables[admin_theme_admin_theme_devel] = '1'
 variables[anonymous] = 'Anonymous'
 variables[array_filter] = true
 variables[book_allowed_types][0] = 'page'
+variables[book_allowed_types][1] = 'nrhi_term'
 variables[book_child_type] = 'page'
 variables[boxes_edit_location] = '2'
-variables[cache] = 1
-variables[cache_lifetime] = '0'
-variables[color_chamfer_palette][bg_top] = '#000000'
-variables[color_chamfer_palette][bg_bottom] = '#111111'
-variables[color_chamfer_palette][ext_link] = '#00ccff'
-variables[color_chamfer_palette][ext_text] = '#00eeff'
-variables[color_chamfer_palette][page_header] = '#00b1ff'
-variables[color_chamfer_palette][page_links] = '#0099ff'
-variables[color_chamfer_palette][section_header] = '#00b1ff'
-variables[color_chamfer_palette][section_links] = '#0099ff'
-variables[color_chamfer_palette][section_link_active] = '#584efb'
-variables[color_chamfer_palette][menu_link] = '#cccccc'
-variables[color_chamfer_palette][menu_link_active] = '#fbf64e'
-variables[color_chamfer_palette][menu_shadow] = '#fbf64e'
 variables[context_block_rebuild_needed] = true
-variables[context_status][elearning_content] = false
-variables[date_api_version] = '7.2'
-variables[date_default_timezone] = 'America/New_York'
+variables[context_status][elearning_content] = 'false'
 variables[default_feeds_tamper][elms_node_import-xpathparser_3-current_user_id] = 'false'
 variables[default_feeds_tamper][elms_node_import-xpathparser_1-find_replace] = 'false'
+variables[default_feeds_tamper][feeds_node_helper_book_import-xpathparser_1-jwplayer_find_replace] = false
 variables[default_nodes_main] = '10'
 variables[delta_blocks_branding_logo_linked] = 'true'
 variables[delta_blocks_branding_logo_render] = 'true'
 variables[delta_blocks_branding_site_name_linked] = 'true'
 variables[delta_blocks_breadcrumb_current] = '1'
-variables[delta_blocks_breadcrumb_title_hidden] = true
+variables[delta_blocks_breadcrumb_title_hidden] = 'true'
 variables[delta_blocks_logo_linked] = 'true'
 variables[delta_blocks_site_name_linked] = 'true'
 variables[delta_blocks_toggle][logo] = 'logo'
@@ -186,7 +184,8 @@ variables[delta_blocks_toggle][tabs] = 'tabs'
 variables[delta_blocks_toggle][messages] = 'messages'
 variables[delta_blocks_toggle][action-links] = 'action-links'
 variables[delta_blocks_toggle][feed-icons] = 'feed-icons'
-variables[enable_revisions_page_page] = 1
+variables[enable_revisions_page_nrhi_person] = 1
+variables[enable_revisions_page_page] = '1'
 variables[entityreference:base-tables][field_collection_item][0] = 'field_collection_item'
 variables[entityreference:base-tables][field_collection_item][1] = 'item_id'
 variables[entityreference:base-tables][node][0] = 'node'
@@ -197,6 +196,8 @@ variables[entityreference:base-tables][taxonomy_term][0] = 'taxonomy_term_data'
 variables[entityreference:base-tables][taxonomy_term][1] = 'tid'
 variables[entityreference:base-tables][taxonomy_vocabulary][0] = 'taxonomy_vocabulary'
 variables[entityreference:base-tables][taxonomy_vocabulary][1] = 'vid'
+variables[entityreference:base-tables][typo][0] = 'typo'
+variables[entityreference:base-tables][typo][1] = 'typo_id'
 variables[entityreference:base-tables][user][0] = 'users'
 variables[entityreference:base-tables][user][1] = 'uid'
 variables[entityreference:base-tables][wysiwyg_profile][0] = 'wysiwyg'
@@ -208,16 +209,20 @@ variables[features_ignored_orphans][menu] = 'menu'
 variables[features_ignored_orphans][views] = 'views'
 variables[features_ignored_orphans][entity] = 'entity'
 variables[features_ignored_orphans][uuid] = 'uuid'
+variables[features_ignored_orphans][wysiwyg_template] = 'wysiwyg_template'
 variables[feed_default_items] = '1'
 variables[feed_item_length] = 'title'
+variables[field_bundle_settings_node__nrhi_person][extra_fields][form][title][weight] = '-5'
+variables[field_bundle_settings_node__nrhi_person][extra_fields][form][path][weight] = '30'
+variables[file_private_path] = 'sites/default/files/private'
 variables[filter_fallback_format] = 'plain_text'
-variables[hidden_nodes_apply_styles] = 1
+variables[hidden_nodes_apply_styles] = '1'
 variables[hidden_nodes_message] = 'This content is currently hidden and not displayed to certain user roles.'
 variables[hidden_nodes_parent_message] = 'This content is not hidden, but it has some parent content that is and will not display in most book-based menus as a result.'
 variables[hidden_nodes_partial_message] = 'This page contains some content that is currently hidden and not displayed to certain user roles.'
-variables[hidden_nodes_show_message] = 1
-variables[hidden_nodes_show_parent_message] = 1
-variables[hidden_nodes_show_partial_message] = 1
+variables[hidden_nodes_show_message] = '1'
+variables[hidden_nodes_show_parent_message] = '1'
+variables[hidden_nodes_show_partial_message] = '1'
 variables[hidden_nodes_types][page] = 'page'
 variables[jammer_author_options][page] = 'page'
 variables[jammer_comment_settings][page] = 'page'
@@ -227,9 +232,10 @@ variables[jammer_preview_button_unset_node_types][page] = 'page'
 variables[jammer_revision_information][page] = 'page'
 variables[jammer_revision_log_textarea_unset_node_types][page] = 'page'
 variables[jammer_teaser_controls_unset_node_types][page] = 'page'
-variables[jammer_user_delete_hide_button] = 1
-variables[job_scheduler_rebuild_all] = true
-variables[locale_custom_strings_en][][Admin blocks] = 'Admin'
+variables[jammer_user_delete_hide_button] = '1'
+variables[jw_player_inline_js] = 1
+variables[livefeedback_file_path] = 'livefeedback'
+variables[locale_custom_strings_en][0][Admin blocks] = 'Admin'
 variables[masquerade_admin_roles][3] = '3'
 variables[masquerade_admin_roles][1] = '0'
 variables[masquerade_admin_roles][2] = '0'
@@ -249,46 +255,57 @@ variables[menu_default_active_menus][1] = 'main-menu'
 variables[menu_default_active_menus][2] = 'management'
 variables[menu_default_active_menus][3] = 'navigation'
 variables[menu_default_active_menus][4] = 'user-menu'
+variables[menu_default_active_menus][5] = 'devel'
+variables[menu_options_nrhi_person][0] = 'main-menu'
+variables[menu_parent_nrhi_person] = 'main-menu:0'
+variables[menu_parent_nrhi_term] = 'main-menu:0'
 variables[menu_parent_page] = 'main-menu:0'
 variables[minimum_word_size] = '3'
 variables[nodeformscols_field_placements_page_default][title][region] = 'main'
 variables[nodeformscols_field_placements_page_default][title][weight] = '0'
-variables[nodeformscols_field_placements_page_default][title][has_required] = true
+variables[nodeformscols_field_placements_page_default][title][has_required] = 'true'
 variables[nodeformscols_field_placements_page_default][title][title] = 'Title'
 variables[nodeformscols_field_placements_page_default][additional_settings][region] = 'right'
 variables[nodeformscols_field_placements_page_default][additional_settings][weight] = '3'
-variables[nodeformscols_field_placements_page_default][additional_settings][has_required] = false
+variables[nodeformscols_field_placements_page_default][additional_settings][has_required] = 'false'
 variables[nodeformscols_field_placements_page_default][additional_settings][title] = 'Vertical tabs'
-variables[nodeformscols_field_placements_page_default][additional_settings][hidden] = 0
+variables[nodeformscols_field_placements_page_default][additional_settings][hidden] = '0'
 variables[nodeformscols_field_placements_page_default][actions][region] = 'right'
 variables[nodeformscols_field_placements_page_default][actions][weight] = '0'
-variables[nodeformscols_field_placements_page_default][actions][has_required] = false
+variables[nodeformscols_field_placements_page_default][actions][has_required] = 'false'
 variables[nodeformscols_field_placements_page_default][actions][title] = 'Save'
-variables[nodeformscols_field_placements_page_default][actions][hidden] = 0
+variables[nodeformscols_field_placements_page_default][actions][hidden] = '0'
 variables[nodeformscols_field_placements_page_default][body][region] = 'main'
 variables[nodeformscols_field_placements_page_default][body][weight] = '1'
-variables[nodeformscols_field_placements_page_default][body][has_required] = false
+variables[nodeformscols_field_placements_page_default][body][has_required] = 'false'
 variables[nodeformscols_field_placements_page_default][body][title] = 'Body'
-variables[nodeformscols_field_placements_page_default][body][hidden] = 0
+variables[nodeformscols_field_placements_page_default][body][hidden] = '0'
 variables[nodeformscols_field_placements_page_default][book_title_override_override][region] = 'right'
 variables[nodeformscols_field_placements_page_default][book_title_override_override][weight] = '1'
-variables[nodeformscols_field_placements_page_default][book_title_override_override][has_required] = false
+variables[nodeformscols_field_placements_page_default][book_title_override_override][has_required] = 'false'
 variables[nodeformscols_field_placements_page_default][book_title_override_override][title] = 'Override book title'
-variables[nodeformscols_field_placements_page_default][book_title_override_override][hidden] = 0
+variables[nodeformscols_field_placements_page_default][book_title_override_override][hidden] = '0'
 variables[nodeformscols_field_placements_page_default][book_title_override_title][region] = 'right'
 variables[nodeformscols_field_placements_page_default][book_title_override_title][weight] = '2'
-variables[nodeformscols_field_placements_page_default][book_title_override_title][has_required] = false
+variables[nodeformscols_field_placements_page_default][book_title_override_title][has_required] = 'false'
 variables[nodeformscols_field_placements_page_default][book_title_override_title][title] = 'Override title'
-variables[nodeformscols_field_placements_page_default][book_title_override_title][hidden] = 0
+variables[nodeformscols_field_placements_page_default][book_title_override_title][hidden] = '0'
 variables[node_admin_theme] = '1'
 variables[node_options_book][0] = 'status'
+variables[node_options_nrhi_person][0] = 'status'
+variables[node_options_nrhi_person][1] = 'promote'
+variables[node_options_nrhi_term][0] = 'status'
+variables[node_options_nrhi_term][1] = 'revision'
 variables[node_options_page][0] = 'status'
 variables[node_options_page][1] = 'revision'
+variables[node_preview_nrhi_person] = '1'
+variables[node_preview_nrhi_term] = '0'
 variables[node_preview_page] = '1'
 variables[node_rank_comments] = '0'
 variables[node_rank_promote] = '0'
 variables[node_rank_relevance] = '0'
 variables[node_rank_sticky] = '0'
+variables[node_submitted_nrhi_person] = 1
 variables[outline_designer_collapse_toggle] = '1'
 variables[outline_designer_context_menu_exclusion_matrix][2][nid][unchecked] = true
 variables[outline_designer_context_menu_exclusion_matrix][2][add_content][unchecked] = true
@@ -300,6 +317,16 @@ variables[outline_designer_context_menu_exclusion_matrix][2][duplicate][unchecke
 variables[outline_designer_context_menu_exclusion_matrix][2][change_type][unchecked] = true
 variables[outline_designer_context_menu_exclusion_matrix][2][hidden_nodes][unchecked] = true
 variables[outline_designer_context_menu_exclusion_matrix][2][book_title_override][unchecked] = true
+variables[outline_designer_context_menu_exclusion_matrix][7][nid][unchecked] = true
+variables[outline_designer_context_menu_exclusion_matrix][7][add_content][unchecked] = true
+variables[outline_designer_context_menu_exclusion_matrix][7][rename][unchecked] = true
+variables[outline_designer_context_menu_exclusion_matrix][7][edit][unchecked] = true
+variables[outline_designer_context_menu_exclusion_matrix][7][view][unchecked] = true
+variables[outline_designer_context_menu_exclusion_matrix][7][delete][unchecked] = true
+variables[outline_designer_context_menu_exclusion_matrix][7][duplicate][unchecked] = true
+variables[outline_designer_context_menu_exclusion_matrix][7][change_type][unchecked] = true
+variables[outline_designer_context_menu_exclusion_matrix][7][hidden_nodes][unchecked] = true
+variables[outline_designer_context_menu_exclusion_matrix][7][book_title_override][unchecked] = true
 variables[outline_designer_context_menu_exclusion_matrix][4][nid][unchecked] = true
 variables[outline_designer_context_menu_exclusion_matrix][4][add_content][unchecked] = true
 variables[outline_designer_context_menu_exclusion_matrix][4][rename][unchecked] = true
@@ -320,23 +347,12 @@ variables[outline_designer_context_menu_exclusion_matrix][8][duplicate][unchecke
 variables[outline_designer_context_menu_exclusion_matrix][8][change_type][unchecked] = true
 variables[outline_designer_context_menu_exclusion_matrix][8][hidden_nodes][unchecked] = true
 variables[outline_designer_context_menu_exclusion_matrix][8][book_title_override][unchecked] = true
-variables[outline_designer_context_menu_exclusion_matrix][7][nid][unchecked] = true
-variables[outline_designer_context_menu_exclusion_matrix][7][add_content][unchecked] = true
-variables[outline_designer_context_menu_exclusion_matrix][7][rename][unchecked] = true
-variables[outline_designer_context_menu_exclusion_matrix][7][edit][unchecked] = true
-variables[outline_designer_context_menu_exclusion_matrix][7][view][unchecked] = true
-variables[outline_designer_context_menu_exclusion_matrix][7][delete][unchecked] = true
-variables[outline_designer_context_menu_exclusion_matrix][7][duplicate][unchecked] = true
-variables[outline_designer_context_menu_exclusion_matrix][7][change_type][unchecked] = true
-variables[outline_designer_context_menu_exclusion_matrix][7][hidden_nodes][unchecked] = true
-variables[outline_designer_context_menu_exclusion_matrix][7][book_title_override][unchecked] = true
 variables[outline_designer_context_menu_exclusion_matrix][5][delete][unchecked] = true
 variables[outline_designer_context_menu_exclusion_matrix][5][duplicate][unchecked] = true
 variables[outline_designer_context_menu_exclusion_matrix][5][change_type][unchecked] = true
+variables[outline_designer_nrhi_term_icon] = 'profiles/mooc/modules/contrib/outline_designer/images/edit.png'
 variables[outline_designer_theme] = 'human'
 variables[overlap_cjk] = '1'
-variables[page_cache_maximum_age] = '0'
-variables[page_compression] = 1
 variables[pathauto_blog_pattern] = 'blogs/[user:name]'
 variables[pathauto_forum_pattern] = '[term:vocabulary]/[term:name]'
 variables[pathauto_node_pattern] = 'content/[node:title]'
@@ -345,6 +361,8 @@ variables[pathauto_taxonomy_term_pattern] = '[term:vocabulary]/[term:name]'
 variables[pathauto_user_pattern] = 'users/[user:name]'
 variables[path_alias_whitelist][node] = 'true'
 variables[path_alias_whitelist][user] = 'true'
+variables[save_continue_person] = 'Save and add fields'
+variables[save_continue_term] = 'Save and add fields'
 variables[scanner_body_field_revision_body_page] = '1'
 variables[scanner_published] = '1'
 variables[scanner_title_node_revision_page] = '1'
@@ -354,32 +372,46 @@ variables[search_active_modules][advanced_help] = '0'
 variables[search_active_modules][user] = '0'
 variables[search_cron_limit] = '100'
 variables[search_default_module] = 'node'
+variables[show_preview_changes_nrhi_person] = 1
+variables[textbook_active] = 'textbook_core'
+variables[textbook_reset] = 1
 variables[theme_default] = 'chamfer'
-variables[theme_settings][toggle_logo] = '1'
-variables[theme_settings][toggle_name] = '1'
-variables[theme_settings][toggle_slogan] = '1'
-variables[theme_settings][toggle_node_user_picture] = '1'
-variables[theme_settings][toggle_comment_user_picture] = '1'
-variables[theme_settings][toggle_comment_user_verification] = '1'
-variables[theme_settings][toggle_favicon] = '1'
-variables[theme_settings][toggle_main_menu] = '0'
-variables[theme_settings][toggle_secondary_menu] = '0'
-variables[theme_settings][default_logo] = '1'
-variables[theme_settings][logo_path] = ''
-variables[theme_settings][logo_upload] = ''
-variables[theme_settings][default_favicon] = '1'
-variables[theme_settings][favicon_path] = ''
-variables[theme_settings][favicon_upload] = ''
 variables[tinynav_active_class] = 'active-trail'
 variables[tinynav_css_selector] = '#zone-menu .region-menu ul.menu'
 variables[tinynav_media_query] = 'all and (max-width:980px)'
+variables[tipsy][drupal_forms][forms] = 0
+variables[tipsy][drupal_forms][options][fade] = 1
+variables[tipsy][drupal_forms][options][gravity] = 'autoWE'
+variables[tipsy][drupal_forms][options][delayIn] = '0'
+variables[tipsy][drupal_forms][options][delayOut] = '0'
+variables[tipsy][drupal_forms][options][trigger] = 'focus'
+variables[tipsy][drupal_forms][options][opacity] = '0.8'
+variables[tipsy][drupal_forms][options][offset] = '0'
+variables[tipsy][custom_selectors][0][selector] = '.tipsy'
+variables[tipsy][custom_selectors][0][options][fade] = 1
+variables[tipsy][custom_selectors][0][options][gravity] = 'w'
+variables[tipsy][custom_selectors][0][options][trigger] = 'hover'
+variables[tipsy][custom_selectors][0][options][delayIn] = '0'
+variables[tipsy][custom_selectors][0][options][delayOut] = '0'
+variables[tipsy][custom_selectors][0][options][opacity] = '0.8'
+variables[tipsy][custom_selectors][0][options][offset] = '0'
+variables[tipsy][custom_selectors][0][options][html] = 0
+variables[tipsy][custom_selectors][0][options][tooltip_content] = array (
+  'source' => 'attribute',
+  'selector' => 'title',
+)
+variables[transliteration_file_lowercase] = 1
+variables[transliteration_file_uploads] = 1
 variables[transliteration_search] = '1'
+variables[typo_max_chars] = 100
+variables[typo_reports_ttl] = '4320'
 variables[update_check_frequency] = '1'
 variables[update_notification_threshold] = 'all'
 variables[user_cancel_method] = 'user_cancel_block'
-variables[user_pictures] = 1
+variables[user_pictures] = '1'
 variables[user_picture_dimensions] = '1024x1024'
 variables[user_picture_file_size] = '800'
 variables[user_picture_path] = 'pictures'
 variables[user_picture_style] = 'thumbnail'
 variables[user_register] = '0'
+variables[views_defaults][glossary] = false
