@@ -276,7 +276,7 @@ function mooc_install() {
     'feeds_node_helper_import',
     'regions_admin_example',
     'mooc_ux_defaults',
-    'mooc_roles_perms',
+   // 'mooc_roles_perms',
   );
   features_revert($features);
 

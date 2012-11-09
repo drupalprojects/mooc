@@ -250,3 +250,5 @@ projects[scanner][patch][] = "http://drupal.org/files/strict-variable-by-referen
 projects[jw_player][patch][] = "http://drupal.org/files/jw_player-inlineconsistency.patch"
 ; Add input filter to JW Player
 projects[jw_player][patch][] = "http://drupal.org/files/jw_player-inputfilter.patch"
+; import of templates via features warning message
+projects[wysiwyg_template][patch][] = "http://drupal.org/files/wysiwyg_template-illegal-offset-1836822-1.patch"

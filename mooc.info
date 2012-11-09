@@ -70,9 +70,6 @@ dependencies[] = field_group
 dependencies[] = video_filter
 ; Jammer
 dependencies[] = jammer
-; MOOC
-dependencies[] = mooc_roles_perms
-dependencies[] = mooc_ux_defaults
 ; Media
 dependencies[] = imce
 dependencies[] = imce_crop
@@ -114,8 +111,6 @@ dependencies[] = regions
 dependencies[] = regions_right_slideout
 ; Textbook
 dependencies[] = textbook
-dependencies[] = textbook_editor
-dependencies[] = textbook_templates
 ; Theme Tools
 dependencies[] = delta
 dependencies[] = delta_blocks
@@ -140,10 +135,12 @@ dependencies[] = views_ui
 ; Features
 dependencies[] = features
 dependencies[] = chamfer_defaults
+dependencies[] = textbook_editor
+dependencies[] = textbook_templates
 dependencies[] = node_reference_highlight_glossary
 dependencies[] = regions_admin_example
 dependencies[] = mooc_ux_defaults
-dependencies[] = mooc_roles_perms
+; dependencies[] = mooc_roles_perms
 
 ; ----------
 ; Variables
@@ -217,7 +214,6 @@ variables[feed_default_items] = '1'
 variables[feed_item_length] = 'title'
 variables[field_bundle_settings_node__nrhi_person][extra_fields][form][title][weight] = '-5'
 variables[field_bundle_settings_node__nrhi_person][extra_fields][form][path][weight] = '30'
-variables[file_private_path] = 'sites/default/files/private'
 variables[filter_fallback_format] = 'plain_text'
 variables[hidden_nodes_apply_styles] = '1'
 variables[hidden_nodes_message] = 'This content is currently hidden and not displayed to certain user roles.'
