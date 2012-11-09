@@ -71,9 +71,6 @@ projects[video_filter][subdir] = "contrib"
 projects[jammer][version] = "1.2"
 projects[jammer][subdir] = "contrib"
 
-projects[mooc][version] = "1.x-dev"
-projects[mooc][subdir] = "contrib"
-
 projects[imce][version] = "1.5"
 projects[imce][subdir] = "contrib"
 
