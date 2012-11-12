@@ -71,7 +71,7 @@ projects[video_filter][subdir] = "contrib"
 projects[jammer][version] = "1.2"
 projects[jammer][subdir] = "contrib"
 
-projects[imce][version] = "1.5"
+projects[imce][version] = "1.6"
 projects[imce][subdir] = "contrib"
 
 projects[imce_crop][version] = "1.0"
@@ -161,8 +161,11 @@ projects[hidden_nodes][subdir] = "contrib"
 projects[regions][version] = "1.x-dev"
 projects[regions][subdir] = "contrib"
 
-projects[textbook][version] = "1.0-rc1"
+projects[textbook][version] = "1.0-rc2"
 projects[textbook][subdir] = "contrib"
+
+projects[typogrify][version] = "1.0-rc5"
+projects[typogrify][subdir] = "contrib"
 
 projects[delta][version] = "3.0-beta11"
 projects[delta][subdir] = "contrib"
