@@ -53,7 +53,7 @@ projects[feeds_tamper][subdir] = "contrib"
 projects[feeds_xpathparser][version] = "1.0-beta3"
 projects[feeds_xpathparser][subdir] = "contrib"
 
-projects[entityreference][version] = "1.0-rc5"
+projects[entityreference][version] = "1.0"
 projects[entityreference][subdir] = "contrib"
 
 projects[entityreference_prepopulate][version] = "1.1"
@@ -205,6 +205,16 @@ projects[views_fluid_grid][subdir] = "contrib"
 
 projects[nodereference_highlight][version] = "1.x-dev"
 projects[nodereference_highlight][subdir] = "contrib"
+
+projects[book_touch][version] = "1.0-beta1"
+projects[book_touch][subdir] = "contrib"
+
+projects[thumbnav][version] = "1.0-alpha1"
+projects[thumbnav][subdir] = "contrib"
+
+projects[quojs][version] = "1.0-beta1"
+projects[quojs][subdir] = "contrib"
+
 
 ; Themes
 ; chamfer
