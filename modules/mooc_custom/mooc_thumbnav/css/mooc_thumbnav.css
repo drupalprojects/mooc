@@ -1,0 +1,30 @@
+/* CSS Document */
+#mooc_thumbnav_modal {
+  width: 50%;
+  top: 15%;
+  position: fixed;
+  display: none;
+  background-color: #FFF;
+  left: 25%;
+  border: 5px solid #999;
+  color: #333;
+  padding: 10px;
+}
+#mooc_thumbnav_modal ul.tinyjs {
+  display:none;
+}
+#mooc_thumbnav_modal.display {
+  display:block;
+}
+/* hide these items when on a phone */
+@media screen and (max-width: 739px) {
+  #block-boxes-mooc-instructor-contact {
+    display:none;
+  }
+  #block-menu-block-2 {
+    display:none;
+  }
+  #block-menu-block-1 {
+    display:none;
+  }
+}
