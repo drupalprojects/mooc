@@ -1,0 +1,26 @@
+<?php
+
+/**
+ * Implements hook_thumbnav_widget().
+ */
+function mooc_thumbnav_thumbnav_widget() {
+  $widgets = array();
+  // detect if we are on a node
+  if ($node = menu_get_object()) {
+    $widgets = array(
+      'mooc_thumbnav_bookmark' => array(
+        'icon' => base_path() . drupal_get_path('module', 'mooc_thumbnav') . '/images/bookmark.png',
+        'title' => t('Bookmark page'),
+        'inc' => base_path() . drupal_get_path('module', 'mooc_thumbnav') . '/js/mooc_thumbnav_bookmark.js',
+        'weight' => 1,
+      ),
+      'mooc_thumbnav_helpdesk' => array(
+        'icon' => base_path() . drupal_get_path('module', 'mooc_thumbnav') . '/images/helpdesk.png',
+        'title' => t('Contact helpdesk'),
+        'inc' => base_path() . drupal_get_path('module', 'mooc_thumbnav') . '/js/mooc_thumbnav_helpdesk.js',
+        'weight' => 2,
+      ),
+    );
+  }
+  return $widgets;
+}
