@@ -53,10 +53,4 @@ function mooc_thumbnav_thumbnav_widget() {
     );
   }
   return $widgets;
-}pal_get_path('module', 'mooc_thumbnav') . '/js/mooc_thumbnav_copyright.js',
-        'weight' => 5,
-      ),
-    );
-  }
-  return $widgets;
 }

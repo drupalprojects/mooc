@@ -9,4 +9,16 @@
   #block-menu-block-1 {
     display:none;
   }
+  #section-header {
+    display:none;
+  }
+  .book-navigation {
+    display:none;
+  }
+  #page {
+    margin-bottom:50px;
+  }
+}
+#thumbnav_modal select.tinynav {
+  display:block !important;
 }

@@ -1,7 +1,7 @@
 (function ($) {
   $(document).ready(function(){
     // if next is clicked go to the next page
-    $('.thumbnav_controller .mooc_thumbnav_outline').click(function(){
+    $('.thumbnav_controller img.mooc_thumbnav_outline').click(function(){
       var text = '';
       var title = $(this).attr('alt');
       if ($('#block-menu-block-1').length > 0) {
