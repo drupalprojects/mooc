@@ -149,7 +149,7 @@ projects[token][subdir] = "contrib"
 projects[transliteration][version] = "3.1"
 projects[transliteration][subdir] = "contrib"
 
-projects[typo][version] = "1.2"
+projects[typo][version] = "1.3"
 projects[typo][subdir] = "contrib"
 
 projects[outline_designer][version] = "2.0-alpha3"
