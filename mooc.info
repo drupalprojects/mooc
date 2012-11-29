@@ -132,6 +132,11 @@ dependencies[] = views
 dependencies[] = views_bulk_operations
 dependencies[] = views_fluid_grid
 dependencies[] = views_ui
+; Thumbnav
+dependencies[] = book_touch
+dependencies[] = thumbnav
+; dependencies[] = quojs
+dependencies[] = mooc_thumbnav
 ; Features
 dependencies[] = features
 dependencies[] = chamfer_defaults
