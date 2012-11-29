@@ -18,36 +18,42 @@ function mooc_thumbnav_thumbnav_widget() {
       'mooc_thumbnav_outline' => array(
         'icon' => base_path() . drupal_get_path('module', 'mooc_thumbnav') . '/images/outline.png',
         'title' => t('Course outline'),
-        'inc' => base_path() . drupal_get_path('module', 'mooc_thumbnav') . '/js/mooc_thumbnav_outline.js',
+        'inc' => drupal_get_path('module', 'mooc_thumbnav') . '/js/mooc_thumbnav_outline.js',
         'weight' => 1,
         'side' => 'right',
       ),
       'mooc_thumbnav_inst_contact' => array(
         'icon' => base_path() . drupal_get_path('module', 'mooc_thumbnav') . '/images/contact_info.png',
         'title' => t('Contact info'),
-        'inc' => base_path() . drupal_get_path('module', 'mooc_thumbnav') . '/js/mooc_thumbnav_inst_contact.js',
+        'inc' => drupal_get_path('module', 'mooc_thumbnav') . '/js/mooc_thumbnav_inst_contact.js',
         'weight' => 2,
         'side' => 'left',
       ),
       /*'mooc_thumbnav_bookmark' => array(
         'icon' => base_path() . drupal_get_path('module', 'mooc_thumbnav') . '/images/bookmark.png',
         'title' => t('Bookmark page'),
-        'inc' => base_path() . drupal_get_path('module', 'mooc_thumbnav') . '/js/mooc_thumbnav_bookmark.js',
+        'inc' => drupal_get_path('module', 'mooc_thumbnav') . '/js/mooc_thumbnav_bookmark.js',
         'weight' => 3,
         'side' => 'right',
       ),
       'mooc_thumbnav_helpdesk' => array(
         'icon' => base_path() . drupal_get_path('module', 'mooc_thumbnav') . '/images/helpdesk.png',
         'title' => t('Contact helpdesk'),
-        'inc' => base_path() . drupal_get_path('module', 'mooc_thumbnav') . '/js/mooc_thumbnav_helpdesk.js',
+        'inc' => drupal_get_path('module', 'mooc_thumbnav') . '/js/mooc_thumbnav_helpdesk.js',
         'weight' => 4,
         'side' => 'left',
       ),*/
       'mooc_thumbnav_copyright' => array(
         'icon' => base_path() . drupal_get_path('module', 'mooc_thumbnav') . '/images/copyright.png',
         'title' => t('Course copyright info'),
-        'inc' => base_path() . drupal_get_path('module', 'mooc_thumbnav') . '/js/mooc_thumbnav_copyright.js',
+        'inc' => drupal_get_path('module', 'mooc_thumbnav') . '/js/mooc_thumbnav_copyright.js',
         'weight' => 5,
+        'side' => 'left',
+      ),
+    );
+  }
+  return $widgets;
+} 5,
         'side' => 'left',
       ),
     );
