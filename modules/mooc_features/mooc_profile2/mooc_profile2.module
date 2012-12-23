@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the MOOC Profile2 feature.
+ */
+
+include_once 'mooc_profile2.features.inc';
