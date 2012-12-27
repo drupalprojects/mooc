@@ -17,7 +17,7 @@ projects[book_title_override][subdir] = "contrib"
 projects[ctools][version] = "1.2"
 projects[ctools][subdir] = "contrib"
 
-projects[context][version] = "3.0-beta4"
+projects[context][version] = "3.0-beta6"
 projects[context][subdir] = "contrib"
 
 projects[context_condition_theme][version] = "1.0"
@@ -59,7 +59,7 @@ projects[entityreference][subdir] = "contrib"
 projects[entityreference_prepopulate][version] = "1.1"
 projects[entityreference_prepopulate][subdir] = "contrib"
 
-projects[field_collection][version] = "1.0-beta4"
+projects[field_collection][version] = "1.0-beta5"
 projects[field_collection][subdir] = "contrib"
 
 projects[field_group][version] = "1.1"
@@ -98,7 +98,7 @@ projects[boxes][subdir] = "contrib"
 projects[diff][version] = "2.0"
 projects[diff][subdir] = "contrib"
 
-projects[entity][version] = "1.0-rc3"
+projects[entity][version] = "1.0"
 projects[entity][subdir] = "contrib"
 
 projects[job_scheduler][version] = "2.0-alpha3"
@@ -197,7 +197,7 @@ projects[wysiwyg_template][subdir] = "contrib"
 projects[views][version] = "3.5"
 projects[views][subdir] = "contrib"
 
-projects[views_bulk_operations][version] = "3.0"
+projects[views_bulk_operations][version] = "3.1"
 projects[views_bulk_operations][subdir] = "contrib"
 
 projects[views_fluid_grid][version] = "3.0"
@@ -219,7 +219,7 @@ projects[quojs][subdir] = "contrib"
 ; Themes
 ; chamfer
 projects[chamfer][type] = "theme"
-projects[chamfer][version] = "1.0-rc1"
+projects[chamfer][version] = "1.0-rc2"
 projects[chamfer][subdir] = "contrib"
 ; rubik
 projects[rubik][type] = "theme"
