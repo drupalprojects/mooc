@@ -257,6 +257,8 @@ libraries[profiler][directory_name] = "profiler"
 libraries[profiler][type] = "library"
 
 ; Patches
+; Adds Drush support
+projects[feeds][patch][] = "http://drupal.org/files/608408-feeds_drush_d7-57.patch"
 ; Fixes warning message in Scanner module
 projects[scanner][patch][] = "http://drupal.org/files/strict-variable-by-reference.patch"
 ; Help JW Player setting be more consistent
