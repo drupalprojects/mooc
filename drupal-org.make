@@ -222,7 +222,7 @@ projects[quojs][subdir] = "contrib"
 ; Themes
 ; chamfer
 projects[chamfer][type] = "theme"
-projects[chamfer][version] = "1.0-rc2"
+projects[chamfer][version] = "1.x-dev"
 projects[chamfer][subdir] = "contrib"
 ; rubik
 projects[rubik][type] = "theme"
