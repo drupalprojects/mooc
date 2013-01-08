@@ -17,6 +17,9 @@ projects[book_title_override][subdir] = "contrib"
 projects[ctools][version] = "1.2"
 projects[ctools][subdir] = "contrib"
 
+projects[cis_connector][version] = "1.x-dev"
+projects[cis_connector][subdir] = "contrib"
+
 projects[context][version] = "3.0-beta6"
 projects[context][subdir] = "contrib"
 
