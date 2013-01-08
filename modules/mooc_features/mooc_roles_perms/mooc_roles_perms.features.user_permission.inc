@@ -335,16 +335,6 @@ function mooc_roles_perms_user_default_permissions() {
     'module' => 'hidden_nodes',
   );
 
-  // Exported permission: view regions_admin_left region.
-  $permissions['view regions_admin_left region'] = array(
-    'name' => 'view regions_admin_left region',
-    'roles' => array(
-      0 => 'administrator',
-      1 => 'authenticated user',
-    ),
-    'module' => 'regions',
-  );
-
   // Exported permission: view regions_right_slideout region.
   $permissions['view regions_right_slideout region'] = array(
     'name' => 'view regions_right_slideout region',

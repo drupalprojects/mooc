@@ -1,7 +1,7 @@
 name = MOOC Profile2
 description = User fields stored using the profile2 module
 core = 7.x
-package = Features
+package = MOOC
 dependencies[] = entity
 dependencies[] = features
 dependencies[] = field_sql_storage

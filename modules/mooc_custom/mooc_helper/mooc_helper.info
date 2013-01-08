@@ -1,0 +1,4 @@
+name = MOOC Helper
+description = Helper functions and glue code for the MOOC code base
+core = 7.x
+package = MOOC

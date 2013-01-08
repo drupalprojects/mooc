@@ -1,0 +1,23 @@
+<?php
+/**
+ * Implements hook_init().
+ */
+function mooc_helper_init() {
+	// add css related to mooc helper instance
+	drupal_add_css(drupal_get_path('module', 'mooc_helper') . '/css/mooc_helper.css');
+}
+
+/**
+ * Return a list of all book roots as an array
+ */
+function _mooc_helper_all_book_outlines() {
+	$outlines = array();
+	// load all book outline etids
+  foreach (book_get_books() as $book_id => $book) {
+		// load book node fully
+    $node = node_load($book['nid']);
+		// create an array
+		$outlines[$node->uuid] = $node->book['link_title'];
+	}
+	return $outlines;
+}

@@ -36,8 +36,8 @@ function mooc_ux_defaults_menu_breadcrumb_alter(&$active_trail, $item) {
  * @see book.module
  */
 function mooc_ux_defaults_menu_alter(&$items) {
-  // Remove outline tab.
-  unset($items['node/%node/outline']);
+  // Remove link to outline tab
+  $items['node/%node/outline']['type'] = MENU_CALLBACK;
 }
 
 /**

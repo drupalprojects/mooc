@@ -26,9 +26,9 @@ function mooc_ux_defaults_context_default_contexts() {
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
-        'menu_block-1' => array(
-          'module' => 'menu_block',
-          'delta' => '1',
+        'system-main-menu' => array(
+          'module' => 'system',
+          'delta' => 'main-menu',
           'region' => 'menu',
           'weight' => '-10',
         ),
@@ -37,12 +37,6 @@ function mooc_ux_defaults_context_default_contexts() {
           'delta' => '2',
           'region' => 'sidebar_first',
           'weight' => '-10',
-        ),
-        'boxes-mooc_instructor_contact' => array(
-          'module' => 'boxes',
-          'delta' => 'mooc_instructor_contact',
-          'region' => 'sidebar_first',
-          'weight' => '7',
         ),
       ),
     ),

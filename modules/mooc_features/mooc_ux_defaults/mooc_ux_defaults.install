@@ -1,0 +1,15 @@
+<?php
+
+/**
+ * Implements hook_install().
+ */
+function mooc_ux_defaults_install() {
+  // remove the title from the primary links block instance
+	db_update('block')
+    ->fields(array(
+      'title' => '<none>',
+    ))
+    ->condition('module', 'system')
+		->condition('delta', 'main-menu')
+    ->execute();
+}
