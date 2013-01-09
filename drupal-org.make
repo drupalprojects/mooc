@@ -71,7 +71,7 @@ projects[field_group][subdir] = "contrib"
 projects[video_filter][version] = "3.x-dev"
 projects[video_filter][subdir] = "contrib"
 
-projects[jammer][version] = "1.2"
+projects[jammer][version] = "1.3"
 projects[jammer][subdir] = "contrib"
 
 projects[imce][version] = "1.6"
