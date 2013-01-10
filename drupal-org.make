@@ -107,9 +107,6 @@ projects[entity][subdir] = "contrib"
 projects[job_scheduler][version] = "2.0-alpha3"
 projects[job_scheduler][subdir] = "contrib"
 
-projects[jw_player][version] = "1.x-dev"
-projects[jw_player][subdir] = "contrib"
-
 projects[libraries][version] = "2.0"
 projects[libraries][subdir] = "contrib"
 
@@ -264,7 +261,3 @@ libraries[profiler][type] = "library"
 projects[feeds][patch][] = "http://drupal.org/files/608408-feeds_drush_d7-57.patch"
 ; Fixes warning message in Scanner module
 projects[scanner][patch][] = "http://drupal.org/files/strict-variable-by-reference.patch"
-; Help JW Player setting be more consistent
-projects[jw_player][patch][] = "http://drupal.org/files/jw_player-inlineconsistency.patch"
-; Add input filter to JW Player
-projects[jw_player][patch][] = "http://drupal.org/files/jw_player-inputfilter.patch"
