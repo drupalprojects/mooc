@@ -47,7 +47,7 @@ projects[ftools][subdir] = "contrib"
 projects[feeds][version] = "2.0-alpha7"
 projects[feeds][subdir] = "contrib"
 
-projects[feeds_node_helper][version] = "1.2"
+projects[feeds_node_helper][version] = "1.3"
 projects[feeds_node_helper][subdir] = "contrib"
 
 projects[feeds_tamper][version] = "1.0-beta4"
@@ -59,7 +59,7 @@ projects[feeds_xpathparser][subdir] = "contrib"
 projects[entityreference][version] = "1.0"
 projects[entityreference][subdir] = "contrib"
 
-projects[entityreference_prepopulate][version] = "1.1"
+projects[entityreference_prepopulate][version] = "1.2"
 projects[entityreference_prepopulate][subdir] = "contrib"
 
 projects[field_collection][version] = "1.0-beta5"
@@ -158,7 +158,7 @@ projects[outline_designer][subdir] = "contrib"
 projects[hidden_nodes][version] = "1.0"
 projects[hidden_nodes][subdir] = "contrib"
 
-projects[regions][version] = "1.x-dev"
+projects[regions][version] = "1.5"
 projects[regions][subdir] = "contrib"
 
 projects[textbook][version] = "1.0-rc2"
@@ -179,7 +179,7 @@ projects[uuid][subdir] = "contrib"
 projects[tinynav][version] = "1.1"
 projects[tinynav][subdir] = "contrib"
 
-projects[ckeditor_link][version] = "2.2"
+projects[ckeditor_link][version] = "2.3"
 projects[ckeditor_link][subdir] = "contrib"
 
 projects[imce_wysiwyg][version] = "1.0"
@@ -203,7 +203,7 @@ projects[views_bulk_operations][subdir] = "contrib"
 projects[views_fluid_grid][version] = "3.0"
 projects[views_fluid_grid][subdir] = "contrib"
 
-projects[nodereference_highlight][version] = "1.x-dev"
+projects[nodereference_highlight][version] = "1.0"
 projects[nodereference_highlight][subdir] = "contrib"
 
 projects[book_touch][version] = "1.0-beta1"
