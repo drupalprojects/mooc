@@ -22,6 +22,12 @@ function mooc_roles_perms_user_default_roles() {
     'weight' => '5',
   );
 
+  // Exported role: past student.
+  $roles['past student'] = array(
+    'name' => 'past student',
+    'weight' => '8',
+  );
+
   // Exported role: staff.
   $roles['staff'] = array(
     'name' => 'staff',

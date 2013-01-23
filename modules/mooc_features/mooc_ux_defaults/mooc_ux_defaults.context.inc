@@ -32,12 +32,6 @@ function mooc_ux_defaults_context_default_contexts() {
           'region' => 'menu',
           'weight' => '-10',
         ),
-        'menu_block-2' => array(
-          'module' => 'menu_block',
-          'delta' => '2',
-          'region' => 'sidebar_first',
-          'weight' => '-10',
-        ),
       ),
     ),
   );

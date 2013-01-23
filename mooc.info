@@ -12,6 +12,8 @@ dependencies[] = admin_menu_toolbar
 dependencies[] = admin_theme
 ; Book
 dependencies[] = book_title_override
+; CIS
+dependencies[] = cis_connector
 ; Chaos tool suite
 dependencies[] = ctools
 ; Context
@@ -23,6 +25,7 @@ dependencies[] = block
 dependencies[] = book
 dependencies[] = color
 dependencies[] = contextual
+dependencies[] = dashboard
 dependencies[] = dblog
 dependencies[] = field
 dependencies[] = field_sql_storage
@@ -67,6 +70,7 @@ dependencies[] = entityreference_prepopulate
 dependencies[] = field_collection
 dependencies[] = field_group
 ; Input filters
+dependencies[] = typogrify
 dependencies[] = video_filter
 ; Jammer
 dependencies[] = jammer
@@ -84,7 +88,9 @@ dependencies[] = boxes
 dependencies[] = diff
 dependencies[] = entity
 dependencies[] = entity_token
+dependencies[] = fitvids
 dependencies[] = job_scheduler
+dependencies[] = jw_player
 dependencies[] = libraries
 dependencies[] = masquerade
 dependencies[] = menu_block
@@ -92,6 +98,7 @@ dependencies[] = module_filter
 dependencies[] = options_element
 dependencies[] = pathauto
 dependencies[] = prepopulate
+dependencies[] = profile2
 dependencies[] = scanner
 dependencies[] = select_or_other
 dependencies[] = stringoverrides
@@ -119,6 +126,9 @@ dependencies[] = omega_tools
 ; UUID
 dependencies[] = uuid
 ; User Interface
+dependencies[] = book_touch
+dependencies[] = quojs
+dependencies[] = thumbnav
 dependencies[] = tinynav
 ; User interface
 dependencies[] = ckeditor_link
@@ -131,20 +141,21 @@ dependencies[] = views
 dependencies[] = views_bulk_operations
 dependencies[] = views_fluid_grid
 dependencies[] = views_ui
-; Thumbnav
-dependencies[] = book_touch
-dependencies[] = thumbnav
-; dependencies[] = quojs
-dependencies[] = mooc_thumbnav
+dependencies[] = views_xml_backend
+
 ; Features
 dependencies[] = features
+dependencies[] = cis_connector_profile2
 dependencies[] = chamfer_defaults
 dependencies[] = textbook_editor
 dependencies[] = textbook_templates
 dependencies[] = node_reference_highlight_glossary
-dependencies[] = regions_admin_example
 dependencies[] = mooc_ux_defaults
-; dependencies[] = mooc_roles_perms
+dependencies[] = mooc_roles_perms
+dependencies[] = mooc_textbook
+; MOOC
+dependencies[] = mooc_thumbnav
+dependencies[] = mooc_helper
 
 ; ----------
 ; Variables
@@ -236,6 +247,7 @@ variables[jammer_revision_information][page] = 'page'
 variables[jammer_revision_log_textarea_unset_node_types][page] = 'page'
 variables[jammer_teaser_controls_unset_node_types][page] = 'page'
 variables[jammer_user_delete_hide_button] = '1'
+variables[jw_player_inline_js] = 1
 variables[livefeedback_file_path] = 'livefeedback'
 variables[locale_custom_strings_en][0][Admin blocks] = 'Admin'
 variables[masquerade_admin_roles][3] = '3'

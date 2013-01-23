@@ -1,18 +1,18 @@
 /* CSS Document */
 #toc {
-	float:right;
-	position:relative;
-	margin:-10px 0px 0px 0px;
-	padding:15px;
+  float:right;
+  position:relative;
+  margin:-10px 0px 0px 0px;
+  padding:15px;
 }
 
 #toc span.toc-number {
-	display: block;
-	margin: 0px 5px 0px -5px;
-	float: left;
+  display: block;
+  margin: 0px 5px 0px -5px;
+  float: left;
 }
 @media screen and (max-width: 739px) {
-	#toc {
-	  float:none;
-	}
+  #toc {
+    float:none;
+  }
 }

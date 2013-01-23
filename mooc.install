@@ -29,6 +29,7 @@ function mooc_install() {
     ->condition('name', $admin_theme)
     ->execute();
   variable_set('admin_theme', $admin_theme);
+  
   // activate admin theme when editing a node
   variable_set('node_admin_theme', '1');
   $blocks = array(
@@ -262,13 +263,6 @@ function mooc_install() {
     ),
   );
   field_create_instance($instance);
-  // Create a Home link in the main menu.
-  $item = array(
-    'link_title' => st('Home'),
-    'link_path' => '<front>',
-    'menu_name' => 'main-menu',
-  );
-  menu_link_save($item);
   // revert features to ensure they are all installed
   $features = array(
     'textbook_editor',
@@ -276,7 +270,7 @@ function mooc_install() {
     'feeds_node_helper_import',
     'regions_admin_example',
     'mooc_ux_defaults',
-   // 'mooc_roles_perms',
+    'mooc_roles_perms',
   );
   features_revert($features);
 
@@ -315,7 +309,8 @@ function mooc_install() {
   user_role_grant_permissions($admin_role->rid, array_keys(module_invoke_all('permission')));
   // Set this as the administrator role.
   variable_set('user_admin_role', $admin_role->rid);
-
+  // set admin menu client side cache to off for performance reasons
+  variable_set('admin_menu_cache_client', FALSE);
   // Assign user 1 the "administrator" role.
   db_insert('users_roles')
     ->fields(array('uid' => 1, 'rid' => $admin_role->rid))

@@ -1,12 +1,15 @@
 /* hide these items when on a phone */
 @media screen and (max-width: 739px) {
-  #block-boxes-mooc-instructor-contact {
+  #block-cis-service-connection-instructor-contact {
     display:none;
   }
-  #block-menu-block-2 {
+  #block-cis-service-connection-active-outline {
     display:none;
   }
-  #block-menu-block-1 {
+  #block-cis-service-connection-section-context-changer {
+    display:none;
+  }
+  #block-menu-menu-lms-menu {
     display:none;
   }
   #section-header {
@@ -17,7 +20,7 @@
   }
   #page {
     margin-bottom:50px;
-		margin-top:30px;
+    margin-top:30px;
   }
 }
 #thumbnav_modal select.tinynav {

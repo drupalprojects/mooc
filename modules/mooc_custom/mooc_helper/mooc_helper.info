@@ -2,3 +2,6 @@ name = MOOC Helper
 description = Helper functions and glue code for the MOOC code base
 core = 7.x
 package = MOOC
+dependencies[] = features
+features[features_api][] = api:1
+features[user_role][] = activation code holder
