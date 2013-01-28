@@ -32,7 +32,7 @@ projects[date][subdir] = "contrib"
 projects[devel][version] = "1.3"
 projects[devel][subdir] = "contrib"
 
-projects[profiler_builder][version] = "1.0-rc2"
+projects[profiler_builder][version] = "1.0-rc3"
 projects[profiler_builder][subdir] = "contrib"
 
 projects[chamfer_defaults][version] = "1.0-beta2"
@@ -152,10 +152,10 @@ projects[transliteration][subdir] = "contrib"
 projects[typo][version] = "1.3"
 projects[typo][subdir] = "contrib"
 
-projects[outline_designer][version] = "2.0-alpha3"
+projects[outline_designer][version] = "2.0-beta1"
 projects[outline_designer][subdir] = "contrib"
 
-projects[hidden_nodes][version] = "1.0"
+projects[hidden_nodes][version] = "1.1"
 projects[hidden_nodes][subdir] = "contrib"
 
 projects[regions][version] = "1.5"
