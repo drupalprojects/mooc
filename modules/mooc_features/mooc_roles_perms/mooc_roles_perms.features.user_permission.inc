@@ -161,6 +161,17 @@ function mooc_roles_perms_user_default_permissions() {
     'module' => 'book',
   );
 
+  // Exported permission: create nrhi_term content.
+  $permissions['create nrhi_term content'] = array(
+    'name' => 'create nrhi_term content',
+    'roles' => array(
+      0 => 'administrator',
+      1 => 'instructor',
+      2 => 'staff',
+    ),
+    'module' => 'node',
+  );
+
   // Exported permission: create page content.
   $permissions['create page content'] = array(
     'name' => 'create page content',
@@ -168,6 +179,16 @@ function mooc_roles_perms_user_default_permissions() {
       0 => 'administrator',
       1 => 'instructor',
       2 => 'staff',
+    ),
+    'module' => 'node',
+  );
+
+  // Exported permission: delete any nrhi_term content.
+  $permissions['delete any nrhi_term content'] = array(
+    'name' => 'delete any nrhi_term content',
+    'roles' => array(
+      0 => 'administrator',
+      1 => 'staff',
     ),
     'module' => 'node',
   );
@@ -182,9 +203,31 @@ function mooc_roles_perms_user_default_permissions() {
     'module' => 'node',
   );
 
+  // Exported permission: delete own nrhi_term content.
+  $permissions['delete own nrhi_term content'] = array(
+    'name' => 'delete own nrhi_term content',
+    'roles' => array(
+      0 => 'administrator',
+      1 => 'instructor',
+      2 => 'staff',
+    ),
+    'module' => 'node',
+  );
+
   // Exported permission: delete own page content.
   $permissions['delete own page content'] = array(
     'name' => 'delete own page content',
+    'roles' => array(
+      0 => 'administrator',
+      1 => 'instructor',
+      2 => 'staff',
+    ),
+    'module' => 'node',
+  );
+
+  // Exported permission: edit any nrhi_term content.
+  $permissions['edit any nrhi_term content'] = array(
+    'name' => 'edit any nrhi_term content',
     'roles' => array(
       0 => 'administrator',
       1 => 'instructor',
@@ -214,6 +257,17 @@ function mooc_roles_perms_user_default_permissions() {
     'module' => 'boxes',
   );
 
+  // Exported permission: edit own nrhi_term content.
+  $permissions['edit own nrhi_term content'] = array(
+    'name' => 'edit own nrhi_term content',
+    'roles' => array(
+      0 => 'administrator',
+      1 => 'instructor',
+      2 => 'staff',
+    ),
+    'module' => 'node',
+  );
+
   // Exported permission: edit own page content.
   $permissions['edit own page content'] = array(
     'name' => 'edit own page content',
@@ -233,6 +287,17 @@ function mooc_roles_perms_user_default_permissions() {
       1 => 'staff',
     ),
     'module' => 'admin_menu',
+  );
+
+  // Exported permission: highlight highlight content.
+  $permissions['highlight highlight content'] = array(
+    'name' => 'highlight highlight content',
+    'roles' => array(
+      0 => 'administrator',
+      1 => 'instructor',
+      2 => 'staff',
+    ),
+    'module' => 'nodereference_highlight',
   );
 
   // Exported permission: masquerade as user.
