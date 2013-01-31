@@ -53,3 +53,34 @@ function mooc_helper_set_cis_service_data($delta) {
   }
   return $data;
 }
+
+/**
+ * Implementation of hook_feeds_after_import().
+ */
+function mooc_helper_feeds_after_import(FeedsSource $source) {
+  //TODO: Convert to D7 code
+  //TODO: dump changed connotations about uuid location in D6
+  //TODO: make sure this only applies to the initial outline import routine
+  // need to clear the UUIDs of all imported nodes from the
+  // get a list of nodes that were just imported
+  $ary = array();
+  /*$result = db_query("SELECT nid FROM {feeds_node_item} WHERE id='elms_node_import'");
+  while ($val = db_fetch_array($result)) {
+    $ary[] = $val['nid'];
+  }
+  if (count($ary) != 0) {
+    // clear all nodes that came across
+    db_query("DELETE FROM {uuid_node} WHERE nid IN(". db_placeholders($ary) .")", $ary);
+    // clean up revisions if they exist
+    db_query("DELETE FROM {uuid_node_revisions} WHERE nid IN(". db_placeholders($ary) .")", $ary);
+    // clean up original import table
+    db_query("DELETE FROM {feeds_node_item} WHERE id='elms_node_import'");
+    // seed all nodes by saving them all again
+    foreach ($ary as $nid) {
+      $node = node_load($nid);
+      $node->uuid = uuid_uuid();
+      $node->revision_uuid = uuid_uuid();
+      node_save($node);
+    }
+  }*/
+}
