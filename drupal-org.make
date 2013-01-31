@@ -5,7 +5,7 @@ api = "2"
 ;projects[drupal][version] = "7.x"
 
 ; Modules
-projects[admin_menu][version] = "3.0-rc3"
+projects[admin_menu][version] = "3.0-rc4"
 projects[admin_menu][subdir] = "contrib"
 
 projects[admin_theme][version] = "1.0"
@@ -74,7 +74,7 @@ projects[video_filter][subdir] = "contrib"
 projects[jammer][version] = "1.3"
 projects[jammer][subdir] = "contrib"
 
-projects[imce][version] = "1.6"
+projects[imce][version] = "1.7"
 projects[imce][subdir] = "contrib"
 
 projects[imce_crop][version] = "1.0"
@@ -95,7 +95,7 @@ projects[backup_migrate][subdir] = "contrib"
 projects[better_formats][version] = "1.0-beta1"
 projects[better_formats][subdir] = "contrib"
 
-projects[boxes][version] = "1.0"
+projects[boxes][version] = "1.1"
 projects[boxes][subdir] = "contrib"
 
 projects[diff][version] = "2.0"
