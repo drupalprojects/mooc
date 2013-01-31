@@ -256,6 +256,13 @@ libraries[profiler][download][url] = "http://ftp.drupal.org/files/projects/profi
 libraries[profiler][directory_name] = "profiler"
 libraries[profiler][type] = "library"
 
+; Touch capable library for thumbnav interface
+libraries[quojs][directory_name] = "quojs"
+libraries[quojs][type] = "library"
+libraries[quojs][destination] = "libraries"
+libraries[quojs][download][type] = "get"
+libraries[quojs][download][url] = "https://github.com/soyjavi/QuoJS/archive/master.zip"
+
 ; Patches
 ; Adds Drush support
 projects[feeds][patch][] = "http://drupal.org/files/608408-feeds_drush_d7-57.patch"
