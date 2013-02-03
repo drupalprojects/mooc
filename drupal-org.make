@@ -234,7 +234,6 @@ projects[tao][type] = "theme"
 projects[tao][version] = "3.0-beta4"
 projects[tao][subdir] = "contrib"
 
-
 ; Libraries
 
 ; CKEditor for use as WYSIWYG default text editor
