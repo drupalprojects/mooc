@@ -209,6 +209,12 @@ projects[nodereference_highlight][subdir] = "contrib"
 projects[book_touch][version] = "1.0-beta1"
 projects[book_touch][subdir] = "contrib"
 
+projects[book_copy][version] = "1.x-dev"
+projects[book_copy][subdir] = "contrib"
+
+projects[node_clone][version] = "1.0-rc1"
+projects[node_clone][subdir] = "contrib"
+
 projects[thumbnav][version] = "1.0-alpha1"
 projects[thumbnav][subdir] = "contrib"
 
@@ -256,11 +262,11 @@ libraries[profiler][directory_name] = "profiler"
 libraries[profiler][type] = "library"
 
 ; Touch capable library for thumbnav interface
-libraries[quojs][directory_name] = "quojs"
-libraries[quojs][type] = "library"
-libraries[quojs][destination] = "libraries"
-libraries[quojs][download][type] = "get"
-libraries[quojs][download][url] = "https://github.com/soyjavi/QuoJS/archive/master.zip"
+;libraries[quojs][directory_name] = "quojs"
+;libraries[quojs][type] = "library"
+;libraries[quojs][destination] = "libraries"
+;libraries[quojs][download][type] = "get"
+;libraries[quojs][download][url] = "https://github.com/soyjavi/QuoJS/archive/master.zip"
 
 ; Patches
 ; Adds Drush support
