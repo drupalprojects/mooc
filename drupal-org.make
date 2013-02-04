@@ -161,7 +161,7 @@ projects[hidden_nodes][subdir] = "contrib"
 projects[regions][version] = "1.5"
 projects[regions][subdir] = "contrib"
 
-projects[textbook][version] = "1.0-rc2"
+projects[textbook][version] = "1.x-dev"
 projects[textbook][subdir] = "contrib"
 
 projects[typogrify][version] = "1.0-rc5"
@@ -176,7 +176,7 @@ projects[omega_tools][subdir] = "contrib"
 projects[uuid][version] = "1.x-dev"
 projects[uuid][subdir] = "contrib"
 
-projects[tinynav][version] = "1.1"
+projects[tinynav][version] = "1.x-dev"
 projects[tinynav][subdir] = "contrib"
 
 projects[ckeditor_link][version] = "2.3"
