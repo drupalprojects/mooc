@@ -38,8 +38,11 @@ projects[profiler_builder][subdir] = "contrib"
 projects[chamfer_defaults][version] = "1.0-beta2"
 projects[chamfer_defaults][subdir] = "contrib"
 
-projects[features][version] = "1.0"
+projects[features][version] = "2.0-beta1"
 projects[features][subdir] = "contrib"
+
+projects[features_override][version] = "2.0-beta2"
+projects[features_override][subdir] = "contrib"
 
 projects[ftools][version] = "1.6"
 projects[ftools][subdir] = "contrib"

@@ -90,7 +90,6 @@ dependencies[] = entity
 dependencies[] = entity_token
 dependencies[] = fitvids
 dependencies[] = job_scheduler
-dependencies[] = jw_player
 dependencies[] = libraries
 dependencies[] = masquerade
 dependencies[] = menu_block
@@ -145,6 +144,7 @@ dependencies[] = views_xml_backend
 
 ; Features
 dependencies[] = features
+dependencies[] = features_override
 dependencies[] = cis_connector_profile2
 dependencies[] = chamfer_defaults
 dependencies[] = textbook_editor
@@ -247,7 +247,6 @@ variables[jammer_revision_information][page] = 'page'
 variables[jammer_revision_log_textarea_unset_node_types][page] = 'page'
 variables[jammer_teaser_controls_unset_node_types][page] = 'page'
 variables[jammer_user_delete_hide_button] = '1'
-variables[jw_player_inline_js] = 1
 variables[livefeedback_file_path] = 'livefeedback'
 variables[locale_custom_strings_en][0][Admin blocks] = 'Admin'
 variables[masquerade_admin_roles][3] = '3'
