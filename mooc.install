@@ -44,16 +44,6 @@ function mooc_install() {
       'cache' => -1,
     ),
     array(
-      'module' => 'user',
-      'delta' => 'login',
-      'theme' => $default_theme,
-      'status' => 1,
-      'weight' => 0,
-      'region' => 'sidebar_first',
-      'pages' => '',
-      'cache' => -1,
-    ),
-    array(
       'module' => 'system',
       'delta' => 'help',
       'theme' => $default_theme,
@@ -264,13 +254,15 @@ function mooc_install() {
   );
   field_create_instance($instance);
   // revert features to ensure they are all installed
-  $features = array(
-    'textbook_editor',
-    'textbook_templates',
+  $features = array(		
     'feeds_node_helper_import',
-    'regions_admin_example',
+    'node_reference_highlight_glossary',
     'mooc_ux_defaults',
     'mooc_roles_perms',
+    'mooc_helper',
+		'textbook_editor',
+    'mooc_textbook',
+		'textbook_templates',
   );
   features_revert($features);
 
