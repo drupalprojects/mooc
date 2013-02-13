@@ -59,6 +59,9 @@ projects[feeds_tamper][subdir] = "contrib"
 projects[feeds_xpathparser][version] = "1.0-beta3"
 projects[feeds_xpathparser][subdir] = "contrib"
 
+projects[feedback_reloaded][version] = "1.x-dev"
+projects[feedback_reloaded][subdir] = "contrib"
+
 projects[entityreference][version] = "1.0"
 projects[entityreference][subdir] = "contrib"
 

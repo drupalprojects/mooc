@@ -106,6 +106,7 @@ dependencies[] = tipsy
 dependencies[] = token
 dependencies[] = transliteration
 dependencies[] = typo
+dependencies[] = feedback_reloaded
 ; Outline Designer
 dependencies[] = outline_designer
 dependencies[] = outline_designer_book
@@ -261,7 +262,7 @@ variables[jammer_revision_information][page] = 'page'
 variables[jammer_revision_log_textarea_unset_node_types][page] = 'page'
 variables[jammer_teaser_controls_unset_node_types][page] = 'page'
 variables[jammer_user_delete_hide_button] = '1'
-variables[livefeedback_file_path] = 'livefeedback'
+variables[feedback_reloaded_screenshot_method] = 'html2canvas'
 variables[locale_custom_strings_en][0][Admin blocks] = 'Admin'
 variables[masquerade_admin_roles][3] = '3'
 variables[masquerade_admin_roles][1] = '0'

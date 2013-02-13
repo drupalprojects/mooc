@@ -89,6 +89,15 @@ function mooc_roles_perms_user_default_permissions() {
     'module' => 'book',
   );
 
+  // Exported permission: access typo list.
+  $permissions['access typo list'] = array(
+    'name' => 'access typo list',
+    'roles' => array(
+      0 => 'administrator',
+    ),
+    'module' => 'typo',
+  );
+
   // Exported permission: access user profiles.
   $permissions['access user profiles'] = array(
     'name' => 'access user profiles',
@@ -130,6 +139,16 @@ function mooc_roles_perms_user_default_permissions() {
       2 => 'staff',
     ),
     'module' => 'book',
+  );
+
+  // Exported permission: view feedback messages.
+  $permissions['view feedback messages'] = array(
+    'name' => 'view feedback messages',
+    'roles' => array(
+      0 => 'administrator',
+      1 => 'staff',
+    ),
+    'module' => 'feedback_reloaded',
   );
 
   // Exported permission: administer themes.
@@ -312,6 +331,15 @@ function mooc_roles_perms_user_default_permissions() {
     'module' => 'masquerade',
   );
 
+  // Exported permission: may send typo reports.
+  $permissions['may send typo reports'] = array(
+    'name' => 'may send typo reports',
+    'roles' => array(
+      0 => 'administrator',
+    ),
+    'module' => 'typo',
+  );
+
   // Exported permission: perform search and replace.
   $permissions['perform search and replace'] = array(
     'name' => 'perform search and replace',
@@ -363,6 +391,19 @@ function mooc_roles_perms_user_default_permissions() {
       2 => 'staff',
     ),
     'module' => 'better_formats',
+  );
+
+  // Exported permission: access feedback form.
+  $permissions['access feedback form'] = array(
+    'name' => 'access feedback form',
+    'roles' => array(
+      0 => 'administrator',
+      1 => 'instructor',
+      2 => 'staff',
+      3 => 'student',
+      4 => 'teaching assistant',
+    ),
+    'module' => 'feedback_reloaded',
   );
 
   // Exported permission: use outline designer.

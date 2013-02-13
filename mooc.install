@@ -134,163 +134,18 @@ function mooc_install() {
   // Allow visitor account creation with administrative approval.
   variable_set('user_register', USER_REGISTER_VISITORS_ADMINISTRATIVE_APPROVAL);
 
-  // Create a default vocabulary named "Tags", enabled for the 'article' content type.
-  $description = st('Use tags to group articles on similar topics into categories.');
-  $help = st('Enter a comma-separated list of words to describe your content.');
-  $vocabulary = (object) array(
-    'name' => st('Tags'),
-    'description' => $description,
-    'machine_name' => 'tags',
-    'help' => $help,
-
-  );
-  taxonomy_vocabulary_save($vocabulary);
-
-  $field = array(
-    'field_name' => 'field_' . $vocabulary->machine_name,
-    'type' => 'taxonomy_term_reference',
-    // Set cardinality to unlimited for tagging.
-    'cardinality' => FIELD_CARDINALITY_UNLIMITED,
-    'settings' => array(
-      'allowed_values' => array(
-        array(
-          'vocabulary' => $vocabulary->machine_name,
-          'parent' => 0,
-        ),
-      ),
-    ),
-  );
-  field_create_field($field);
-
-  $instance = array(
-    'field_name' => 'field_' . $vocabulary->machine_name,
-    'entity_type' => 'node',
-    'label' => 'Tags',
-    'bundle' => 'article',
-    'description' => $vocabulary->help,
-    'widget' => array(
-      'type' => 'taxonomy_autocomplete',
-      'weight' => -4,
-    ),
-    'display' => array(
-      'default' => array(
-        'type' => 'taxonomy_term_reference_link',
-        'weight' => 10,
-      ),
-      'teaser' => array(
-        'type' => 'taxonomy_term_reference_link',
-        'weight' => 10,
-      ),
-    ),
-  );
-  field_create_instance($instance);
-
-
-  // Create an image field named "Image", enabled for the 'article' content type.
-  // Many of the following values will be defaulted, they're included here as an illustrative examples.
-  // See http://api.drupal.org/api/function/field_create_field/7
-
-  $field = array(
-    'field_name' => 'field_image',
-    'type' => 'image',
-    'cardinality' => 1,
-    'locked' => FALSE,
-    'indexes' => array('fid' => array('fid')),
-    'settings' => array(
-      'uri_scheme' => 'public',
-      'default_image' => FALSE,
-    ),
-    'storage' => array(
-      'type' => 'field_sql_storage',
-      'settings' => array(),
-    ),
-  );
-  field_create_field($field);
-
-
-  // Many of the following values will be defaulted, they're included here as an illustrative examples.
-  // See http://api.drupal.org/api/function/field_create_instance/7
-  $instance = array(
-    'field_name' => 'field_image',
-    'entity_type' => 'node',
-    'label' => 'Image',
-    'bundle' => 'article',
-    'description' => st('Upload an image to go with this article.'),
-    'required' => FALSE,
-
-    'settings' => array(
-      'file_directory' => 'field/image',
-      'file_extensions' => 'png gif jpg jpeg',
-      'max_filesize' => '',
-      'max_resolution' => '',
-      'min_resolution' => '',
-      'alt_field' => TRUE,
-      'title_field' => '',
-    ),
-
-    'widget' => array(
-      'type' => 'image_image',
-      'settings' => array(
-        'progress_indicator' => 'throbber',
-        'preview_image_style' => 'thumbnail',
-      ),
-      'weight' => -1,
-    ),
-
-    'display' => array(
-      'default' => array(
-        'label' => 'hidden',
-        'type' => 'image',
-        'settings' => array('image_style' => 'large', 'image_link' => ''),
-        'weight' => -1,
-      ),
-      'teaser' => array(
-        'label' => 'hidden',
-        'type' => 'image',
-        'settings' => array('image_style' => 'medium', 'image_link' => 'content'),
-        'weight' => -1,
-      ),
-    ),
-  );
-  field_create_instance($instance);
   // revert features to ensure they are all installed
-  $features = array(		
+  $features = array(    
     'feeds_node_helper_import',
     'node_reference_highlight_glossary',
     'mooc_ux_defaults',
     'mooc_roles_perms',
     'mooc_helper',
-		'textbook_editor',
+    'textbook_editor',
     'mooc_textbook',
-		'textbook_templates',
+    'textbook_templates',
   );
   features_revert($features);
-
-  // From shortcut.install, add shortcuts to the default set on install
-  $shortcut_set = shortcut_set_load(SHORTCUT_DEFAULT_SET_NAME);
-  $shortcut_set->links = array(
-    array(
-      'link_path' => 'admin/content/book', 
-      'link_title' => st('Course outline'), 
-      'weight' => -18,
-    ),
-    array(
-      'link_path' => 'admin/appearance/settings/chamfer', 
-      'link_title' => st('Theme'), 
-      'weight' => -17,
-    ),
-    array(
-      'link_path' => 'admin/content/scanner', 
-      'link_title' => st('Search / Replace'), 
-      'weight' => -16,
-    ),
-    array(
-      'link_path' => 'admin/config/system/course-settings', 
-      'link_title' => st('Course settings'), 
-      'weight' => -15,
-    ),
-  );
-  shortcut_set_save($shortcut_set);
   // drop the "book" content type as its confusing
   node_type_delete('book');
   // Create a default role for site administrators, with all available permissions assigned.
@@ -307,9 +162,45 @@ function mooc_install() {
   db_insert('users_roles')
     ->fields(array('uid' => 1, 'rid' => $admin_role->rid))
     ->execute();
-  // Update the menu router information.
+  // remove the two default shortcuts added
+  menu_delete_links(SHORTCUT_DEFAULT_SET_NAME);
+  // From shortcut.install, add shortcuts to the default set on install
+  $shortcut_set = shortcut_set_load(SHORTCUT_DEFAULT_SET_NAME);
+  $shortcut_set->links = array(
+    array(
+      'link_path' => 'admin/content/book', 
+      'link_title' => st('Instructional Outlines'), 
+      'weight' => -18,
+    ),
+    array(
+      'link_path' => 'admin/appearance/settings/chamfer', 
+      'link_title' => st('Theme'), 
+      'weight' => -17,
+    ),
+    array(
+      'link_path' => 'admin/content/scanner', 
+      'link_title' => st('Search / Replace'), 
+      'weight' => -16,
+    ),
+    array(
+      'link_path' => 'admin/config/system/course-settings', 
+      'link_title' => st('Course Settings'), 
+      'weight' => -15,
+    ),
+    array(
+      'link_path' => 'admin/reports/feedback', 
+      'link_title' => st('Visitor Feedback'), 
+      'weight' => -14,
+    ),
+    array(
+      'link_path' => 'typo-shortcut', 
+      'link_title' => st('Typo Report'), 
+      'weight' => -13,
+    ),
+  );
+  shortcut_set_save($shortcut_set);
   menu_rebuild();
-  // ignore any rebuild messages
+  // ignore any rebuild messages as we have no content
   node_access_needs_rebuild(FALSE);
   // ignore any other install messages
   drupal_get_messages();
