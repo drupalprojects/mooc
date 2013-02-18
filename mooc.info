@@ -147,12 +147,13 @@ dependencies[] = views_xml_backend
 dependencies[] = features
 dependencies[] = features_override
 dependencies[] = cis_connector_profile2
+dependencies[] = cis_service_roles
 dependencies[] = chamfer_defaults
 dependencies[] = textbook_editor
 dependencies[] = textbook_templates
 dependencies[] = node_reference_highlight_glossary
 dependencies[] = mooc_ux_defaults
-dependencies[] = mooc_roles_perms
+dependencies[] = mooc_perms
 dependencies[] = mooc_textbook
 ; MOOC
 dependencies[] = mooc_thumbnav

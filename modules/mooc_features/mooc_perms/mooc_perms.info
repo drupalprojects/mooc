@@ -1,5 +1,5 @@
-name = MOOC roles perms
-description = Default permissions and roles
+name = MOOC perms
+description = Default permissions
 core = 7.x
 package = MOOC
 php = 5.2.4
@@ -66,9 +66,3 @@ features[user_permission][] = view hidden content
 features[user_permission][] = view regions_right_slideout region
 features[user_permission][] = view revisions
 features[user_permission][] = view the administration theme
-features[user_role][] = guest
-features[user_role][] = instructor
-features[user_role][] = past student
-features[user_role][] = staff
-features[user_role][] = student
-features[user_role][] = teaching assistant

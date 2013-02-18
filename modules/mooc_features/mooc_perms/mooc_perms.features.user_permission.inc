@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * mooc_roles_perms.features.user_permission.inc
+ * mooc_perms.features.user_permission.inc
  */
 
 /**
  * Implements hook_user_default_permissions().
  */
-function mooc_roles_perms_user_default_permissions() {
+function mooc_perms_user_default_permissions() {
   $permissions = array();
 
   // Exported permission: access admin theme.
