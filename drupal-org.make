@@ -77,7 +77,7 @@ projects[field_collection][subdir] = "contrib"
 projects[field_group][version] = "1.1"
 projects[field_group][subdir] = "contrib"
 
-projects[typogrify][version] = "1.0-rc5"
+projects[typogrify][version] = "1.0-rc6"
 projects[typogrify][subdir] = "contrib"
 
 projects[video_filter][version] = "3.1"
@@ -161,7 +161,7 @@ projects[strongarm][subdir] = "contrib"
 projects[tipsy][version] = "1.0-rc1"
 projects[tipsy][subdir] = "contrib"
 
-projects[token][version] = "1.4"
+projects[token][version] = "1.5"
 projects[token][subdir] = "contrib"
 
 projects[transliteration][version] = "3.1"
