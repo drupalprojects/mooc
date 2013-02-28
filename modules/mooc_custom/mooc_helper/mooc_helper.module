@@ -8,9 +8,18 @@ function mooc_helper_init() {
 }
 
 /**
+ * Implements hook_theme_registry_alter().
+ */
+function mooc_helper_theme_registry_alter(&$theme_registry) {
+  // point to the mooc's way of handling book pagination
+  $theme_registry['book_navigation']['template'] = drupal_get_path('module', 'mooc_helper') . '/templates/book-navigation';
+  $theme_registry['book_navigation']['theme path'] = drupal_get_path('module', 'mooc_helper');
+  unset($theme_registry['book_navigation']['path']);
+}
+/**
  * Implements hook_menu().
  */
-function mooc_helper_connection_menu() {
+function mooc_helper_menu() {
   $items = array();
   // Callback to load correct instructional outline
   $items['inst-outline'] = array(
@@ -19,6 +28,14 @@ function mooc_helper_connection_menu() {
     'page arguments' => array(0),
     'type' => MENU_CALLBACK,
     'access arguments' => array('access content'),
+  );
+  // fix for typo shortcut
+  $items['typo-shortcut'] = array(
+    'title' => 'Typo',
+    'page callback' => 'drupal_goto',
+    'page arguments' => array('typo-reports'),
+    'type' => MENU_CALLBACK,
+    'access arguments' => array('access typo list'),
   );
   return $items;
 }

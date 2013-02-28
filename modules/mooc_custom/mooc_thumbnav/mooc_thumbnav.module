@@ -32,14 +32,17 @@ function mooc_thumbnav_thumbnav_widget() {
       'inc' => drupal_get_path('module', 'mooc_thumbnav') . '/js/mooc_thumbnav_bookmark.js',
       'weight' => 3,
       'side' => 'right',
-    ),
-    'mooc_thumbnav_helpdesk' => array(
+    ),*/
+  );
+  // optional feedback reloaded support for helpdesk
+  if (module_exists('feedback_reloaded')) {
+    $widgets['mooc_thumbnav_helpdesk'] = array(
       'icon' => base_path() . drupal_get_path('module', 'mooc_thumbnav') . '/images/helpdesk.png',
       'title' => t('Contact helpdesk'),
       'inc' => drupal_get_path('module', 'mooc_thumbnav') . '/js/mooc_thumbnav_helpdesk.js',
       'weight' => 4,
       'side' => 'left',
-    ),*/
-  );
+    );
+  }
   return $widgets;
 }

@@ -11,8 +11,47 @@
   margin: 0px 5px 0px -5px;
   float: left;
 }
+
+.book-navigation {
+  float: left;
+  width: 100%;
+}
+
+.book-navigation div.page-links {
+  bottom: auto;
+  left: auto;
+  position: relative;
+  width: auto;
+  background-color: transparent;
+  z-index: auto;
+  padding: 0px;
+}
+
+.book-navigation ol li, .book-navigation  ul li{margin:0px;}
+
+.book-navigation div.page-links a{
+  padding:5px;
+}
+
+.book-navigation .page-next {
+	text-align: right;
+	width: 42%;
+	display: block;
+	float: right;
+}
+
+.book-navigation .page-prev {
+	text-align: left;
+	width: 42%;
+	display: block;
+	float: left;
+}
+
 @media screen and (max-width: 739px) {
   #toc {
     float:none;
   }
+	.region-sidebar-first {
+		display:none;
+	}
 }
