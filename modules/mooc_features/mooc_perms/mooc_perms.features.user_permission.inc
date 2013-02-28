@@ -14,10 +14,9 @@ function mooc_perms_user_default_permissions() {
   $permissions['access admin theme'] = array(
     'name' => 'access admin theme',
     'roles' => array(
-      0 => 'administrator',
-      1 => 'instructor',
-      2 => 'staff',
-      3 => 'teaching assistant',
+      'administrator' => 'administrator',
+      'instructor' => 'instructor',
+      'staff' => 'staff',
     ),
     'module' => 'admin_theme',
   );
@@ -26,9 +25,9 @@ function mooc_perms_user_default_permissions() {
   $permissions['access administration menu'] = array(
     'name' => 'access administration menu',
     'roles' => array(
-      0 => 'administrator',
-      1 => 'instructor',
-      2 => 'staff',
+      'administrator' => 'administrator',
+      'instructor' => 'instructor',
+      'staff' => 'staff',
     ),
     'module' => 'admin_menu',
   );
@@ -37,10 +36,9 @@ function mooc_perms_user_default_permissions() {
   $permissions['access ckeditor link'] = array(
     'name' => 'access ckeditor link',
     'roles' => array(
-      0 => 'administrator',
-      1 => 'instructor',
-      2 => 'staff',
-      3 => 'teaching assistant',
+      'administrator' => 'administrator',
+      'instructor' => 'instructor',
+      'staff' => 'staff',
     ),
     'module' => 'ckeditor_link',
   );
@@ -49,9 +47,9 @@ function mooc_perms_user_default_permissions() {
   $permissions['access content'] = array(
     'name' => 'access content',
     'roles' => array(
-      0 => 'administrator',
-      1 => 'anonymous user',
-      2 => 'authenticated user',
+      'administrator' => 'administrator',
+      'anonymous user' => 'anonymous user',
+      'authenticated user' => 'authenticated user',
     ),
     'module' => 'node',
   );
@@ -60,21 +58,33 @@ function mooc_perms_user_default_permissions() {
   $permissions['access contextual links'] = array(
     'name' => 'access contextual links',
     'roles' => array(
-      0 => 'administrator',
-      1 => 'instructor',
-      2 => 'staff',
+      'administrator' => 'administrator',
+      'instructor' => 'instructor',
+      'staff' => 'staff',
     ),
     'module' => 'contextual',
+  );
+
+  // Exported permission: access feedback form.
+  $permissions['access feedback form'] = array(
+    'name' => 'access feedback form',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'instructor' => 'instructor',
+      'staff' => 'staff',
+      'student' => 'student',
+      'teaching assistant' => 'teaching assistant',
+    ),
+    'module' => 'feedback_reloaded',
   );
 
   // Exported permission: access overlay.
   $permissions['access overlay'] = array(
     'name' => 'access overlay',
     'roles' => array(
-      0 => 'administrator',
-      1 => 'instructor',
-      2 => 'staff',
-      3 => 'teaching assistant',
+      'administrator' => 'administrator',
+      'instructor' => 'instructor',
+      'staff' => 'staff',
     ),
     'module' => 'overlay',
   );
@@ -83,8 +93,11 @@ function mooc_perms_user_default_permissions() {
   $permissions['access printer-friendly version'] = array(
     'name' => 'access printer-friendly version',
     'roles' => array(
-      0 => 'administrator',
-      1 => 'authenticated user',
+      'administrator' => 'administrator',
+      'instructor' => 'instructor',
+      'staff' => 'staff',
+      'student' => 'student',
+      'teaching assistant' => 'teaching assistant',
     ),
     'module' => 'book',
   );
@@ -93,7 +106,9 @@ function mooc_perms_user_default_permissions() {
   $permissions['access typo list'] = array(
     'name' => 'access typo list',
     'roles' => array(
-      0 => 'administrator',
+      'administrator' => 'administrator',
+      'instructor' => 'instructor',
+      'staff' => 'staff',
     ),
     'module' => 'typo',
   );
@@ -102,9 +117,7 @@ function mooc_perms_user_default_permissions() {
   $permissions['access user profiles'] = array(
     'name' => 'access user profiles',
     'roles' => array(
-      0 => 'administrator',
-      1 => 'instructor',
-      2 => 'staff',
+      'administrator' => 'administrator',
     ),
     'module' => 'user',
   );
@@ -113,9 +126,9 @@ function mooc_perms_user_default_permissions() {
   $permissions['add content to books'] = array(
     'name' => 'add content to books',
     'roles' => array(
-      0 => 'administrator',
-      1 => 'instructor',
-      2 => 'staff',
+      'administrator' => 'administrator',
+      'instructor' => 'instructor',
+      'staff' => 'staff',
     ),
     'module' => 'book',
   );
@@ -124,8 +137,8 @@ function mooc_perms_user_default_permissions() {
   $permissions['administer blocks'] = array(
     'name' => 'administer blocks',
     'roles' => array(
-      0 => 'administrator',
-      1 => 'staff',
+      'administrator' => 'administrator',
+      'staff' => 'staff',
     ),
     'module' => 'block',
   );
@@ -134,19 +147,19 @@ function mooc_perms_user_default_permissions() {
   $permissions['administer book outlines'] = array(
     'name' => 'administer book outlines',
     'roles' => array(
-      0 => 'administrator',
-      1 => 'instructor',
-      2 => 'staff',
+      'administrator' => 'administrator',
+      'instructor' => 'instructor',
+      'staff' => 'staff',
     ),
     'module' => 'book',
   );
 
-  // Exported permission: view feedback messages.
-  $permissions['view feedback messages'] = array(
-    'name' => 'view feedback messages',
+  // Exported permission: administer feedback.
+  $permissions['administer feedback'] = array(
+    'name' => 'administer feedback',
     'roles' => array(
-      0 => 'administrator',
-      1 => 'staff',
+      'administrator' => 'administrator',
+      'staff' => 'staff',
     ),
     'module' => 'feedback_reloaded',
   );
@@ -155,8 +168,8 @@ function mooc_perms_user_default_permissions() {
   $permissions['administer themes'] = array(
     'name' => 'administer themes',
     'roles' => array(
-      0 => 'administrator',
-      1 => 'staff',
+      'administrator' => 'administrator',
+      'staff' => 'staff',
     ),
     'module' => 'system',
   );
@@ -165,8 +178,8 @@ function mooc_perms_user_default_permissions() {
   $permissions['bypass node access'] = array(
     'name' => 'bypass node access',
     'roles' => array(
-      0 => 'administrator',
-      1 => 'staff',
+      'administrator' => 'administrator',
+      'staff' => 'staff',
     ),
     'module' => 'node',
   );
@@ -175,7 +188,7 @@ function mooc_perms_user_default_permissions() {
   $permissions['create new books'] = array(
     'name' => 'create new books',
     'roles' => array(
-      0 => 'administrator',
+      'administrator' => 'administrator',
     ),
     'module' => 'book',
   );
@@ -184,9 +197,9 @@ function mooc_perms_user_default_permissions() {
   $permissions['create nrhi_term content'] = array(
     'name' => 'create nrhi_term content',
     'roles' => array(
-      0 => 'administrator',
-      1 => 'instructor',
-      2 => 'staff',
+      'administrator' => 'administrator',
+      'instructor' => 'instructor',
+      'staff' => 'staff',
     ),
     'module' => 'node',
   );
@@ -195,9 +208,9 @@ function mooc_perms_user_default_permissions() {
   $permissions['create page content'] = array(
     'name' => 'create page content',
     'roles' => array(
-      0 => 'administrator',
-      1 => 'instructor',
-      2 => 'staff',
+      'administrator' => 'administrator',
+      'instructor' => 'instructor',
+      'staff' => 'staff',
     ),
     'module' => 'node',
   );
@@ -206,8 +219,8 @@ function mooc_perms_user_default_permissions() {
   $permissions['delete any nrhi_term content'] = array(
     'name' => 'delete any nrhi_term content',
     'roles' => array(
-      0 => 'administrator',
-      1 => 'staff',
+      'administrator' => 'administrator',
+      'staff' => 'staff',
     ),
     'module' => 'node',
   );
@@ -216,8 +229,8 @@ function mooc_perms_user_default_permissions() {
   $permissions['delete any page content'] = array(
     'name' => 'delete any page content',
     'roles' => array(
-      0 => 'administrator',
-      1 => 'staff',
+      'administrator' => 'administrator',
+      'staff' => 'staff',
     ),
     'module' => 'node',
   );
@@ -226,9 +239,9 @@ function mooc_perms_user_default_permissions() {
   $permissions['delete own nrhi_term content'] = array(
     'name' => 'delete own nrhi_term content',
     'roles' => array(
-      0 => 'administrator',
-      1 => 'instructor',
-      2 => 'staff',
+      'administrator' => 'administrator',
+      'instructor' => 'instructor',
+      'staff' => 'staff',
     ),
     'module' => 'node',
   );
@@ -237,9 +250,9 @@ function mooc_perms_user_default_permissions() {
   $permissions['delete own page content'] = array(
     'name' => 'delete own page content',
     'roles' => array(
-      0 => 'administrator',
-      1 => 'instructor',
-      2 => 'staff',
+      'administrator' => 'administrator',
+      'instructor' => 'instructor',
+      'staff' => 'staff',
     ),
     'module' => 'node',
   );
@@ -248,9 +261,9 @@ function mooc_perms_user_default_permissions() {
   $permissions['edit any nrhi_term content'] = array(
     'name' => 'edit any nrhi_term content',
     'roles' => array(
-      0 => 'administrator',
-      1 => 'instructor',
-      2 => 'staff',
+      'administrator' => 'administrator',
+      'instructor' => 'instructor',
+      'staff' => 'staff',
     ),
     'module' => 'node',
   );
@@ -259,9 +272,9 @@ function mooc_perms_user_default_permissions() {
   $permissions['edit any page content'] = array(
     'name' => 'edit any page content',
     'roles' => array(
-      0 => 'administrator',
-      1 => 'instructor',
-      2 => 'staff',
+      'administrator' => 'administrator',
+      'instructor' => 'instructor',
+      'staff' => 'staff',
     ),
     'module' => 'node',
   );
@@ -270,8 +283,9 @@ function mooc_perms_user_default_permissions() {
   $permissions['edit boxes'] = array(
     'name' => 'edit boxes',
     'roles' => array(
-      0 => 'administrator',
-      1 => 'staff',
+      'administrator' => 'administrator',
+      'instructor' => 'instructor',
+      'staff' => 'staff',
     ),
     'module' => 'boxes',
   );
@@ -280,9 +294,9 @@ function mooc_perms_user_default_permissions() {
   $permissions['edit own nrhi_term content'] = array(
     'name' => 'edit own nrhi_term content',
     'roles' => array(
-      0 => 'administrator',
-      1 => 'instructor',
-      2 => 'staff',
+      'administrator' => 'administrator',
+      'instructor' => 'instructor',
+      'staff' => 'staff',
     ),
     'module' => 'node',
   );
@@ -291,9 +305,9 @@ function mooc_perms_user_default_permissions() {
   $permissions['edit own page content'] = array(
     'name' => 'edit own page content',
     'roles' => array(
-      0 => 'administrator',
-      1 => 'instructor',
-      2 => 'staff',
+      'administrator' => 'administrator',
+      'instructor' => 'instructor',
+      'staff' => 'staff',
     ),
     'module' => 'node',
   );
@@ -302,8 +316,8 @@ function mooc_perms_user_default_permissions() {
   $permissions['flush caches'] = array(
     'name' => 'flush caches',
     'roles' => array(
-      0 => 'administrator',
-      1 => 'staff',
+      'administrator' => 'administrator',
+      'staff' => 'staff',
     ),
     'module' => 'admin_menu',
   );
@@ -312,9 +326,9 @@ function mooc_perms_user_default_permissions() {
   $permissions['highlight highlight content'] = array(
     'name' => 'highlight highlight content',
     'roles' => array(
-      0 => 'administrator',
-      1 => 'instructor',
-      2 => 'staff',
+      'administrator' => 'administrator',
+      'instructor' => 'instructor',
+      'staff' => 'staff',
     ),
     'module' => 'nodereference_highlight',
   );
@@ -323,10 +337,9 @@ function mooc_perms_user_default_permissions() {
   $permissions['masquerade as user'] = array(
     'name' => 'masquerade as user',
     'roles' => array(
-      0 => 'administrator',
-      1 => 'instructor',
-      2 => 'staff',
-      3 => 'teaching assistant',
+      'administrator' => 'administrator',
+      'instructor' => 'instructor',
+      'staff' => 'staff',
     ),
     'module' => 'masquerade',
   );
@@ -335,7 +348,9 @@ function mooc_perms_user_default_permissions() {
   $permissions['may send typo reports'] = array(
     'name' => 'may send typo reports',
     'roles' => array(
-      0 => 'administrator',
+      'administrator' => 'administrator',
+      'instructor' => 'instructor',
+      'staff' => 'staff',
     ),
     'module' => 'typo',
   );
@@ -344,8 +359,8 @@ function mooc_perms_user_default_permissions() {
   $permissions['perform search and replace'] = array(
     'name' => 'perform search and replace',
     'roles' => array(
-      0 => 'administrator',
-      1 => 'staff',
+      'administrator' => 'administrator',
+      'staff' => 'staff',
     ),
     'module' => 'scanner',
   );
@@ -354,9 +369,9 @@ function mooc_perms_user_default_permissions() {
   $permissions['revert revisions'] = array(
     'name' => 'revert revisions',
     'roles' => array(
-      0 => 'administrator',
-      1 => 'instructor',
-      2 => 'staff',
+      'administrator' => 'administrator',
+      'instructor' => 'instructor',
+      'staff' => 'staff',
     ),
     'module' => 'node',
   );
@@ -365,19 +380,17 @@ function mooc_perms_user_default_permissions() {
   $permissions['search content'] = array(
     'name' => 'search content',
     'roles' => array(
-      0 => 'administrator',
-      1 => 'authenticated user',
+      'administrator' => 'administrator',
     ),
     'module' => 'search',
   );
 
-  // Exported permission: show format selection for field_collection_item.
-  $permissions['show format selection for field_collection_item'] = array(
-    'name' => 'show format selection for field_collection_item',
+  // Exported permission: show format selection for feedback_reloaded.
+  $permissions['show format selection for feedback_reloaded'] = array(
+    'name' => 'show format selection for feedback_reloaded',
     'roles' => array(
-      0 => 'administrator',
-      1 => 'instructor',
-      2 => 'staff',
+      'administrator' => 'administrator',
+      'staff' => 'staff',
     ),
     'module' => 'better_formats',
   );
@@ -386,33 +399,20 @@ function mooc_perms_user_default_permissions() {
   $permissions['show format selection for node'] = array(
     'name' => 'show format selection for node',
     'roles' => array(
-      0 => 'administrator',
-      1 => 'instructor',
-      2 => 'staff',
+      'administrator' => 'administrator',
+      'instructor' => 'instructor',
+      'staff' => 'staff',
     ),
     'module' => 'better_formats',
-  );
-
-  // Exported permission: access feedback form.
-  $permissions['access feedback form'] = array(
-    'name' => 'access feedback form',
-    'roles' => array(
-      0 => 'administrator',
-      1 => 'instructor',
-      2 => 'staff',
-      3 => 'student',
-      4 => 'teaching assistant',
-    ),
-    'module' => 'feedback_reloaded',
   );
 
   // Exported permission: use outline designer.
   $permissions['use outline designer'] = array(
     'name' => 'use outline designer',
     'roles' => array(
-      0 => 'administrator',
-      1 => 'instructor',
-      2 => 'staff',
+      'administrator' => 'administrator',
+      'instructor' => 'instructor',
+      'staff' => 'staff',
     ),
     'module' => 'outline_designer',
   );
@@ -421,22 +421,31 @@ function mooc_perms_user_default_permissions() {
   $permissions['use text format textbook_editor'] = array(
     'name' => 'use text format textbook_editor',
     'roles' => array(
-      0 => 'administrator',
-      1 => 'instructor',
-      2 => 'staff',
-      3 => 'teaching assistant',
+      'administrator' => 'administrator',
+      'instructor' => 'instructor',
+      'staff' => 'staff',
     ),
     'module' => 'filter',
+  );
+
+  // Exported permission: view feedback messages.
+  $permissions['view feedback messages'] = array(
+    'name' => 'view feedback messages',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'staff' => 'staff',
+    ),
+    'module' => 'feedback_reloaded',
   );
 
   // Exported permission: view hidden content.
   $permissions['view hidden content'] = array(
     'name' => 'view hidden content',
     'roles' => array(
-      0 => 'administrator',
-      1 => 'instructor',
-      2 => 'staff',
-      3 => 'teaching assistant',
+      'administrator' => 'administrator',
+      'instructor' => 'instructor',
+      'staff' => 'staff',
+      'teaching assistant' => 'teaching assistant',
     ),
     'module' => 'hidden_nodes',
   );
@@ -445,9 +454,9 @@ function mooc_perms_user_default_permissions() {
   $permissions['view regions_right_slideout region'] = array(
     'name' => 'view regions_right_slideout region',
     'roles' => array(
-      0 => 'administrator',
-      1 => 'anonymous user',
-      2 => 'authenticated user',
+      'administrator' => 'administrator',
+      'anonymous user' => 'anonymous user',
+      'authenticated user' => 'authenticated user',
     ),
     'module' => 'regions',
   );
@@ -456,9 +465,9 @@ function mooc_perms_user_default_permissions() {
   $permissions['view revisions'] = array(
     'name' => 'view revisions',
     'roles' => array(
-      0 => 'administrator',
-      1 => 'instructor',
-      2 => 'staff',
+      'administrator' => 'administrator',
+      'instructor' => 'instructor',
+      'staff' => 'staff',
     ),
     'module' => 'node',
   );
@@ -467,10 +476,9 @@ function mooc_perms_user_default_permissions() {
   $permissions['view the administration theme'] = array(
     'name' => 'view the administration theme',
     'roles' => array(
-      0 => 'administrator',
-      1 => 'instructor',
-      2 => 'staff',
-      3 => 'teaching assistant',
+      'administrator' => 'administrator',
+      'instructor' => 'instructor',
+      'staff' => 'staff',
     ),
     'module' => 'system',
   );
