@@ -178,6 +178,8 @@ function mooc_ux_defaults_profiler_builder_ignore_alter(&$ignore_list) {
     'ckeditor_link_type_name',
     'ckeditor_link_type_selected',
     'imce_profiles',
+    'cis_service_connection_last_sync',
+    'cis_service_instance_uuid',
   );
   // merge these items in to have them ignored
   $ignore_list = array_merge($ignore_list, $ignore);
