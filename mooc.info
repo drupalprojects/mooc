@@ -127,7 +127,6 @@ dependencies[] = omega_tools
 dependencies[] = uuid
 ; User Interface
 dependencies[] = book_touch
-dependencies[] = quojs
 dependencies[] = thumbnav
 dependencies[] = tinynav
 ; User interface
@@ -194,9 +193,6 @@ variables[book_child_type] = 'page'
 variables[boxes_edit_location] = '2'
 variables[context_block_rebuild_needed] = true
 variables[context_status][elearning_content] = 'false'
-variables[default_feeds_tamper][elms_node_import-xpathparser_3-current_user_id] = 'false'
-variables[default_feeds_tamper][elms_node_import-xpathparser_1-find_replace] = 'false'
-variables[default_feeds_tamper][feeds_node_helper_book_import-xpathparser_1-jwplayer_find_replace] = false
 variables[default_nodes_main] = '10'
 variables[delta_blocks_branding_logo_linked] = 'true'
 variables[delta_blocks_branding_logo_render] = 'true'
@@ -425,10 +421,6 @@ variables[tipsy][custom_selectors][0][options][delayOut] = '0'
 variables[tipsy][custom_selectors][0][options][opacity] = '0.8'
 variables[tipsy][custom_selectors][0][options][offset] = '0'
 variables[tipsy][custom_selectors][0][options][html] = 0
-variables[tipsy][custom_selectors][0][options][tooltip_content] = array (
-  'source' => 'attribute',
-  'selector' => 'title',
-)
 variables[transliteration_file_lowercase] = 1
 variables[transliteration_file_uploads] = 1
 variables[transliteration_search] = '1'
