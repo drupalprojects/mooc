@@ -173,7 +173,7 @@ projects[typo][subdir] = "contrib"
 projects[outline_designer][version] = "2.0-beta2"
 projects[outline_designer][subdir] = "contrib"
 
-projects[hidden_nodes][version] = "1.1"
+projects[hidden_nodes][version] = "1.x-dev"
 projects[hidden_nodes][subdir] = "contrib"
 
 projects[regions][version] = "1.5"
@@ -194,7 +194,7 @@ projects[uuid][subdir] = "contrib"
 projects[quojs][version] = "1.0-beta1"
 projects[quojs][subdir] = "contrib"
 
-projects[tinynav][version] = "1.1"
+projects[tinynav][version] = "1.x-dev"
 projects[tinynav][subdir] = "contrib"
 
 projects[ckeditor_link][version] = "2.3"

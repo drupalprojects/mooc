@@ -105,28 +105,13 @@ function mooc_install() {
     node_add_body_field($type);
   }
 
-  // Insert default pre-defined RDF mapping into the database.
-  $rdf_mappings = array(
-    array(
-      'type' => 'node',
-      'bundle' => 'page',
-      'mapping' => array(
-        'rdftype' => array('foaf:Document'),
-      ),
-    ),
-  );
-  foreach ($rdf_mappings as $rdf_mapping) {
-    rdf_mapping_save($rdf_mapping);
-  }
-
   // Default "Page" to not be promoted and have comments disabled.
   variable_set('node_options_page', array('status'));
 
   // Don't display date and author information for "Page" nodes by default.
   variable_set('node_submitted_page', FALSE);
 
-  // Enable user picture support and set the default to a square thumbnail option.
-  variable_set('user_pictures', '1');
+  // Enable user picture defaults
   variable_set('user_picture_dimensions', '1024x1024');
   variable_set('user_picture_file_size', '800');
   variable_set('user_picture_style', 'thumbnail');
@@ -139,7 +124,7 @@ function mooc_install() {
     'feeds_node_helper_import',
     'node_reference_highlight_glossary',
     'mooc_ux_defaults',
-    'mooc_roles_perms',
+    'mooc_perms',
     'mooc_helper',
     'textbook_editor',
     'mooc_textbook',
@@ -188,13 +173,13 @@ function mooc_install() {
       'weight' => -15,
     ),
     array(
-      'link_path' => 'admin/reports/feedback', 
-      'link_title' => st('Visitor Feedback'), 
+      'link_path' => 'typo-shortcut', 
+      'link_title' => st('Typo Report'), 
       'weight' => -14,
     ),
     array(
-      'link_path' => 'typo-shortcut', 
-      'link_title' => st('Typo Report'), 
+      'link_path' => 'admin/reports/feedback', 
+      'link_title' => st('Visitor Feedback'), 
       'weight' => -13,
     ),
   );
