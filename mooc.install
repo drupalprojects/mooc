@@ -115,10 +115,8 @@ function mooc_install() {
   variable_set('user_picture_dimensions', '1024x1024');
   variable_set('user_picture_file_size', '800');
   variable_set('user_picture_style', 'thumbnail');
-
   // Allow visitor account creation with administrative approval.
   variable_set('user_register', USER_REGISTER_VISITORS_ADMINISTRATIVE_APPROVAL);
-
   // revert features to ensure they are all installed
   $features = array(    
     'feeds_node_helper_import',
