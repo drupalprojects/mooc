@@ -147,10 +147,6 @@ function mooc_install() {
   db_insert('users_roles')
     ->fields(array('uid' => 1, 'rid' => $admin_role->rid))
     ->execute();
-<<<<<<< HEAD
-  // From shortcut.install, add shortcuts to the default set on install
-=======
->>>>>>> dropped core shortcut requirement
   menu_rebuild();
   // ignore any rebuild messages as we have no content
   node_access_needs_rebuild(FALSE);
