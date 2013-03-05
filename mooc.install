@@ -147,43 +147,7 @@ function mooc_install() {
   db_insert('users_roles')
     ->fields(array('uid' => 1, 'rid' => $admin_role->rid))
     ->execute();
-  // remove the two default shortcuts added
-  menu_delete_links(SHORTCUT_DEFAULT_SET_NAME);
   // From shortcut.install, add shortcuts to the default set on install
-  $shortcut_set = shortcut_set_load(SHORTCUT_DEFAULT_SET_NAME);
-  $shortcut_set->links = array(
-    array(
-      'link_path' => 'admin/content/book', 
-      'link_title' => st('Instructional Outlines'), 
-      'weight' => -18,
-    ),
-    array(
-      'link_path' => 'admin/appearance/settings/chamfer', 
-      'link_title' => st('Theme'), 
-      'weight' => -17,
-    ),
-    array(
-      'link_path' => 'admin/content/scanner', 
-      'link_title' => st('Search / Replace'), 
-      'weight' => -16,
-    ),
-    array(
-      'link_path' => 'admin/config/system/course-settings', 
-      'link_title' => st('Course Settings'), 
-      'weight' => -15,
-    ),
-    array(
-      'link_path' => 'typo-shortcut', 
-      'link_title' => st('Typo Report'), 
-      'weight' => -14,
-    ),
-    array(
-      'link_path' => 'admin/reports/feedback', 
-      'link_title' => st('Visitor Feedback'), 
-      'weight' => -13,
-    ),
-  );
-  shortcut_set_save($shortcut_set);
   menu_rebuild();
   // ignore any rebuild messages as we have no content
   node_access_needs_rebuild(FALSE);
