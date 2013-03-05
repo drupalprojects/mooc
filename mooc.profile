@@ -1,5 +1,9 @@
 <?php
-
+/**
+ * @file
+ * Set some useful defaults prior to form presentation.
+ */
+ 
 /**
  * Implements hook_form_FORM_ID_alter().
  *
