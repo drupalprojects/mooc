@@ -119,7 +119,7 @@ projects[diff][subdir] = "contrib"
 projects[entity][version] = "1.0"
 projects[entity][subdir] = "contrib"
 
-projects[fitvids][version] = "1.8"
+projects[fitvids][version] = "1.9"
 projects[fitvids][subdir] = "contrib"
 
 projects[job_scheduler][version] = "2.0-alpha3"
