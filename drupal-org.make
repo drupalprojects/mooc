@@ -125,7 +125,7 @@ projects[fitvids][subdir] = "contrib"
 projects[job_scheduler][version] = "2.0-alpha3"
 projects[job_scheduler][subdir] = "contrib"
 
-projects[libraries][version] = "2.0"
+projects[libraries][version] = "2.1"
 projects[libraries][subdir] = "contrib"
 
 projects[masquerade][version] = "1.0-rc5"
