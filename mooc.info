@@ -113,6 +113,7 @@ dependencies[] = textbook_editor
 dependencies[] = textbook_templates
 dependencies[] = node_reference_highlight_glossary
 dependencies[] = mooc_ux_defaults
+dependencies[] = mooc_cis_ux
 dependencies[] = mooc_perms
 dependencies[] = mooc_textbook
 ; MOOC

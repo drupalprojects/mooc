@@ -1,0 +1,16 @@
+name = MOOC CIS UX
+description = User experience elements specific to running a CIS instance
+core = 7.x
+package = MOOC
+php = 5.2.4
+dependencies[] = cis_service_connection
+dependencies[] = cis_service_connection_ux
+dependencies[] = context
+dependencies[] = features
+dependencies[] = menu
+features[context][] = mooc_cis_ux-blocks
+features[ctools][] = context:context:3
+features[features_api][] = api:1
+features[menu_links][] = menu-cis-toolkit:admin/content/book
+features[user_permission][] = switch section context
+features_exclude[menu_custom][menu-cis-toolkit] = menu-cis-toolkit

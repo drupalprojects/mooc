@@ -281,3 +281,5 @@ libraries[profiler][type] = "library"
 projects[feeds][patch][] = "http://drupal.org/files/608408-feeds_drush_d7-57.patch"
 ; Fixes warning message in Scanner module
 projects[scanner][patch][] = "http://drupal.org/files/strict-variable-by-reference.patch"
+; profile2 entity cache glitch
+projects[profile2][patch][] = "http://drupal.org/files/profile2-1387268-30.patch"
