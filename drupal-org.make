@@ -236,6 +236,8 @@ projects[node_clone][subdir] = "contrib"
 projects[thumbnav][version] = "1.0-alpha1"
 projects[thumbnav][subdir] = "contrib"
 
+projects[jquery_update][version] = "2.3"
+projects[jquery_update][subdir] = "contrib"
 
 ; Themes
 ; chamfer
@@ -277,6 +279,8 @@ libraries[profiler][directory_name] = "profiler"
 libraries[profiler][type] = "library"
 
 ; Patches
+; allow multiple versions of jquery
+projects[jquery_update][patch][] = "http://drupal.org/files/jquery_update-1524944-78.patch"
 ; Adds Drush support
 projects[feeds][patch][] = "http://drupal.org/files/608408-feeds_drush_d7-57.patch"
 ; Fixes warning message in Scanner module
