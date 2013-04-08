@@ -20,7 +20,7 @@ projects[admin_theme][subdir] = "contrib"
 projects[book_title_override][version] = "1.0-beta4"
 projects[book_title_override][subdir] = "contrib"
 
-projects[ctools][version] = "1.2"
+projects[ctools][version] = "1.3"
 projects[ctools][subdir] = "contrib"
 
 projects[context][version] = "3.0-beta6"
@@ -44,7 +44,7 @@ projects[nodereference_highlight][subdir] = "contrib"
 projects[chamfer_defaults][version] = "1.0-beta2"
 projects[chamfer_defaults][subdir] = "contrib"
 
-projects[features][version] = "2.0-beta1"
+projects[features][version] = "2.0-beta2"
 projects[features][subdir] = "contrib"
 
 projects[features_override][version] = "2.0-beta2"
@@ -212,7 +212,7 @@ projects[wysiwyg][subdir] = "contrib"
 projects[wysiwyg_template][version] = "2.x-dev"
 projects[wysiwyg_template][subdir] = "contrib"
 
-projects[views][version] = "3.5"
+projects[views][version] = "3.6"
 projects[views][subdir] = "contrib"
 
 projects[views_bulk_operations][version] = "3.1"
@@ -238,6 +238,10 @@ projects[thumbnav][subdir] = "contrib"
 
 projects[jquery_update][version] = "2.3"
 projects[jquery_update][subdir] = "contrib"
+
+projects[seckit][version] = "1.5"
+projects[seckit][subdir] = "contrib"
+
 
 ; Themes
 ; chamfer
