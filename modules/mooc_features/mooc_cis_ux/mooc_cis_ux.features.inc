@@ -13,3 +13,10 @@ function mooc_cis_ux_ctools_plugin_api() {
     return array("version" => "3");
   }
 }
+
+/**
+ * Implements hook_views_api().
+ */
+function mooc_cis_ux_views_api() {
+  return array("api" => "3.0");
+}
