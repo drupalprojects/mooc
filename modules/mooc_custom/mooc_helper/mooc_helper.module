@@ -56,28 +56,10 @@ function _mooc_helper_all_book_outlines() {
 }
 
 /**
- * Implements hook_set_cis_service_data().
- */
-function mooc_helper_set_cis_service_data($delta) {
-  switch ($delta) {
-    case 'initial':
-    case 'interval':
-      // report the outlines available, updated at the interval and first time
-      $data = array(
-        'field_service_data' => drupal_json_encode(_mooc_helper_all_book_outlines()),
-      );
-    break;
-  }
-  return $data;
-}
-
-/**
  * Implementation of hook_feeds_after_import().
  */
 function mooc_helper_feeds_after_import(FeedsSource $source) {
   //TODO: Convert to D7 code
-  //TODO: dump changed connotations about uuid location in D6
-  //TODO: make sure this only applies to the initial outline import routine
   // need to clear the UUIDs of all imported nodes from the
   // get a list of nodes that were just imported
   $ary = array();
