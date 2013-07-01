@@ -127,6 +127,7 @@ function mooc_install() {
     'textbook_editor',
     'mooc_textbook',
     'textbook_templates',
+		'cis_section',
   );
   features_revert($features);
   // drop the "book" content type as its confusing

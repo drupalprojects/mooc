@@ -34,24 +34,24 @@
 }
 
 .book-navigation .page-next {
-	text-align: right;
-	width: 42%;
-	display: block;
-	float: right;
+  text-align: right;
+  width: 42%;
+  display: block;
+  float: right;
 }
 
 .book-navigation .page-prev {
-	text-align: left;
-	width: 42%;
-	display: block;
-	float: left;
+  text-align: left;
+  width: 42%;
+  display: block;
+  float: left;
 }
 
 @media screen and (max-width: 739px) {
   #toc {
     float:none;
   }
-	.region-sidebar-first {
-		display:none;
-	}
+  .region-sidebar-first {
+    display:none;
+  }
 }
