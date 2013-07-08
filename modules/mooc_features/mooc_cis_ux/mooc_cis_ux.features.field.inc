@@ -47,7 +47,6 @@ function mooc_cis_ux_field_default_fields() {
             'view_name' => 'mooc_book_roots',
           ),
         ),
-        'profile2_private' => FALSE,
         'target_type' => 'node',
       ),
       'translatable' => '0',
