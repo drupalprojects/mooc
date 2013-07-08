@@ -140,12 +140,25 @@ function mooc_install() {
   user_role_grant_permissions($admin_role->rid, array_keys(module_invoke_all('permission')));
   // Set this as the administrator role.
   variable_set('user_admin_role', $admin_role->rid);
+	
   // clean up for regions conflict w/ install routine
-  $perms = array('view regions_right_slideout region');
-  // anonymous user
-  user_role_grant_permissions(0, $perms);
-  // authenticated user, all users effectively
-  user_role_grant_permissions(1, $perms);
+  // anonymous users
+	db_merge('role_permission')->key(array(
+		'rid' => 1,
+		'permission' => 'view regions_right_slideout region',
+	))->fields(array(
+		'module' => 'regions',
+	))->execute();
+	// auth users
+	db_merge('role_permission')->key(array(
+		'rid' => 2,
+		'permission' => 'view regions_right_slideout region',
+	))->fields(array(
+		'module' => 'regions',
+	))->execute();
+	
+	drupal_static_reset('user_access');
+  drupal_static_reset('user_role_permissions');
   
   // set admin menu client side cache to off for performance reasons
   variable_set('admin_menu_cache_client', FALSE);
