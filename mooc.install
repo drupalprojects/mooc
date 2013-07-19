@@ -140,23 +140,23 @@ function mooc_install() {
   user_role_grant_permissions($admin_role->rid, array_keys(module_invoke_all('permission')));
   // Set this as the administrator role.
   variable_set('user_admin_role', $admin_role->rid);
-	
+  
   // clean up for regions conflict w/ install routine
   // anonymous users
-	db_merge('role_permission')->key(array(
-		'rid' => 1,
-		'permission' => 'view regions_right_slideout region',
-	))->fields(array(
-		'module' => 'regions',
-	))->execute();
-	// auth users
-	db_merge('role_permission')->key(array(
-		'rid' => 2,
-		'permission' => 'view regions_right_slideout region',
-	))->fields(array(
-		'module' => 'regions',
-	))->execute();
-	// stupid work around for regions conflict with module perms
+  db_merge('role_permission')->key(array(
+    'rid' => 1,
+    'permission' => 'view regions_right_slideout region',
+  ))->fields(array(
+    'module' => 'regions',
+  ))->execute();
+  // auth users
+  db_merge('role_permission')->key(array(
+    'rid' => 2,
+    'permission' => 'view regions_right_slideout region',
+  ))->fields(array(
+    'module' => 'regions',
+  ))->execute();
+  // stupid work around for regions conflict with module perms
   $roles = array('teaching assistant', 'instructor', 'administrator', 'staff');
   foreach ($roles as $name) {
     $role = user_role_load_by_name($name);
@@ -167,7 +167,7 @@ function mooc_install() {
         'module' => 'regions',
     ))->execute();
   }
-	drupal_static_reset('user_access');
+  drupal_static_reset('user_access');
   drupal_static_reset('user_role_permissions');
   
   // set admin menu client side cache to off for performance reasons
