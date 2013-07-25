@@ -9,16 +9,6 @@ function mooc_helper_page_build($page) {
 }
 
 /**
- * Implements hook_theme_registry_alter().
- */
-function mooc_helper_theme_registry_alter(&$theme_registry) {
-  // point to the mooc's way of handling book pagination
-  $theme_registry['book_navigation']['template'] = drupal_get_path('module', 'mooc_helper') . '/templates/book-navigation';
-  $theme_registry['book_navigation']['theme path'] = drupal_get_path('module', 'mooc_helper');
-  unset($theme_registry['book_navigation']['path']);
-}
-
-/**
  * Implements hook_menu().
  */
 function mooc_helper_menu() {

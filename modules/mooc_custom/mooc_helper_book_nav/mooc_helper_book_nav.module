@@ -1,0 +1,11 @@
+<?php
+
+/**
+ * Implements hook_theme_registry_alter().
+ */
+function mooc_helper_book_nav_theme_registry_alter(&$theme_registry) {
+  // point to the mooc's way of handling book pagination
+  $theme_registry['book_navigation']['template'] = drupal_get_path('module', 'mooc_helper_book_nav') . '/templates/book-navigation';
+  $theme_registry['book_navigation']['theme path'] = drupal_get_path('module', 'mooc_helper_book_nav');
+  unset($theme_registry['book_navigation']['path']);
+}

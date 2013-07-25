@@ -120,6 +120,7 @@ dependencies[] = mooc_textbook
 ; MOOC
 dependencies[] = mooc_thumbnav
 dependencies[] = mooc_helper
+dependencies[] = mooc_helper_book_nav
 dependencies[] = mooc_perms
 
 ; ----------
