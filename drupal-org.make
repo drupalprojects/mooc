@@ -14,6 +14,9 @@ projects[devel][subdir] = "contrib"
 projects[cis_connector][version] = "1.x-dev"
 projects[cis_connector][subdir] = "contrib"
 
+projects[httprl][version] = "1.12"
+projects[httprl][subdir] = "contrib"
+
 projects[admin_theme][version] = "1.0"
 projects[admin_theme][subdir] = "contrib"
 
