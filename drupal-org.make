@@ -59,7 +59,7 @@ projects[feeds][subdir] = "contrib"
 projects[pathauto][version] = "1.2"
 projects[pathauto][subdir] = "contrib"
 
-projects[feeds_node_helper][version] = "1.3"
+projects[feeds_node_helper][version] = "1.4"
 projects[feeds_node_helper][subdir] = "contrib"
 
 projects[feeds_tamper][version] = "1.0-beta4"

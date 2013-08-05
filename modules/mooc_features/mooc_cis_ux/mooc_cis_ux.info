@@ -5,6 +5,7 @@ package = MOOC
 php = 5.2.4
 dependencies[] = cis_service_connection
 dependencies[] = cis_service_connection_ux
+dependencies[] = feeds_node_helper_export
 dependencies[] = entityreference
 dependencies[] = joyride
 dependencies[] = options
