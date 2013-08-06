@@ -8,19 +8,19 @@ includes[] = "drupal-org.make"
 
 ; +++++ Libraries +++++
 
-; FitVids
-libraries[fitvids][directory_name] = "fitvids"
-libraries[fitvids][type] = "library"
-libraries[fitvids][destination] = "libraries"
-libraries[fitvids][download][type] = "get"
-libraries[fitvids][download][url] = "https://raw.github.com/davatron5000/FitVids.js/master/jquery.fitvids.js"
+; Profiler
+libraries[profiler][directory_name] = "profiler"
+libraries[profiler][type] = "library"
+libraries[profiler][destination] = "../../profiles/mooc/libraries"
+libraries[profiler][download][type] = "get"
+libraries[profiler][download][url] = "http://ftp.drupal.org/files/projects/profiler-7.x-2.x-dev.tar.gz"
 
-; OAuth Drupal fork
-libraries[oauth][directory_name] = "oauth"
-libraries[oauth][type] = "library"
-libraries[oauth][destination] = "libraries"
-libraries[oauth][download][type] = "get"
-libraries[oauth][download][url] = "https://github.com/juampy72/OAuth-PHP/archive/master.zip"
+; jwerty
+libraries[jwerty][directory_name] = "jwerty"
+libraries[jwerty][type] = "library"
+libraries[jwerty][destination] = "libraries"
+libraries[jwerty][download][type] = "get"
+libraries[jwerty][download][url] = "" ; TODO add download URI
 
 ; mooc
 libraries[mooc][directory_name] = "mooc"

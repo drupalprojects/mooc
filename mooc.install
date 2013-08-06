@@ -118,16 +118,23 @@ function mooc_install() {
   // Allow visitor account creation with administrative approval.
   variable_set('user_register', USER_REGISTER_VISITORS_ADMINISTRATIVE_APPROVAL);
   // revert features to ensure they are all installed
-  $features = array(    
+  $features = array(
+    'chamfer_defaults',
+    'cis_section',
+    'cis_service_connection_ux',
+    'cis_service_lti',
+    'cis_service_roles',
+    'feeds_node_helper_export',
     'feeds_node_helper_import',
+    'textbook_editor',
+    'textbook_templates',
     'node_reference_highlight_glossary',
     'mooc_ux_defaults',
-    'mooc_perms',
-    'mooc_helper',
-    'textbook_editor',
+    'mooc_cis_ux',
     'mooc_textbook',
-    'textbook_templates',
-    'cis_section',
+    'mooc_helper',
+    'mooc_perms',
+    'regions_admin_example',
   );
   features_revert($features);
   // drop the "book" content type as its confusing
