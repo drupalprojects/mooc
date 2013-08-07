@@ -10,7 +10,7 @@ projects[admin_menu][subdir] = "contrib"
 projects[admin_theme][version] = "1.0"
 projects[admin_theme][subdir] = "contrib"
 
-projects[advagg][version] = "2.0-alpha2"
+projects[advagg][version] = "2.0-rc1"
 projects[advagg][subdir] = "contrib"
 
 projects[book_title_override][version] = "1.0-beta4"
@@ -97,7 +97,7 @@ projects[imce_mkdir][subdir] = "contrib"
 projects[nodeformcols][version] = "1.x-dev"
 projects[nodeformcols][subdir] = "contrib"
 
-projects[og][version] = "2.1"
+projects[og][version] = "2.2"
 projects[og][subdir] = "contrib"
 
 projects[og_clone][version] = "1.x-dev"
@@ -145,7 +145,7 @@ projects[node_clone][subdir] = "contrib"
 projects[prepopulate][version] = "2.x-dev"
 projects[prepopulate][subdir] = "contrib"
 
-projects[restws][version] = "2.0-alpha4"
+projects[restws][version] = "2.0"
 projects[restws][subdir] = "contrib"
 
 projects[scanner][version] = "1.x-dev"
@@ -205,7 +205,7 @@ projects[wysiwyg][subdir] = "contrib"
 projects[wysiwyg_template][version] = "2.x-dev"
 projects[wysiwyg_template][subdir] = "contrib"
 
-projects[select_or_other][version] = "2.18"
+projects[select_or_other][version] = "2.19"
 projects[select_or_other][subdir] = "contrib"
 
 projects[views][version] = "3.7"
@@ -249,24 +249,12 @@ projects[omega][type] = "theme"
 projects[omega][version] = "3.1"
 projects[omega][subdir] = "contrib"
 
-; bootstrap
-projects[bootstrap][type] = "theme"
-projects[bootstrap][version] = "2.0-beta2"
-projects[bootstrap][subdir] = "contrib"
-
 ; tao
 projects[tao][type] = "theme"
 projects[tao][version] = "3.0-beta4"
 projects[tao][subdir] = "contrib"
 
 ; +++++ Libraries +++++
-
-; Profiler
-libraries[profiler][directory_name] = "profiler"
-libraries[profiler][type] = "library"
-libraries[profiler][destination] = "libraries"
-libraries[profiler][download][type] = "get"
-libraries[profiler][download][url] = "http://ftp.drupal.org/files/projects/profiler-7.x-2.x-dev.tar.gz"
 
 ; CKEditor
 libraries[ckeditor][directory_name] = "ckeditor"
@@ -310,4 +298,3 @@ projects[og_clone][patch][] = "http://drupal.org/files/og_clone-menu-cloning-non
 projects[og_clone][patch][] = "http://drupal.org/files/og_clone-item-id-alter-1941054-1.patch"
 
 projects[feeds][patch][] = "http://drupal.org/files/608408-feeds_drush_d7-57.patch"
-
