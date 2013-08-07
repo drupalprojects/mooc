@@ -20,7 +20,7 @@ libraries[jwerty][directory_name] = "jwerty"
 libraries[jwerty][type] = "library"
 libraries[jwerty][destination] = "libraries"
 libraries[jwerty][download][type] = "get"
-libraries[jwerty][download][url] = "" ; TODO add download URI
+libraries[jwerty][download][url] = "http://github.com/keithamus/jwerty/tarball/master"
 
 ; mooc
 libraries[mooc][directory_name] = "mooc"
