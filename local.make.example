@@ -8,13 +8,6 @@ includes[] = "drupal-org.make"
 
 ; +++++ Libraries +++++
 
-; Profiler
-libraries[profiler][directory_name] = "profiler"
-libraries[profiler][type] = "library"
-libraries[profiler][destination] = "../../profiles/mooc/libraries"
-libraries[profiler][download][type] = "get"
-libraries[profiler][download][url] = "http://ftp.drupal.org/files/projects/profiler-7.x-2.x-dev.tar.gz"
-
 ; jwerty
 libraries[jwerty][directory_name] = "jwerty"
 libraries[jwerty][type] = "library"
