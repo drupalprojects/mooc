@@ -22,11 +22,11 @@ function mooc_ux_defaults_menu_default_menu_links() {
       ),
     ),
     'module' => 'menu',
-    'hidden' => '0',
-    'external' => '0',
-    'has_children' => '0',
-    'expanded' => '0',
-    'weight' => '-46',
+    'hidden' => 0,
+    'external' => 0,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => -46,
   );
   // Exported menu link: menu-cis-toolkit:admin/reports/feedback
   $menu_links['menu-cis-toolkit:admin/reports/feedback'] = array(
@@ -40,11 +40,11 @@ function mooc_ux_defaults_menu_default_menu_links() {
       ),
     ),
     'module' => 'menu',
-    'hidden' => '0',
-    'external' => '0',
-    'has_children' => '0',
-    'expanded' => '0',
-    'weight' => '-47',
+    'hidden' => 0,
+    'external' => 0,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => -47,
   );
   // Exported menu link: menu-cis-toolkit:typo-reports
   $menu_links['menu-cis-toolkit:typo-reports'] = array(
@@ -58,11 +58,11 @@ function mooc_ux_defaults_menu_default_menu_links() {
       ),
     ),
     'module' => 'menu',
-    'hidden' => '0',
-    'external' => '0',
-    'has_children' => '0',
-    'expanded' => '0',
-    'weight' => '-44',
+    'hidden' => 0,
+    'external' => 0,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => -44,
   );
   // Translatables
   // Included for use with string extractors like potx.
