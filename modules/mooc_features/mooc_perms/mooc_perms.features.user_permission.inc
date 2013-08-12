@@ -48,8 +48,12 @@ function mooc_perms_user_default_permissions() {
     'name' => 'access content',
     'roles' => array(
       'administrator' => 'administrator',
-      'anonymous user' => 'anonymous user',
-      'authenticated user' => 'authenticated user',
+      'guest' => 'guest',
+      'instructor' => 'instructor',
+      'past student' => 'past student',
+      'staff' => 'staff',
+      'student' => 'student',
+      'teaching assistant' => 'teaching assistant',
     ),
     'module' => 'node',
   );
@@ -63,19 +67,6 @@ function mooc_perms_user_default_permissions() {
       'staff' => 'staff',
     ),
     'module' => 'contextual',
-  );
-
-  // Exported permission: access feedback form.
-  $permissions['access feedback form'] = array(
-    'name' => 'access feedback form',
-    'roles' => array(
-      'administrator' => 'administrator',
-      'instructor' => 'instructor',
-      'staff' => 'staff',
-      'student' => 'student',
-      'teaching assistant' => 'teaching assistant',
-    ),
-    'module' => 'feedback_reloaded',
   );
 
   // Exported permission: access overlay.
@@ -152,16 +143,6 @@ function mooc_perms_user_default_permissions() {
       'staff' => 'staff',
     ),
     'module' => 'book',
-  );
-
-  // Exported permission: administer feedback.
-  $permissions['administer feedback'] = array(
-    'name' => 'administer feedback',
-    'roles' => array(
-      'administrator' => 'administrator',
-      'staff' => 'staff',
-    ),
-    'module' => 'feedback_reloaded',
   );
 
   // Exported permission: administer themes.
@@ -385,16 +366,6 @@ function mooc_perms_user_default_permissions() {
     'module' => 'search',
   );
 
-  // Exported permission: show format selection for feedback_reloaded.
-  $permissions['show format selection for feedback_reloaded'] = array(
-    'name' => 'show format selection for feedback_reloaded',
-    'roles' => array(
-      'administrator' => 'administrator',
-      'staff' => 'staff',
-    ),
-    'module' => 'better_formats',
-  );
-
   // Exported permission: show format selection for node.
   $permissions['show format selection for node'] = array(
     'name' => 'show format selection for node',
@@ -428,16 +399,6 @@ function mooc_perms_user_default_permissions() {
     'module' => 'filter',
   );
 
-  // Exported permission: view feedback messages.
-  $permissions['view feedback messages'] = array(
-    'name' => 'view feedback messages',
-    'roles' => array(
-      'administrator' => 'administrator',
-      'staff' => 'staff',
-    ),
-    'module' => 'feedback_reloaded',
-  );
-
   // Exported permission: view hidden content.
   $permissions['view hidden content'] = array(
     'name' => 'view hidden content',
@@ -448,6 +409,16 @@ function mooc_perms_user_default_permissions() {
       'teaching assistant' => 'teaching assistant',
     ),
     'module' => 'hidden_nodes',
+  );
+
+  // Exported permission: view regions_right_slideout region.
+  $permissions['view regions_right_slideout region'] = array(
+    'name' => 'view regions_right_slideout region',
+    'roles' => array(
+      'anonymous user' => 'anonymous user',
+      'authenticated user' => 'authenticated user',
+    ),
+    'module' => 'regions',
   );
 
   // Exported permission: view revisions.
