@@ -28,24 +28,6 @@ function mooc_ux_defaults_menu_default_menu_links() {
     'expanded' => 0,
     'weight' => -46,
   );
-  // Exported menu link: menu-cis-toolkit:admin/reports/feedback
-  $menu_links['menu-cis-toolkit:admin/reports/feedback'] = array(
-    'menu_name' => 'menu-cis-toolkit',
-    'link_path' => 'admin/reports/feedback',
-    'router_path' => 'admin/reports/feedback',
-    'link_title' => 'Feedback Reports',
-    'options' => array(
-      'attributes' => array(
-        'title' => 'Feedback related to potential issues with the course as reported by students / faculty.',
-      ),
-    ),
-    'module' => 'menu',
-    'hidden' => 0,
-    'external' => 0,
-    'has_children' => 0,
-    'expanded' => 0,
-    'weight' => -47,
-  );
   // Exported menu link: menu-cis-toolkit:typo-reports
   $menu_links['menu-cis-toolkit:typo-reports'] = array(
     'menu_name' => 'menu-cis-toolkit',
@@ -66,7 +48,6 @@ function mooc_ux_defaults_menu_default_menu_links() {
   );
   // Translatables
   // Included for use with string extractors like potx.
-  t('Feedback Reports');
   t('Search / Replace');
   t('Typo Reports');
 

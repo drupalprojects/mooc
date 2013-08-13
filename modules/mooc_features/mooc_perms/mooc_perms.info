@@ -63,6 +63,5 @@ features[user_permission][] = show format selection for node
 features[user_permission][] = use outline designer
 features[user_permission][] = use text format textbook_editor
 features[user_permission][] = view hidden content
-features[user_permission][] = view regions_right_slideout region
 features[user_permission][] = view revisions
 features[user_permission][] = view the administration theme

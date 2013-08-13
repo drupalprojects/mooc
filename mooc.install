@@ -20,6 +20,7 @@ function mooc_install() {
     ->condition('type', 'theme')
     ->condition('name', $default_theme)
     ->execute();
+	variable_set('theme_default', $default_theme);
   // enable $admin_theme
   db_update('system')
     ->fields(array('status' => 1))
@@ -103,9 +104,6 @@ function mooc_install() {
     node_add_body_field($type);
   }
 
-  // Default "Page" to not be promoted and have comments disabled.
-  variable_set('node_options_page', array('status'));
-
   // Don't display date and author information for "Page" nodes by default.
   variable_set('node_submitted_page', FALSE);
 
@@ -131,8 +129,8 @@ function mooc_install() {
     'mooc_cis_ux',
     'mooc_textbook',
     'mooc_helper',
-    'mooc_perms',
     'regions_admin_example',
+		'mooc_perms',
   );
   features_revert($features);
   // drop the "book" content type as its confusing

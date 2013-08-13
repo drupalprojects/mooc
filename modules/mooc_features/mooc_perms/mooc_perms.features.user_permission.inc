@@ -411,16 +411,6 @@ function mooc_perms_user_default_permissions() {
     'module' => 'hidden_nodes',
   );
 
-  // Exported permission: view regions_right_slideout region.
-  $permissions['view regions_right_slideout region'] = array(
-    'name' => 'view regions_right_slideout region',
-    'roles' => array(
-      'anonymous user' => 'anonymous user',
-      'authenticated user' => 'authenticated user',
-    ),
-    'module' => 'regions',
-  );
-
   // Exported permission: view revisions.
   $permissions['view revisions'] = array(
     'name' => 'view revisions',
