@@ -97,7 +97,7 @@ projects[imce_mkdir][subdir] = "contrib"
 projects[nodeformcols][version] = "1.x-dev"
 projects[nodeformcols][subdir] = "contrib"
 
-projects[og][version] = "2.2"
+projects[og][version] = "2.3"
 projects[og][subdir] = "contrib"
 
 projects[og_clone][version] = "1.x-dev"
@@ -136,7 +136,7 @@ projects[linkchecker][subdir] = "contrib"
 projects[masquerade][version] = "1.0-rc5"
 projects[masquerade][subdir] = "contrib"
 
-projects[module_filter][version] = "1.7"
+projects[module_filter][version] = "1.8"
 projects[module_filter][subdir] = "contrib"
 
 projects[node_clone][version] = "1.0-rc1"
@@ -145,7 +145,7 @@ projects[node_clone][subdir] = "contrib"
 projects[prepopulate][version] = "2.x-dev"
 projects[prepopulate][subdir] = "contrib"
 
-projects[restws][version] = "2.0"
+projects[restws][version] = "2.1"
 projects[restws][subdir] = "contrib"
 
 projects[scanner][version] = "1.x-dev"
