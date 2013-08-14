@@ -35,18 +35,20 @@ function mooc_helper_menu() {
 /**
  * Return a list of all book roots as an array
  */
-function _mooc_helper_all_book_outlines($property = '') {
+function _mooc_helper_all_book_outlines($property = 'uuid', $title = '') {
   $outlines = array();
   // load all book outline etids
   foreach (book_get_books() as $book_id => $book) {
     // load book node fully
     $node = node_load($book['nid']);
-    // provide uuid as default if not provided
-    if ($property == '') {
-      $property = 'uuid';
+    if ($title == '') {
+      $set_title = $node->book['link_title'];
+    }
+    else {
+      $set_title = $node->{$title};
     }
     // create an array
-    $outlines[$node->{$property}] = $node->book['link_title'];
+    $outlines[$node->{$property}] = $set_title;
   }
   return $outlines;
 }
@@ -54,7 +56,7 @@ function _mooc_helper_all_book_outlines($property = '') {
 /**
  * Implements hook_node_insert().
  */
-function mooc_helper_node_insert($node) {
+function mooc_helper_node_insert(&$node) {
   // insert evaluation needs to process same as update
   mooc_helper_node_update($node);
 }
@@ -62,12 +64,31 @@ function mooc_helper_node_insert($node) {
 /**
  * Implements hook_node_update().
  */
-function mooc_helper_node_update($node) {
+function mooc_helper_node_update(&$node) {
   // make sure there's an outline associated to this
+  // but only if we have at least 1 to do so with
   if ($node->type == 'section') {
     // ensure an outline is set, if not use default
-    if (!isset($node->field_instructional_outline['und'])) {
-      $node->field_instructional_outline['und'][0]['value'] = variable_get('mooc_default_outline', '');
+    if (!isset($node->field_instructional_outlines['und'])) {
+      $default = variable_get('mooc_default_outline', '');
+      // edge case, default was never set
+      if ($default == '') {
+        // load all books
+        $books = _mooc_helper_all_book_outlines('nid', 'created');
+        // make sure we at least have some books in here
+        if (is_array($books)) {
+          // move to 1st array position in iterator
+          reset($books);
+          // sort maintaining index which is the nid
+          asort($books);
+          // set default to first key in array
+          $default = key($books);
+        }
+      }
+      // make sure we have something to set
+      if ($default != '') {
+        $node->field_instructional_outlines['und'][0]['value'] = $default; 
+      }
     }
   }
 }
