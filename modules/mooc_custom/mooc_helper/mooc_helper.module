@@ -54,22 +54,14 @@ function _mooc_helper_all_book_outlines($property = 'uuid', $title = '') {
 }
 
 /**
- * Implements hook_node_insert().
+ * Implements hook_node_presave().
  */
-function mooc_helper_node_insert(&$node) {
-  // insert evaluation needs to process same as update
-  mooc_helper_node_update($node);
-}
-
-/**
- * Implements hook_node_update().
- */
-function mooc_helper_node_update(&$node) {
+function mooc_helper_node_presave($node) {
   // make sure there's an outline associated to this
   // but only if we have at least 1 to do so with
   if ($node->type == 'section') {
     // ensure an outline is set, if not use default
-    if (!isset($node->field_instructional_outlines['und'])) {
+    if (empty($node->field_instructional_outlines['und'])) {
       $default = variable_get('mooc_default_outline', '');
       // edge case, default was never set
       if ($default == '') {
@@ -87,7 +79,7 @@ function mooc_helper_node_update(&$node) {
       }
       // make sure we have something to set
       if ($default != '') {
-        $node->field_instructional_outlines['und'][0]['value'] = $default; 
+        $node->field_instructional_outlines['und'][0]['target_id'] = $default;
       }
     }
   }
