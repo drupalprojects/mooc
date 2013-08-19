@@ -11,6 +11,7 @@ function mooc_thumbnav_thumbnav_widget() {
       'inc' => drupal_get_path('module', 'mooc_thumbnav') . '/js/mooc_thumbnav_outline.js',
       'weight' => 1,
       'side' => 'right',
+      'fragment' => 'thumbnav_anchor',
     ),
   );
   drupal_add_css(drupal_get_path('module', 'mooc_thumbnav') . '/css/mooc_thumbnav.css');
