@@ -1,4 +1,7 @@
 /* CSS Document */
+.content ul {
+  margin-left: 40px;
+}
 #toc {
   float:right;
   position:relative;
