@@ -3,7 +3,7 @@
     $('.thumbnav_controller img.mooc_thumbnav_outline').click(function(){
       if (!$(this).hasClass('mooc_thumbnav_outline-active')) {
         $(this).addClass('mooc_thumbnav_outline-active');
-        $(this).attr('src', $(this).attr('src').replace('-click.png', '.png'));
+        $(this).attr('src', $(this).attr('src').replace('outline.png', 'outline-click.png'));
         var text = '';
         var title = $(this).attr('alt');
         if ($('#block-system-main-menu').length > 0) {
@@ -21,7 +21,7 @@
       else {
         // drop class and trigger a click to act like a toggle
         $(this).removeClass('mooc_thumbnav_outline-active');
-        $(this).attr('src', $(this).attr('src').replace('.png', '-click.png'));
+        $(this).attr('src', $(this).attr('src').replace('outline-click.png', 'outline.png'));
         $('#thumbnav_modal_close').click();
       }
     });
