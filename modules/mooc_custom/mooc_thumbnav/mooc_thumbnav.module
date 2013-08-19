@@ -1,13 +1,6 @@
 <?php
 
 /**
- * Implements hook_init().
- */
-function mooc_thumbnav_init() {
-  drupal_add_css(drupal_get_path('module', 'mooc_thumbnav') . '/css/mooc_thumbnav.css');
-}
-
-/**
  * Implements hook_thumbnav_widget().
  */
 function mooc_thumbnav_thumbnav_widget() {
@@ -19,30 +12,7 @@ function mooc_thumbnav_thumbnav_widget() {
       'weight' => 1,
       'side' => 'right',
     ),
-    'mooc_thumbnav_copyright' => array(
-      'icon' => base_path() . drupal_get_path('module', 'mooc_thumbnav') . '/images/copyright.png',
-      'title' => t('Course copyright'),
-      'inc' => drupal_get_path('module', 'mooc_thumbnav') . '/js/mooc_thumbnav_copyright.js',
-      'weight' => 5,
-      'side' => 'left',
-    ),
-    /*'mooc_thumbnav_bookmark' => array(
-      'icon' => base_path() . drupal_get_path('module', 'mooc_thumbnav') . '/images/bookmark.png',
-      'title' => t('Bookmark page'),
-      'inc' => drupal_get_path('module', 'mooc_thumbnav') . '/js/mooc_thumbnav_bookmark.js',
-      'weight' => 3,
-      'side' => 'right',
-    ),*/
   );
-  // optional feedback reloaded support for helpdesk
-  if (module_exists('feedback_reloaded')) {
-    $widgets['mooc_thumbnav_helpdesk'] = array(
-      'icon' => base_path() . drupal_get_path('module', 'mooc_thumbnav') . '/images/helpdesk.png',
-      'title' => t('Contact helpdesk'),
-      'inc' => drupal_get_path('module', 'mooc_thumbnav') . '/js/mooc_thumbnav_helpdesk.js',
-      'weight' => 4,
-      'side' => 'left',
-    );
-  }
+  drupal_add_css(drupal_get_path('module', 'mooc_thumbnav') . '/css/mooc_thumbnav.css');
   return $widgets;
 }

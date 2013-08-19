@@ -1,8 +1,5 @@
 /* hide these items when on a phone */
 @media screen and (max-width: 739px) {
-  #feedback_button {
-    display:none;
-  }
   #block-cis-service-connection-active-outline {
     display:none;
   }
