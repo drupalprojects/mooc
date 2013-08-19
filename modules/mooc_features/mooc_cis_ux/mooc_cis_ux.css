@@ -2,13 +2,12 @@
 
 #mooc_active_outline_flag {
   position:fixed;
-  top:40px;
-  right:0px;
-	z-index:100000;
-  padding:4px;
+  bottom:0px;
+  left:25%;
+  z-index:100000;
+  padding:10px;
   text-align:center;
   background-color:#555;
-	border:2px solid #5fbff3;
 }
 #mooc_active_outline_flag a {
   color:#fff;

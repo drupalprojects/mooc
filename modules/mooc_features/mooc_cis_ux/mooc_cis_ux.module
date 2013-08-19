@@ -40,6 +40,8 @@ function mooc_cis_ux_page_build(&$page) {
       ->entityCondition('bundle', 'section')
       // that are published
       ->propertyCondition('status', 1)
+      // only sections that are active
+      ->fieldCondition('field_cis_active', 'value', 1, '=')
       // where field has reference to this book outline
       ->fieldCondition('field_instructional_outlines', 'target_id', $node->book['bid'], '=');
       // store results
@@ -86,16 +88,19 @@ function mooc_cis_ux_cis_section_deactivate() {
  * Callback to send outline on section deactivation.
  */
 function _mooc_cis_ux_send_outline($node) {
-  // pull section object from cis
-  $section = _cis_connector_transaction('section', 'default', array(), $node->field_section_id['und'][0]['value']);
-  // grab local outline in use
-  $bid = $node->field_instructional_outlines['und'][0]['target_id'];
-  // set what this field looks for via cis
-  $data = array(
-    'files' => array(
-      'field_course_archive' => 'feeds_node_helper_export/' . $bid,
-    ),
-  );
-  // set the file in CIS
-  _cis_connection_object($section['item_id'], 'field_collection_item', NULL, 'PUT', $data);
+  // make sure this had an outline set first
+  if (isset($node->field_instructional_outlines['und'])) {
+    // pull section object from cis
+    $section = _cis_connector_transaction('section', 'default', array(), $node->field_section_id['und'][0]['value']);
+    // grab local outline in use
+    $bid = $node->field_instructional_outlines['und'][0]['target_id'];
+    // set what this field looks for via cis
+    $data = array(
+      'files' => array(
+        'field_course_archive' => 'feeds_node_helper_export/' . $bid,
+      ),
+    );
+    // TODO set the file in CIS
+    //_cis_connection_object($section['item_id'], 'field_collection_item', NULL, 'PUT', $data);
+  }
 }
