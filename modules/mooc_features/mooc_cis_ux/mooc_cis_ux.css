@@ -16,11 +16,11 @@
 
 @media all and (max-width: 740px) {
   #mooc_active_outline_flag {
-		bottom:50px;
-		width:100%;
-		left:0px;
-	}
-	#admin-menu {
-		display:none;
-	}
+    bottom:50px;
+    width:100%;
+    left:0px;
+  }
+  #admin-menu {
+    display:none;
+  }
 }
