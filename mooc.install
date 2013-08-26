@@ -20,7 +20,7 @@ function mooc_install() {
     ->condition('type', 'theme')
     ->condition('name', $default_theme)
     ->execute();
-	variable_set('theme_default', $default_theme);
+  variable_set('theme_default', $default_theme);
   // enable $admin_theme
   db_update('system')
     ->fields(array('status' => 1))
@@ -130,7 +130,7 @@ function mooc_install() {
     'mooc_textbook',
     'mooc_helper',
     'regions_admin_example',
-		'mooc_perms',
+    'mooc_perms',
   );
   features_revert($features);
   // drop the "book" content type as its confusing
@@ -180,6 +180,24 @@ function mooc_install() {
     ->fields(array('uid' => 1, 'rid' => $admin_role->rid))
     ->execute();
   menu_rebuild();
+  // create a master section
+  $node = new stdClass();
+  $node->type = 'section';
+  node_object_prepare($node);
+  $node->title = t('Master Section');
+  $node->language = LANGUAGE_NONE;
+  $node->uid = 1;
+  $node->status = 1;
+  $node->promote = 0;
+  $node->revision = 1;
+  // make up a random section id to make things happy but fake
+  $node->field_section_id[LANGUAGE_NONE][0]['value'] = 'master_' . rand(1000, 5000);
+  // mark this as inactive so it can sync with systems
+  $node->field_cis_active[LANGUAGE_NONE][0]['value'] = 0;
+  // build out via submit then save
+  if($node = node_submit($node)) {
+    node_save($node);
+  }
   // ignore any rebuild messages as we have no content
   node_access_needs_rebuild(FALSE);
   // ignore any other install messages
