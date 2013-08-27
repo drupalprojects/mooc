@@ -93,6 +93,7 @@ dependencies[] = masquerade
 dependencies[] = module_filter
 dependencies[] = prepopulate
 dependencies[] = restws
+dependencies[] = restws_basic_auth
 dependencies[] = scanner
 dependencies[] = strongarm
 dependencies[] = tipsy
