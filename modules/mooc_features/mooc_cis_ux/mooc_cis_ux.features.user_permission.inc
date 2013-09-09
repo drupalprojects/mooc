@@ -10,7 +10,7 @@
 function mooc_cis_ux_user_default_permissions() {
   $permissions = array();
 
-  // Exported permission: switch section context.
+  // Exported permission: 'switch section context'.
   $permissions['switch section context'] = array(
     'name' => 'switch section context',
     'roles' => array(
