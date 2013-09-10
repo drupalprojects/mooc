@@ -10,7 +10,7 @@ projects[admin_menu][subdir] = "contrib"
 projects[admin_theme][version] = "1.0"
 projects[admin_theme][subdir] = "contrib"
 
-projects[advagg][version] = "2.0-rc1"
+projects[advagg][version] = "2.0-rc3"
 projects[advagg][subdir] = "contrib"
 
 projects[book_title_override][version] = "1.0-beta4"
@@ -25,7 +25,7 @@ projects[context][subdir] = "contrib"
 projects[context_condition_theme][version] = "1.0"
 projects[context_condition_theme][subdir] = "contrib"
 
-projects[joyride][version] = "1.0-alpha2"
+projects[joyride][version] = "1.0-alpha3"
 projects[joyride][subdir] = "contrib"
 
 projects[devel][version] = "1.3"
@@ -46,7 +46,7 @@ projects[replicate][subdir] = "contrib"
 projects[chamfer_defaults][version] = "1.0-beta2"
 projects[chamfer_defaults][subdir] = "contrib"
 
-projects[features][version] = "2.0-rc2"
+projects[features][version] = "2.0-rc3"
 projects[features][subdir] = "contrib"
 
 projects[features_override][version] = "2.0-beta3"
@@ -118,10 +118,10 @@ projects[boxes][subdir] = "contrib"
 projects[diff][version] = "3.2"
 projects[diff][subdir] = "contrib"
 
-projects[entity][version] = "1.1"
+projects[entity][version] = "1.2"
 projects[entity][subdir] = "contrib"
 
-projects[fitvids][version] = "1.12"
+projects[fitvids][version] = "1.14"
 projects[fitvids][subdir] = "contrib"
 
 projects[job_scheduler][version] = "2.0-alpha3"
@@ -205,7 +205,7 @@ projects[wysiwyg][subdir] = "contrib"
 projects[wysiwyg_template][version] = "2.x-dev"
 projects[wysiwyg_template][subdir] = "contrib"
 
-projects[select_or_other][version] = "2.19"
+projects[select_or_other][version] = "2.20"
 projects[select_or_other][subdir] = "contrib"
 
 projects[views][version] = "3.7"
@@ -241,7 +241,7 @@ projects[chamfer][subdir] = "contrib"
 
 ; rubik
 projects[rubik][type] = "theme"
-projects[rubik][version] = "4.0-beta8"
+projects[rubik][version] = "4.0-beta9"
 projects[rubik][subdir] = "contrib"
 
 ; omega
