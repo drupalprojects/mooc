@@ -133,12 +133,6 @@ function mooc_install() {
     'mooc_perms',
   );
   features_revert($features);
-  // seems odd but attempt to revert these again since they aren't
-  $features = array(
-    'cis_section',
-    'mooc_ux_defaults',
-  );
-  features_revert($features);
   // drop the "book" content type as its confusing
   node_type_delete('book');
   // Create a default role for site administrators, with all available permissions assigned.
