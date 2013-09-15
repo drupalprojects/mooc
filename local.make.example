@@ -6,6 +6,9 @@ projects[drupal][version] = "7.x"
 ; include the d.o. profile base
 includes[] = "drupal-org.make"
 
+projects[joyride][version] = "1.0-alpha3"
+projects[joyride][subdir] = "contrib"
+
 ; +++++ Libraries +++++
 
 ; jwerty

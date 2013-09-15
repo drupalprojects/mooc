@@ -25,14 +25,8 @@ projects[context][subdir] = "contrib"
 projects[context_condition_theme][version] = "1.0"
 projects[context_condition_theme][subdir] = "contrib"
 
-projects[joyride][version] = "1.0-alpha3"
-projects[joyride][subdir] = "contrib"
-
 projects[devel][version] = "1.3"
 projects[devel][subdir] = "contrib"
-
-projects[feedback_reloaded][version] = "1.x-dev"
-projects[feedback_reloaded][subdir] = "contrib"
 
 projects[profiler_builder][version] = "1.x-dev"
 projects[profiler_builder][subdir] = "contrib"
@@ -262,13 +256,6 @@ libraries[ckeditor][type] = "library"
 libraries[ckeditor][destination] = "libraries"
 libraries[ckeditor][download][type] = "get"
 libraries[ckeditor][download][url] = "http://download.cksource.com/CKEditor/CKEditor/CKEditor%203.6.6.1/ckeditor_3.6.6.1.tar.gz"
-
-; jQuery Joyride
-libraries[joyride][directory_name] = "joyride"
-libraries[joyride][type] = "library"
-libraries[joyride][destination] = "libraries"
-libraries[joyride][download][type] = "get"
-libraries[joyride][download][url] = "https://github.com/zurb/joyride/archive/v2.0.3.tar.gz"
 
 ; FitVids
 libraries[fitvids][directory_name] = "fitvids"
