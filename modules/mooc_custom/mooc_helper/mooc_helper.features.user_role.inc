@@ -13,7 +13,7 @@ function mooc_helper_user_default_roles() {
   // Exported role: activation code holder.
   $roles['activation code holder'] = array(
     'name' => 'activation code holder',
-    'weight' => '9',
+    'weight' => 9,
   );
 
   return $roles;
