@@ -19,11 +19,13 @@
         });
       }
       else {
-        // drop class and trigger a click to act like a toggle
-        $(this).removeClass('mooc_thumbnav_outline-active');
-        $(this).attr('src', $(this).attr('src').replace('outline-click.png', 'outline.png'));
         $('#thumbnav_modal_close').click();
       }
+    });
+    // visualize closing of the box
+    $('#thumbnav_modal_close').click(function(){
+      $('.thumbnav_controller img.mooc_thumbnav_outline').removeClass('mooc_thumbnav_outline-active');
+      $('.thumbnav_controller img.mooc_thumbnav_outline').attr('src', $('.thumbnav_controller img.mooc_thumbnav_outline').attr('src').replace('outline-click.png', 'outline.png'));
     });
   });
 })(jQuery);
