@@ -10,7 +10,7 @@ projects[admin_menu][subdir] = "contrib"
 projects[admin_theme][version] = "1.0"
 projects[admin_theme][subdir] = "contrib"
 
-projects[advagg][version] = "2.0-rc3"
+projects[advagg][version] = "2.1"
 projects[advagg][subdir] = "contrib"
 
 projects[book_title_override][version] = "1.0-beta4"
@@ -19,7 +19,7 @@ projects[book_title_override][subdir] = "contrib"
 projects[ctools][version] = "1.3"
 projects[ctools][subdir] = "contrib"
 
-projects[context][version] = "3.0-beta7"
+projects[context][version] = "3.1"
 projects[context][subdir] = "contrib"
 
 projects[context_condition_theme][version] = "1.0"
@@ -40,10 +40,10 @@ projects[replicate][subdir] = "contrib"
 projects[chamfer_defaults][version] = "1.0-beta2"
 projects[chamfer_defaults][subdir] = "contrib"
 
-projects[features][version] = "2.0-rc3"
+projects[features][version] = "2.0"
 projects[features][subdir] = "contrib"
 
-projects[features_override][version] = "2.0-beta3"
+projects[features_override][version] = "2.0-rc1"
 projects[features_override][subdir] = "contrib"
 
 projects[nodereference_highlight][version] = "1.0"
@@ -55,7 +55,7 @@ projects[feeds][subdir] = "contrib"
 projects[feeds_node_helper][version] = "1.4"
 projects[feeds_node_helper][subdir] = "contrib"
 
-projects[feeds_tamper][version] = "1.0-beta4"
+projects[feeds_tamper][version] = "1.0-beta5"
 projects[feeds_tamper][subdir] = "contrib"
 
 projects[feeds_xpathparser][version] = "1.0-beta4"
@@ -67,7 +67,7 @@ projects[entityreference][subdir] = "contrib"
 projects[entityreference_prepopulate][version] = "1.3"
 projects[entityreference_prepopulate][subdir] = "contrib"
 
-projects[typogrify][version] = "1.0-rc6"
+projects[typogrify][version] = "1.0-rc8"
 projects[typogrify][subdir] = "contrib"
 
 projects[video_filter][version] = "3.1"
@@ -121,6 +121,9 @@ projects[fitvids][subdir] = "contrib"
 projects[job_scheduler][version] = "2.0-alpha3"
 projects[job_scheduler][subdir] = "contrib"
 
+projects[joyride][version] = "1.0-alpha3"
+projects[joyride][subdir] = "contrib"
+
 projects[libraries][version] = "2.1"
 projects[libraries][subdir] = "contrib"
 
@@ -166,7 +169,7 @@ projects[outline_designer][subdir] = "contrib"
 projects[entitycache][version] = "1.1"
 projects[entitycache][subdir] = "contrib"
 
-projects[httprl][version] = "1.12"
+projects[httprl][version] = "1.13"
 projects[httprl][subdir] = "contrib"
 
 projects[hidden_nodes][version] = "1.1"
