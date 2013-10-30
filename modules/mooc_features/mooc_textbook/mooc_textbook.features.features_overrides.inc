@@ -15,16 +15,27 @@ function mooc_textbook_features_override_default_overrides() {
   $overrides["filter.textbook_editor.filters|cis_filter"] = array(
     'settings' => array(),
     'status' => 1,
-    'weight' => -49,
+    'weight' => -50,
   );
   $overrides["filter.textbook_editor.filters|filter_html|settings|allowed_html"] = '<div> <legend> <fieldset> <h2> <h3> <h4> <h5> <h6> <em> <iframe> <video> <strong> <img> <br> <blockquote> <cite> <sup> <sub> <p> <ul> <ol> <li> <dl> <dt> <dd> <a> <table> <tr> <td> <th> <tbody> <thead> <tfoot> <colgroup> <caption> <hr>';
-  $overrides["filter.textbook_editor.filters|filter_html|weight"] = -48;
+  $overrides["filter.textbook_editor.filters|filter_html|weight"] = -49;
+  $overrides["filter.textbook_editor.filters|filter_tokens"] = array(
+    'settings' => array(),
+    'status' => 1,
+    'weight' => -44,
+  );
   $overrides["filter.textbook_editor.filters|nrhi"] = array(
     'settings' => array(),
     'status' => 1,
-    'weight' => -43,
+    'weight' => -42,
   );
-  $overrides["filter.textbook_editor.filters|typogrify|weight"] = -42;
+  $overrides["filter.textbook_editor.filters|typogrify|weight"] = -43;
+
+  // Exported overrides for: wysiwyg
+  $overrides["wysiwyg.textbook_editor.settings|buttons|drupal"] = array(
+    'rendered_entity' => 1,
+    'token_insert_wysiwyg' => 1,
+  );
 
  return $overrides;
 }
