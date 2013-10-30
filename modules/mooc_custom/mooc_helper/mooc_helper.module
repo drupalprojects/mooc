@@ -7,6 +7,17 @@
 include_once 'mooc_helper.features.inc';
 
 /**
+ * Implements hook_preprocess().
+ *
+ * Add a class to match our view-modes
+ */
+function mooc_helper_preprocess(&$variables, $hook) {
+  if ($hook == 'node') {
+    $variables['classes_array'][] = $hook . '-view-mode-' . $variables['view_mode'];
+	}
+}
+
+/**
  * Implements hook_page_build().
  */
 function mooc_helper_page_build($page) {
