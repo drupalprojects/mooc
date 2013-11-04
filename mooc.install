@@ -129,6 +129,9 @@ function mooc_install() {
     'mooc_cis_ux',
     'mooc_textbook',
     'mooc_helper',
+    'mooc_widgets',
+    'mooc_widget_table',
+    'mooc_widget_list',
     'regions_admin_example',
     'mooc_perms',
   );
@@ -180,26 +183,47 @@ function mooc_install() {
     ->fields(array('uid' => 1, 'rid' => $admin_role->rid))
     ->execute();
   menu_rebuild();
-  // create a master section
+
+  // create basic content to drive system
+  $root = _mooc_default_content('page');
+  _mooc_default_content('page', $root->nid);
+  _mooc_default_content('section', $root->nid);
+  cache_clear_all();
+  // ignore any rebuild messages as we have minimal content
+  node_access_needs_rebuild(FALSE);
+  // ignore any other install messages
+  drupal_get_messages();
+}
+
+/**
+ * Callback to generate a node during install.
+ */
+function _mooc_default_content($type, $bid = NULL) {
   $node = new stdClass();
-  $node->type = 'section';
+  $node->type = $type;
   node_object_prepare($node);
-  $node->title = t('Master Section');
   $node->language = LANGUAGE_NONE;
   $node->uid = 1;
   $node->status = 1;
   $node->promote = 0;
   $node->revision = 1;
-  // make up a random section id to make things happy but fake
-  $node->field_section_id[LANGUAGE_NONE][0]['value'] = 'master_' . rand(1000, 5000);
-  // mark this as inactive so it can sync with systems
-  $node->field_cis_active[LANGUAGE_NONE][0]['value'] = 0;
+  switch ($type) {
+    case 'page':
+      $node->title = empty($bid) ? t('Master Outline') : t('Lesson 1');
+      $node->book['bid'] = empty($bid) ? 'new' : $bid;
+    break;
+    case 'section':
+      $node->title = t('Master Section');
+      // make up a random section id to make things happy but fake
+      $node->field_section_id[LANGUAGE_NONE][0]['value'] = 'master_' . rand(1000, 5000);
+      // mark this as inactive so it can sync with systems
+      $node->field_cis_active[LANGUAGE_NONE][0]['value'] = 0;
+      $node->field_instructional_outlines[LANGUAGE_NONE][0]['target_id'] = $bid;
+    break;
+  }
   // build out via submit then save
   if($node = node_submit($node)) {
     node_save($node);
   }
-  // ignore any rebuild messages as we have no content
-  node_access_needs_rebuild(FALSE);
-  // ignore any other install messages
-  drupal_get_messages();
+  return $node;
 }
