@@ -1,4 +1,8 @@
 <?php
+/**
+ * @file
+ * Thumbnav integration with MOOC platform.
+ */
 
 /**
  * Implements hook_thumbnav_widget().

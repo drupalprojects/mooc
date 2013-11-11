@@ -15,7 +15,7 @@ function mooc_cis_ux_views_default_views() {
   $view->description = 'Proviedes entity reference view for book root items';
   $view->tag = 'default';
   $view->base_table = 'node';
-  $view->human_name = 'MOOC Book Roots';
+  $view->human_name = 'MOOC book roots';
   $view->core = 7;
   $view->api_version = '3.0';
   $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */

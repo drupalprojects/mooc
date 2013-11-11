@@ -33,7 +33,7 @@ function mooc_ux_defaults_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_cis_tag',
-    'label' => 'Unique Tag',
+    'label' => 'Unique tag',
     'required' => 0,
     'settings' => array(
       'better_formats' => array(
@@ -70,7 +70,7 @@ function mooc_ux_defaults_field_default_field_instances() {
 
   // Translatables
   // Included for use with string extractors like potx.
-  t('Unique Tag');
+  t('Unique tag');
 
   return $field_instances;
 }

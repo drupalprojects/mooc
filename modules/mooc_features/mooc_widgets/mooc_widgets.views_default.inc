@@ -15,14 +15,14 @@ function mooc_widgets_views_default_views() {
   $view->description = '';
   $view->tag = 'default';
   $view->base_table = 'node';
-  $view->human_name = 'MOOC Widgets';
+  $view->human_name = 'MOOC widgets';
   $view->core = 7;
   $view->api_version = '3.0';
   $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
 
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
-  $handler->display->display_options['title'] = 'MOOC Widgets';
+  $handler->display->display_options['title'] = 'MOOC widgets';
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['access']['type'] = 'role';
   $handler->display->display_options['access']['role'] = array(
@@ -39,7 +39,7 @@ function mooc_widgets_views_default_views() {
   $handler->display->display_options['footer']['area']['table'] = 'views';
   $handler->display->display_options['footer']['area']['field'] = 'area';
   $handler->display->display_options['footer']['area']['empty'] = TRUE;
-  $handler->display->display_options['footer']['area']['content'] = '<a href="node/add">Create Widgets</a>';
+  $handler->display->display_options['footer']['area']['content'] = '<a href="node/add">Create widgets</a>';
   $handler->display->display_options['footer']['area']['format'] = 'textbook_editor';
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';

@@ -15,7 +15,7 @@ function mooc_ux_defaults_menu_default_menu_links() {
     'menu_name' => 'menu-cis-toolkit',
     'link_path' => 'admin/content/scanner',
     'router_path' => 'admin/content/scanner',
-    'link_title' => 'Search / Replace',
+    'link_title' => 'Search / replace',
     'options' => array(
       'attributes' => array(
         'title' => 'Search and replace text across content',
@@ -33,7 +33,7 @@ function mooc_ux_defaults_menu_default_menu_links() {
     'menu_name' => 'menu-cis-toolkit',
     'link_path' => 'typo-reports',
     'router_path' => 'typo-reports',
-    'link_title' => 'Typo Reports',
+    'link_title' => 'Typo reports',
     'options' => array(
       'attributes' => array(
         'title' => 'Typographical errors as reported by other members of the content team',
@@ -48,8 +48,8 @@ function mooc_ux_defaults_menu_default_menu_links() {
   );
   // Translatables
   // Included for use with string extractors like potx.
-  t('Search / Replace');
-  t('Typo Reports');
+  t('Search / replace');
+  t('Typo reports');
 
 
   return $menu_links;

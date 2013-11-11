@@ -14,7 +14,7 @@ include_once 'mooc_helper.features.inc';
 function mooc_helper_preprocess(&$variables, $hook) {
   if ($hook == 'node') {
     $variables['classes_array'][] = $hook . '-view-mode-' . $variables['view_mode'];
-	}
+  }
 }
 
 /**
@@ -51,6 +51,13 @@ function mooc_helper_menu() {
 
 /**
  * Return a list of all book roots as an array
+ *
+ * @param $property
+ *   property to use as the unique key, defaults to uuid.
+ * @param $title
+ *   (optional) property to use as the title field in array.
+ * @return $outlines
+ *   an array of outlines keyed as property => title
  */
 function _mooc_helper_all_book_outlines($property = 'uuid', $title = '') {
   $outlines = array();
@@ -104,6 +111,8 @@ function mooc_helper_node_presave($node) {
 
 /**
  * Page callback for cis_service_connection_ux.
+ *
+ * This adds the default outline select box to course settings.
  */
 function mooc_helper_form_alter(&$form, &$form_state, $form_id) {
   if ($form_id == 'cis_service_connection_ux_form') {
@@ -111,39 +120,10 @@ function mooc_helper_form_alter(&$form, &$form_state, $form_id) {
       '#description' => t('This is the default content outline for new sections that register.'),
       '#default_value' => variable_get('mooc_default_outline', ''),
       '#weight' => '0',
-      '#title' => t('Default Outline'),
+      '#title' => t('Default outline'),
       '#type' => 'select',
       '#required' => '1',
       '#options' => _mooc_helper_all_book_outlines('nid'),
     );
   }
-}
-
-/**
- * Implementation of hook_feeds_after_import().
- */
-function mooc_helper_feeds_after_import(FeedsSource $source) {
-  //TODO: Convert to D7 code
-  // need to clear the UUIDs of all imported nodes from the
-  // get a list of nodes that were just imported
-  //$ary = array();
-  /*$result = db_query("SELECT nid FROM {feeds_node_item} WHERE id='elms_node_import'");
-  while ($val = db_fetch_array($result)) {
-    $ary[] = $val['nid'];
-  }
-  if (count($ary) != 0) {
-    // clear all nodes that came across
-    db_query("DELETE FROM {uuid_node} WHERE nid IN(". db_placeholders($ary) .")", $ary);
-    // clean up revisions if they exist
-    db_query("DELETE FROM {uuid_node_revisions} WHERE nid IN(". db_placeholders($ary) .")", $ary);
-    // clean up original import table
-    db_query("DELETE FROM {feeds_node_item} WHERE id='elms_node_import'");
-    // seed all nodes by saving them all again
-    foreach ($ary as $nid) {
-      $node = node_load($nid);
-      $node->uuid = uuid_uuid();
-      $node->revision_uuid = uuid_uuid();
-      node_save($node);
-    }
-  }*/
 }

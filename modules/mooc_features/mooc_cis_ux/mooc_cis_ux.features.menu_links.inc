@@ -15,10 +15,10 @@ function mooc_cis_ux_menu_default_menu_links() {
     'menu_name' => 'menu-cis-toolkit',
     'link_path' => 'admin/content/book',
     'router_path' => 'admin/content/book',
-    'link_title' => 'Instructional Outline',
+    'link_title' => 'Instructional outline',
     'options' => array(
       'attributes' => array(
-        'title' => 'Outline Designer for establishing the instructional pacing of this course.',
+        'title' => 'Outline designer for establishing the instructional pacing of this course.',
       ),
     ),
     'module' => 'menu',
@@ -30,7 +30,7 @@ function mooc_cis_ux_menu_default_menu_links() {
   );
   // Translatables
   // Included for use with string extractors like potx.
-  t('Instructional Outline');
+  t('Instructional outline');
 
 
   return $menu_links;

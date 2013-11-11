@@ -30,7 +30,7 @@ function mooc_cis_ux_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_instructional_outlines',
-    'label' => 'Instructional Outlines',
+    'label' => 'Instructional outlines',
     'required' => 0,
     'settings' => array(
       'behaviors' => array(
@@ -56,7 +56,7 @@ function mooc_cis_ux_field_default_field_instances() {
 
   // Translatables
   // Included for use with string extractors like potx.
-  t('Instructional Outlines');
+  t('Instructional outlines');
 
   return $field_instances;
 }

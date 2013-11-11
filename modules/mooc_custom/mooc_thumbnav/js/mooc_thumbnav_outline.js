@@ -1,3 +1,7 @@
+/**
+ * @file
+ * Buttons and JS handlers for clicking thumbnav in MOOC.
+ */
 (function ($) {
   $(document).ready(function(){
     $('.thumbnav_controller img.mooc_thumbnav_outline').click(function(){

@@ -20,5 +20,5 @@ function mooc_cis_ux_features_override_default_overrides() {
   $overrides["field.node-section-field_instructional_outlines.field_instance|settings|behaviors|prepopulate|skip_perm"] = 0;
   $overrides["field.node-section-field_instructional_outlines.field_instance|widget|weight"] = 3;
 
- return $overrides;
+  return $overrides;
 }
