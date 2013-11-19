@@ -5,6 +5,24 @@
  */
 
 /**
+ * Implements hook_ctools_plugin_api().
+ */
+function mooc_textbook_ctools_plugin_api($module = NULL, $api = NULL) {
+  if ($module == "strongarm" && $api == "strongarm") {
+    return array("version" => "1");
+  }
+}
+
+/**
+ * Implements hook_field_default_field_instances_alter().
+ */
+function mooc_textbook_field_default_field_instances_alter(&$data) {
+  if (isset($data['node-page-body'])) {
+    $data['node-page-body']['accessibility_content'] = 1; /* WAS: 0 */
+  }
+}
+
+/**
  * Implements hook_filter_default_formats_alter().
  */
 function mooc_textbook_filter_default_formats_alter(&$data) {
