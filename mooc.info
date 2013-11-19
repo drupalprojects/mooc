@@ -6,6 +6,10 @@ core = "7.x"
 ; ----------
 ; Dependencies
 ; ----------
+; Accessibility
+dependencies[] = accessibility
+dependencies[] = accessibility_wysiwyg
+dependencies[] = accessibility_content
 ; Administration
 dependencies[] = admin_menu
 dependencies[] = admin_menu_toolbar
