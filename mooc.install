@@ -129,9 +129,6 @@ function mooc_install() {
     'mooc_cis_ux',
     'mooc_textbook',
     'mooc_helper',
-    'mooc_widgets',
-    'mooc_widget_table',
-    'mooc_widget_list',
     'regions_admin_example',
     'mooc_perms',
   );
@@ -182,17 +179,28 @@ function mooc_install() {
   db_insert('users_roles')
     ->fields(array('uid' => 1, 'rid' => $admin_role->rid))
     ->execute();
-  menu_rebuild();
-
   // create basic content to drive system
-  $root = _mooc_default_content('page');
-  _mooc_default_content('page', $root->nid);
-  _mooc_default_content('section', $root->nid);
-  cache_clear_all();
-  // ignore any rebuild messages as we have minimal content
-  node_access_needs_rebuild(FALSE);
-  // ignore any other install messages
-  drupal_get_messages();
+  if (!drupal_is_cli()) {
+    menu_rebuild();
+    $root = _mooc_default_content('page');
+    _mooc_default_content('page', $root->nid);
+    _mooc_default_content('section', $root->nid);
+    cache_clear_all();
+  }
+  else {
+    // if this is created via drush we don't need default contnet
+    // this provides usability to those testing it out
+    // without interfering with more complex setups
+    // we also make the assumption that node 2 will be
+    // the outline in question as this method will be called
+    // with a content outline import automatically after
+    // the distro finishes building
+    _mooc_default_content('section', 2);
+  }
+	// ignore any rebuild messages as we have minimal content
+	node_access_needs_rebuild(FALSE);
+	// ignore any other install messages
+	drupal_get_messages();
 }
 
 /**
