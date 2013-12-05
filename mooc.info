@@ -157,4 +157,5 @@ dependencies[] = node_reference_highlight_glossary
 dependencies[] = regions_admin_example
 dependencies[] = textbook_editor
 dependencies[] = textbook_templates
+dependencies[] = mooc_page
 dependencies[] = mooc_perms
