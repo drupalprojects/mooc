@@ -139,17 +139,22 @@ function mooc_install() {
   ))->fields(array(
     'module' => 'regions',
   ))->execute();
-  // stupid work around for regions conflict with module perms
-  $roles = array('teaching assistant', 'instructor', 'administrator', 'staff');
-  foreach ($roles as $name) {
-    $role = user_role_load_by_name($name);
-    db_merge('role_permission')->key(array(
-        'rid' => $role->rid,
-        'permission' => 'view regions_admin_left region',
-    ))->fields(array(
-        'module' => 'regions',
-    ))->execute();
-  }
+
+  // clean up for regions conflict w/ install routine
+  // anonymous users
+  db_merge('role_permission')->key(array(
+    'rid' => 1,
+    'permission' => 'view regions_admin_left region',
+  ))->fields(array(
+    'module' => 'regions',
+  ))->execute();
+  // auth users
+  db_merge('role_permission')->key(array(
+    'rid' => 2,
+    'permission' => 'view regions_admin_left region',
+  ))->fields(array(
+    'module' => 'regions',
+  ))->execute();
   drupal_static_reset('user_access');
   drupal_static_reset('user_role_permissions');
 
