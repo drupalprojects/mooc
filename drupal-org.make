@@ -25,6 +25,9 @@ projects[field_collection_list][subdir] = "contrib"
 projects[field_collection_tabs][version] = "1.x-dev"
 projects[field_collection_tabs][subdir] = "contrib"
 
+projects[footnotes][version] = "2.x-dev"
+projects[footnotes][subdir] = "contrib"
+
 projects[tablefield][version] = "2.2"
 projects[tablefield][subdir] = "contrib"
 
@@ -322,3 +325,5 @@ projects[feeds][patch][] = "http://drupal.org/files/608408-feeds_drush_d7-57.pat
 projects[tablefield][patch][] = "http://drupal.org/files/tablefield_accessibility-1251738-6.patch"
 ; token insert entity notice resolved
 projects[token_insert_entity][patch][] = "https://drupal.org/files/token_insert_entity-undefined-constant-2091109-1.patch"
+; patch to resolve issue with ckeditor 4.x
+projects[footnotes][patch][] = "https://drupal.org/files/footnotes-wysiwyg_fix_js_error_ckeditor-1589130-6.patch"
