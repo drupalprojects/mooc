@@ -1,7 +1,28 @@
 /* CSS Document */
-.content ul {
+
+.node .content ul {
   margin-left: 40px;
 }
+
+.node .content ul.footnotes .footnote-label {
+  margin-left: 0em;
+}
+
+.node .content ul.footnotes li.footnote{
+  min-height: 1.6em;
+  font-size:.8em;
+  margin-left:-3em;
+}
+
+.page-welcome-page #region-content .content ul,
+.page-syllabus #region-content .content ul,
+.page-course-help #region-content .content ul,
+.page-resources #region-content .content ul {
+  margin-left: 40px;
+  font-size: 1.25em;
+  line-height: 1.6em;
+}
+
 #toc {
   float:right;
   position:relative;
