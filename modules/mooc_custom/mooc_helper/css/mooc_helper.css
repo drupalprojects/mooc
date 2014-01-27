@@ -1,7 +1,13 @@
 /* CSS Document */
 
-.node .content ul {
+.node .content ul,
+.node .content ol {
   margin-left: 40px;
+}
+
+.node .content ul.footnotes {
+  float: left;
+  margin: 2em;
 }
 
 .node .content ul.footnotes .footnote-label {
@@ -17,7 +23,11 @@
 .page-welcome-page #region-content .content ul,
 .page-syllabus #region-content .content ul,
 .page-course-help #region-content .content ul,
-.page-resources #region-content .content ul {
+.page-resources #region-content .content ul,
+.page-welcome-page #region-content .content ol,
+.page-syllabus #region-content .content ol,
+.page-course-help #region-content .content ol,
+.page-resources #region-content .content ol {
   margin-left: 40px;
   font-size: 1.25em;
   line-height: 1.6em;
