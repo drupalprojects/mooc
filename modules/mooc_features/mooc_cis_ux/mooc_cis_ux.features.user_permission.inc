@@ -15,6 +15,7 @@ function mooc_cis_ux_user_default_permissions() {
     'name' => 'switch section context',
     'roles' => array(
       'administrator' => 'administrator',
+      'guest' => 'guest',
       'instructor' => 'instructor',
       'staff' => 'staff',
       'teaching assistant' => 'teaching assistant',
