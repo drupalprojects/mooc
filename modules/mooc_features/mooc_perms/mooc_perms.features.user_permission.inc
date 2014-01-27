@@ -7,7 +7,7 @@
 /**
  * Implements hook_user_default_permissions().
  */
-function mooc_perms_user_default_permissions() {
+function mooc_perms_defaultconfig_user_default_permissions() {
   $permissions = array();
 
   // Exported permission: 'access admin theme'.
@@ -58,13 +58,6 @@ function mooc_perms_user_default_permissions() {
     'module' => 'node',
   );
 
-  // Exported permission: 'access contextual links'.
-  $permissions['access contextual links'] = array(
-    'name' => 'access contextual links',
-    'roles' => array(),
-    'module' => 'contextual',
-  );
-
   // Exported permission: 'access overlay'.
   $permissions['access overlay'] = array(
     'name' => 'access overlay',
@@ -82,6 +75,7 @@ function mooc_perms_user_default_permissions() {
     'roles' => array(
       'activation code holder' => 'activation code holder',
       'administrator' => 'administrator',
+      'guest' => 'guest',
       'instructor' => 'instructor',
       'staff' => 'staff',
       'student' => 'student',

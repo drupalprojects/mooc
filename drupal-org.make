@@ -16,6 +16,9 @@ projects[exclude_node_title][subdir] = "contrib"
 projects[field_collection][version] = "1.x-dev"
 projects[field_collection][subdir] = "contrib"
 
+projects[defaultconfig][version] = "1.0-alpha9"
+projects[defaultconfig][subdir] = "contrib"
+
 projects[field_collection_fieldset][version] = "2.3"
 projects[field_collection_fieldset][subdir] = "contrib"
 
