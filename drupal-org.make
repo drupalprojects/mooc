@@ -327,13 +327,6 @@ libraries[flexslider][destination] = "libraries"
 libraries[flexslider][download][type] = "get"
 libraries[flexslider][download][url] = "https://github.com/woothemes/FlexSlider/archive/flexslider1.zip"
 
-; jQuery Masonry
-libraries[masonry][directory_name] = "masonry"
-libraries[masonry][type] = "library"
-libraries[masonry][destination] = "libraries"
-libraries[masonry][download][type] = "get"
-libraries[masonry][download][url] = "http://masonry.desandro.com/jquery.masonry.min.js"
-
 ; jQuery Joyride
 libraries[joyride][directory_name] = "joyride"
 libraries[joyride][type] = "library"
