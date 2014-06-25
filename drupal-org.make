@@ -252,6 +252,11 @@ projects[tinynav][subdir] = "contrib"
 
 ; +++++ Themes +++++
 
+; aurora
+projects[chamfer][type] = "theme"
+projects[chamfer][version] = "1.1"
+projects[chamfer][subdir] = "contrib"
+
 ; rubik
 projects[rubik][type] = "theme"
 projects[rubik][version] = "4.0-rc1"
@@ -308,9 +313,14 @@ projects[tao][version] = "3.0-beta4"
 projects[tao][subdir] = "contrib"
 
 ; zurb-foundation
-projects[zurb-foundation][type] = "theme"
-projects[zurb-foundation][version] = "4.0-beta1"
-projects[zurb-foundation][subdir] = "contrib"
+projects[zurb_foundation][type] = "theme"
+projects[zurb_foundation][version] = "5.x-dev"
+projects[zurb_foundation][subdir] = "contrib"
+
+; foundation_access
+projects[foundation_access][type] = "theme"
+projects[foundation_access][version] = "5.x-dev"
+projects[foundation_access][subdir] = "contrib"
 
 ; +++++ Libraries +++++
 ; CKEditor
