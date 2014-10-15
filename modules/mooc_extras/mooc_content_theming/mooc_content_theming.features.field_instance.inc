@@ -18,11 +18,10 @@ function mooc_content_theming_field_default_field_instances() {
     'description' => 'An accent color to associate with this content.',
     'display' => array(
       'default' => array(
-        'label' => 'above',
-        'module' => 'jquery_colorpicker',
+        'label' => 'hidden',
         'settings' => array(),
-        'type' => 'jquery_colorpicker_color_display',
-        'weight' => 6,
+        'type' => 'hidden',
+        'weight' => 3,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -54,14 +53,10 @@ function mooc_content_theming_field_default_field_instances() {
     'description' => 'An image to use to replace the one in the theme.',
     'display' => array(
       'default' => array(
-        'label' => 'above',
-        'module' => 'image',
-        'settings' => array(
-          'image_link' => '',
-          'image_style' => '',
-        ),
-        'type' => 'image',
-        'weight' => 5,
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 4,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -104,14 +99,10 @@ function mooc_content_theming_field_default_field_instances() {
     'description' => 'A smaller representation of the content visually',
     'display' => array(
       'default' => array(
-        'label' => 'above',
-        'module' => 'image',
-        'settings' => array(
-          'image_link' => '',
-          'image_style' => '',
-        ),
-        'type' => 'image',
-        'weight' => 4,
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 2,
       ),
       'teaser' => array(
         'label' => 'above',
