@@ -366,6 +366,9 @@ libraries[colorpicker][download][url] = "http://www.eyecon.ro/colorpicker/colorp
 
 ; +++++ Patches +++++
 
+; allow for custom meta controllers to enable deep querying
+projects[restws][patch][] = "http://drupal.org/files/restws_meta_controls-2053147-1.patch"
+
 projects[og_clone][patch][] = "http://drupal.org/files/og_clone-menu-cloning-none-1940982-1.patch"
 
 projects[og_clone][patch][] = "http://drupal.org/files/og_clone-item-id-alter-1941054-1.patch"
