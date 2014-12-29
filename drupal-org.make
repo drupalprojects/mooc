@@ -31,7 +31,7 @@ projects[context_condition_theme][subdir] = "contrib"
 projects[replicate][version] = "1.1"
 projects[replicate][subdir] = "contrib"
 
-projects[features][version] = "2.0"
+projects[features][version] = "2.2"
 projects[features][subdir] = "contrib"
 
 projects[features_override][version] = "2.0-rc1"
