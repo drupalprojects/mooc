@@ -10,6 +10,9 @@ includes[] = "drupal-org.make"
 projects[textbook][version] = "4.0-beta1"
 projects[textbook][subdir] = "contrib"
 
+projects[accessibility][version] = "1.x-dev"
+projects[accessibility][subdir] = "contrib"
+
 ; +++++ Libraries +++++
 
 ; jwerty
