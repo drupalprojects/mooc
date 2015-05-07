@@ -13,6 +13,9 @@ projects[menu_attributes][subdir] = "contrib"
 projects[speedreader][version] = "1.x-dev"
 projects[speedreader][subdir] = "contrib"
 
+projects[jquery_update][version] = "2.5"
+projects[jquery_update][subdir] = "contrib"
+
 ;projects[joyride][version] = "1.x-dev"
 ;projects[joyride][subdir] = "contrib"
 
