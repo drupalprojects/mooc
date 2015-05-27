@@ -138,7 +138,7 @@ function mooc_helper_form_cis_service_connection_ux_form_alter(&$form, &$form_st
     '#description' => t('This is the default content outline for new sections that register.'),
     '#default_value' => variable_get('mooc_default_outline', ''),
     '#weight' => '0',
-    '#title' => t('Default outline'),
+    '#title' => t('Default content outline'),
     '#type' => 'select',
     '#required' => '1',
     '#options' => _mooc_helper_all_book_outlines('nid'),
