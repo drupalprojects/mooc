@@ -258,6 +258,13 @@ projects[token_insert_entity][version] = "1.x-dev"
 projects[token_insert_entity][subdir] = "contrib"
 projects[token_insert][version] = "2.x-dev"
 projects[token_insert][subdir] = "contrib"
+; Other Dependencies
+projects[joyride][version] = "1.x-dev"
+projects[joyride][subdir] = "contrib"
+projects[token_filter][version] = "1.1"
+projects[token_filter][subdir] = "contrib"
+projects[views_data_export][version] = "3.0-beta8"
+projects[views_data_export][subdir] = "contrib"
 
 ; +++++ Libraries +++++
 ; ColorBox
