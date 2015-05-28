@@ -17,7 +17,6 @@ dependencies[] = outline_designer
 dependencies[] = scanner
 dependencies[] = search
 dependencies[] = system
-dependencies[] = typo
 dependencies[] = user
 dependencies[] = defaultconfig
 features[features_api][] = api:2
