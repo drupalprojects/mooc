@@ -1,16 +1,13 @@
 <?php
 /**
  * @file
- * mooc_page.features.inc
+ * mooc_container_type.features.inc
  */
 
 /**
  * Implements hook_ctools_plugin_api().
  */
-function mooc_page_ctools_plugin_api($module = NULL, $api = NULL) {
-  if ($module == "ds" && $api == "ds") {
-    return array("version" => "1");
-  }
+function mooc_container_type_ctools_plugin_api($module = NULL, $api = NULL) {
   if ($module == "strongarm" && $api == "strongarm") {
     return array("version" => "1");
   }
@@ -19,12 +16,12 @@ function mooc_page_ctools_plugin_api($module = NULL, $api = NULL) {
 /**
  * Implements hook_node_info().
  */
-function mooc_page_node_info() {
+function mooc_container_type_node_info() {
   $items = array(
-    'page' => array(
-      'name' => t('Page'),
+    'mooc_container' => array(
+      'name' => t('Container'),
       'base' => 'node_content',
-      'description' => t('Use <em>pages</em> for your course content.'),
+      'description' => t('Purely navigational element. This type doesn\'t have content of its own, it is used to structure and present other content.'),
       'has_title' => '1',
       'title_label' => t('Title'),
       'help' => '',

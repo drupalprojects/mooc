@@ -3,6 +3,8 @@ name = "MOOC"
 description = "Massively Open Online Course is a set of tools for building an online course"
 exclusive = "1"
 core = "7.x"
+elmslndefaulttitle = "Content outline"
+elmslntype = "service"
 ; ----------
 ; ELMSLN Core Dependencies
 ; ----------
@@ -164,6 +166,7 @@ dependencies[] = mooc_helper
 dependencies[] = mooc_textbook
 dependencies[] = mooc_ux_defaults
 dependencies[] = mooc_page
+dependencies[] = mooc_container_type
 dependencies[] = mooc_perms
 dependencies[] = mooc_theme_foundation
 
