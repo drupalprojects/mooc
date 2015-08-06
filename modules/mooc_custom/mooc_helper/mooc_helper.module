@@ -24,7 +24,8 @@ function mooc_helper_menu_contextual_links_alter(&$links, $router_item, $root_pa
   // Add a link to all contextual links for nodes.
   if ($root_path == 'node/%') {
     unset($links['cis_lmsless-delete']);
-    $entity_id = array_pop(explode('/', $router_item['href']));
+    $tmp = explode('/', $router_item['href']);
+    $entity_id = array_pop($tmp);
     // link to print the outline
     $links['cis_lmsless_print_outline'] = array(
       'title' => t('Print'),
@@ -126,7 +127,15 @@ function mooc_helper_node_presave($node) {
  * Implements hook_form_FORM_ID_alter().
  */
 function mooc_helper_form_cis_service_connection_ux_form_alter(&$form, &$form_state, $form_id) {
-  $form['site_information']['mooc_default_outline'] = array(
+  $form['mooc'] = array(
+    '#tree' => '0',
+    '#type' => 'fieldset',
+    '#collapsed' => '0',
+    '#collapsible' => '1',
+    '#title' => t('Content settings'),
+    '#weight' => '-1',
+  );
+  $form['mooc']['mooc_default_outline'] = array(
     '#description' => t('This is the default content outline for new sections that register.'),
     '#default_value' => variable_get('mooc_default_outline', ''),
     '#weight' => '0',
