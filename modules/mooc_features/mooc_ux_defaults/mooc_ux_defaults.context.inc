@@ -19,6 +19,7 @@ function mooc_ux_defaults_context_default_contexts() {
   $context->conditions = array(
     'node' => array(
       'values' => array(
+        'mooc_container' => 'mooc_container',
         'page' => 'page',
       ),
       'options' => array(
@@ -29,12 +30,6 @@ function mooc_ux_defaults_context_default_contexts() {
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
-        'mooc_helper_book_nav-book_sibling_nav' => array(
-          'module' => 'mooc_helper_book_nav',
-          'delta' => 'book_sibling_nav',
-          'region' => 'header',
-          'weight' => '-10',
-        ),
         'textbook-textbook-magellan' => array(
           'module' => 'textbook',
           'delta' => 'textbook-magellan',
