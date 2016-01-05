@@ -49,6 +49,7 @@ dependencies[] = prepopulate
 dependencies[] = menu_attributes
 dependencies[] = special_menu_items
 ; Other
+dependencies[] = navigation404
 dependencies[] = better_formats
 dependencies[] = chosen
 dependencies[] = defaultconfig
@@ -139,6 +140,7 @@ dependencies[] = feeds_xpathparser
 ; MOOC
 dependencies[] = mooc_helper_book_nav
 ; Other
+dependencies[] = autosave
 dependencies[] = book_copy
 dependencies[] = book_delete
 dependencies[] = footnotes
@@ -170,7 +172,10 @@ dependencies[] = mooc_textbook
 dependencies[] = mooc_ux_defaults
 dependencies[] = mooc_page
 dependencies[] = mooc_container_type
+dependencies[] = mooc_autosave
 dependencies[] = mooc_perms
+dependencies[] = mooc_content_theming
+dependencies[] = mooc_nav_block
 dependencies[] = mooc_theme_foundation
 
 ; Information intentionally kept here to have a version w/ ELMSLN
