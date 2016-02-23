@@ -16,9 +16,10 @@ function mooc_install() {
   _elmsln_installer_admin_role();
   // standard clean up
   _elmsln_installer_post_install_cleanup();
-
   // Allow visitor account creation with administrative approval.
   variable_set('user_register', USER_REGISTER_VISITORS_ADMINISTRATIVE_APPROVAL);
+  // set home page to the table of contents
+  variable_set('site_frontpage', 'mooc/book-toc');
   // drop the "book" content type as its confusing
   node_type_delete('book');
   // create basic content to drive system
@@ -70,4 +71,27 @@ function _mooc_default_content($type, $bid = NULL) {
     node_save($node);
   }
   return $node;
+}
+
+/**
+ * Implements hook_update_N().
+ * Enable og_access so instructors / TAs can only see the sections
+ * that they are part of. All other tools already did this so this is specific
+ * to the MOOC platform requiring this enhancement.
+ */
+function mooc_update_7001(&$sandbox) {
+  // enable og_access
+  module_enable(array('og_access'));
+  // rebuild permissions since there were groups before this
+  node_access_rebuild();
+}
+
+/**
+ * Implements hook_update_N().
+ * Some blocks shifted from cis_service_connection over to mooc_helper
+ * which means that the related contexts need to be rebuild in cache
+ * or they'll just be empty.
+ */
+function mooc_update_7002(&$sandbox) {
+  context_invalidate_cache();
 }

@@ -62,7 +62,6 @@ function mooc_perms_defaultconfig_user_default_permissions() {
   $permissions['access printer-friendly version'] = array(
     'name' => 'access printer-friendly version',
     'roles' => array(
-      'activation code holder' => 'activation code holder',
       'administrator' => 'administrator',
       'guest' => 'guest',
       'instructor' => 'instructor',
@@ -210,17 +209,6 @@ function mooc_perms_defaultconfig_user_default_permissions() {
     'module' => 'admin_menu',
   );
 
-  // Exported permission: 'highlight highlight content'.
-  $permissions['highlight highlight content'] = array(
-    'name' => 'highlight highlight content',
-    'roles' => array(
-      'administrator' => 'administrator',
-      'instructor' => 'instructor',
-      'staff' => 'staff',
-    ),
-    'module' => 'nodereference_highlight',
-  );
-
   // Exported permission: 'masquerade as user'.
   $permissions['masquerade as user'] = array(
     'name' => 'masquerade as user',
@@ -232,16 +220,6 @@ function mooc_perms_defaultconfig_user_default_permissions() {
     'module' => 'masquerade',
   );
 
-  // Exported permission: 'perform search and replace'.
-  $permissions['perform search and replace'] = array(
-    'name' => 'perform search and replace',
-    'roles' => array(
-      'administrator' => 'administrator',
-      'staff' => 'staff',
-    ),
-    'module' => 'scanner',
-  );
-
   // Exported permission: 'revert revisions'.
   $permissions['revert revisions'] = array(
     'name' => 'revert revisions',
@@ -251,13 +229,6 @@ function mooc_perms_defaultconfig_user_default_permissions() {
       'staff' => 'staff',
     ),
     'module' => 'node',
-  );
-
-  // Exported permission: 'search content'.
-  $permissions['search content'] = array(
-    'name' => 'search content',
-    'roles' => array(),
-    'module' => 'search',
   );
 
   // Exported permission: 'show format selection for node'.

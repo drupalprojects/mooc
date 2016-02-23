@@ -1,3 +1,17 @@
+.page-mooc-book-toc ul.menu {
+  list-style-type: none;
+}
+
+.page-mooc-book-toc ul.menu li,
+.page-mooc-book-toc ul.menu a {
+  width:100%;
+}
+
+.page-mooc-book-toc ul.menu a:hover {
+  border: 1px solid #dddddd;
+  background-color: #eeeeee;
+}
+
 a.mooc-helper-toc {
   border: 1px solid #e5e5e5;
   border-radius: 3px;
@@ -260,6 +274,10 @@ ul.book-navigation-wrapper {
 
 .etb-book h3.book-parent-nav-item {
   font-size: 1rem;
+}
+
+.etb-book li {
+  line-height: 2rem;
 }
 
 .book-sibling-nav-item .outline-nav-icon {
