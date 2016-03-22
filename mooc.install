@@ -29,7 +29,7 @@ function mooc_install() {
     _mooc_default_content('section', $root->nid);
   }
   else {
-    // if this is created via drush we don't need default contnet
+    // if this is created via drush we don't need default content
     // this provides usability to those testing it out
     // without interfering with more complex setups
     // we also make the assumption that node 2 will be
@@ -94,4 +94,13 @@ function mooc_update_7001(&$sandbox) {
  */
 function mooc_update_7002(&$sandbox) {
   context_invalidate_cache();
+}
+
+/**
+ * Revert mooc page so it can support input formats other then just textbook
+ * also enable the tokens module
+ */
+function mooc_update_7003(&$sandbox) {
+  features_revert_module('mooc_page');
+  module_enable(array('cis_tokens'));
 }
