@@ -97,10 +97,71 @@ function mooc_update_7002(&$sandbox) {
 }
 
 /**
- * Revert mooc page so it can support input formats other then just textbook
- * also enable the tokens module
+ * Revert mooc page so it can support input formats other then just
+ * textbook also enable the tokens module.
  */
 function mooc_update_7003(&$sandbox) {
   features_revert_module('mooc_page');
   module_enable(array('cis_tokens'));
+}
+
+/**
+ * Enable talking to the comply system but don't bulk send as
+ * people will need to do that manually if they desire.
+ */
+function mooc_update_7004(&$sandbox) {
+  module_enable(array('elmsln_ecd'));
+}
+
+/**
+ * Enable the service module so we can do things specific
+ * to services in the future.
+ */
+function mooc_update_7005(&$sandbox) {
+  module_enable(array('cis_course_service'));
+}
+
+/**
+ * Improved authoring experince with content editing.
+ */
+function mooc_update_7006(&$sandbox) {
+  features_revert_module('mooc_page');
+  features_revert_module('mooc_content_theming');
+}
+
+/**
+ * Improved authoring experince with content editing.
+ */
+function mooc_update_7007(&$sandbox) {
+  features_revert_module('mooc_page');
+}
+
+/**
+ * Improvements to nav_block.
+ */
+function mooc_update_7008(&$sandbox) {
+  features_revert_module('mooc_page');
+  features_revert_module('mooc_nav_block');
+}
+
+/**
+ * PDF printing capabilities via DOMpdf library print module.
+ */
+function mooc_update_7009(&$sandbox) {
+  features_revert_module('mooc_ux_defaults');
+  features_revert_module('mooc_perms');
+}
+
+/**
+ * Tincan API integration support.
+ */
+function mooc_update_7010(&$sandbox) {
+  module_enable(array('elmsln_lrs'));
+}
+
+/**
+ * Tincan settings specific to MOOC out of the box.
+ */
+function mooc_update_7011(&$sandbox) {
+  features_revert_module('mooc_ux_defaults');
 }
