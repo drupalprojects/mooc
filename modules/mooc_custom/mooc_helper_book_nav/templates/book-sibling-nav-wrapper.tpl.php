@@ -13,15 +13,15 @@
    * - $prev_title: Title of the previous node.
    * - $count - number of children in the container so we can name the wrapper
    */
-  $output = implode('<span class="book-sibling-spacer icon-chevron-right">/</span>', $breadcrumbs);
+  $output = implode('<li><span class="book-sibling-spacer icon-chevron-right">/</span></li>', $breadcrumbs);
 ?>
-<div class="book-navigation-header small-12 medium-12 large-12 book-sibling-nav-container book-navigation-header-<?php print $count ?>">
+<div class="book-navigation-header col s12 m12 l12 book-sibling-nav-container book-navigation-header-<?php print $count ?>">
   <!-- TOC Icon -->
-  <a href="#" class="mooc-helper-toc courses-icon"  data-reveal-id="block-mooc-helper-mooc-helper-toc-nav-modal" aria-controls="toc-drop" aria-expanded="false" title="Table of Contents">
-    <div class="mooc-helper-toc-icon icon-courses-black etb-modal-icons"></div><span class="book-sibling-parent-text"><?php print t('Outline'); ?></span>
+  <a href="#block-mooc-helper-mooc-helper-toc-nav-modal" class="mooc-helper-toc elmsln-outline-button elmsln-modal-trigger black-text waves-effect cis-lmsless-waves" aria-controls="block-mooc-helper-mooc-helper-toc-nav-modal" aria-expanded="false" title="Table of Contents" data-jwerty-key="o" data-voicecommand="open outline">
+    <i class="material-icons">explore</i><?php print t('Outline'); ?>
   </a>
-  <span class="book-sibling-spacer icon-chevron-right show-for-large-up">/</span>
-  <ul class="book-navigation-wrapper show-for-large-up">
+  <span class="book-sibling-spacer icon-chevron-right hide-on-med-and-down">/</span>
+  <ul class="book-navigation-wrapper hide-on-med-and-down">
     <?php print $output ?>
   </ul>
 </div>

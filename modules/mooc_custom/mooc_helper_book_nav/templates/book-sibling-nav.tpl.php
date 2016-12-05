@@ -33,43 +33,43 @@
   }
 ?>
 <li class="toolbar-menu-icon book-sibling-parent book-sibling-parent-<?php print $count ?>">
-  <a href="#" title="<?php print $ptitle ?>" class="<?php print $parent['_class'] ?>" data-dropdown="book-sibling-children-<?php print $parent['mlid'] ?>" aria-controls="middle-section-buttons" aria-expanded="false">
-    <div class="book-sibling-parent-text"><?php print $outline_label; ?> <?php print $parent_count; ?> <?php print $parent_title ?></div>
-    <?php if ($parent_icon !== ''): ?><?php print $parent_icon ?><?php endif; ?>
-    <div class="book-sibling-parent-arrow icon--dropdown off-canvas-toolbar-item-icon"></div>
-  </a>
+    <a href="#" title="<?php print $ptitle ?>" class="elmsln-dropdown-button <?php print (isset($parent['_class']) ? $parent['_class'] : ''); ?>" aria-controls="book-sibling-children-<?php print $parent['mlid'] ?>" aria-expanded="false" data-activates="book-sibling-children-<?php print $parent['mlid'] ?>">
+      <div class="book-sibling-parent-text"><?php print $outline_label; ?> <?php print $parent_count; ?> <?php print $parent_title ?></div>
+      <?php if ($parent_icon !== ''): ?><?php print $parent_icon ?><?php endif; ?>
+      <div class="book-sibling-parent-arrow icon--dropdown off-canvas-toolbar-item-icon"></div>
+    </a>
 </li>
-<div id="book-sibling-children-<?php print $parent['mlid'] ?>" data-dropdown-content class="f-dropdown content book-sibling-children" aria-hidden="true" tabindex="-1">
-  <ul>
-<?php
-  foreach ($items as $item) {
-    // look for active trail item
-    if ($parent['link_path'] == $item['link_path']) {
-      $active = 'book-menu-item-active';
-    }
-    else {
-      $active = '';
-    }
-    $pre = '';
-    if (isset($outline_count) && $outline_count && isset($item['_count'])) {
-      $pre .= $item['_count'] . '. ';
-    }
-    // check for icon, we only render these at lowest level
-    if (isset($item['_icon'])) {
-      $pre .= '<div class="book-menu-item-' . $item['mlid'] . ' icon-' . $item['_icon'] . '-black outline-nav-icon"></div>';
-    }
-    $link_title = check_plain($item['link_title']);
-    $link = '<li class="' . $active . '">' . l($pre . $link_title,
-        $item['link_path'],
-        array('html' => TRUE,
-          'attributes' => array(
-            'title' => $link_title,
-            'class' => array($active . '-link'),
+<li>
+  <ul id="book-sibling-children-<?php print $parent['mlid'] ?>" class="content dropdown-content book-sibling-children elmsln-scroll-bar" aria-hidden="true" tabindex="-1">
+  <?php
+    foreach ($items as $item) {
+      // look for active trail item
+      if ($parent['link_path'] == $item['link_path']) {
+        $active = 'book-menu-item-active';
+      }
+      else {
+        $active = 'book-item';
+      }
+      $pre = '';
+      if (isset($outline_count) && $outline_count && isset($item['_count'])) {
+        $pre .= $item['_count'] . '. ';
+      }
+      // check for icon, we only render these at lowest level
+      if (isset($item['_icon'])) {
+        $pre .= '<div class="book-menu-item-' . $item['mlid'] . ' icon-' . $item['_icon'] . '-black outline-nav-icon"></div>';
+      }
+      $link_title = check_plain($item['link_title']);
+      $link = '<li class="' . $active . '">' . l($pre . $link_title,
+          $item['link_path'],
+          array('html' => TRUE,
+            'attributes' => array(
+              'title' => $link_title,
+              'class' => array($active . '-link'),
+            )
           )
-        )
-      ) . '</li>' . "\n";
-    print $link;
-  }
-?>
+        ) . '</li>' . "\n";
+      print $link;
+    }
+  ?>
   </ul>
-</div>
+</li>
